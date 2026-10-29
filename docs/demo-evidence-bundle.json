@@ -1,0 +1,5048 @@
+{
+ "format": "rellm-evidence-bundle/2",
+ "exported_at": "2026-10-22T22:18:20Z",
+ "records": [
+  {
+   "evidence_id": "ev_0f2bd1e16c3fd3e0019b7da7b952809ebff7f9772dd373f66c98b4e0777dc430",
+   "operation": "inspect_model_artifact",
+   "parameters": {
+    "source": "/home/claude/demo/model",
+    "revision": null,
+    "tensor_name_filter": null,
+    "limit": 64
+   },
+   "subject": {
+    "model_id": null
+   },
+   "analysis_profile": null,
+   "normalized_result": {
+    "source": "/home/claude/demo/model",
+    "read_mode": "local-header",
+    "revision": null,
+    "identity": {
+     "headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c",
+     "config_sha256": "e33a6cdd7156eea6fe2776babd7f04b54e0c74f362c52f7400c5d6fe465edc17",
+     "note": "header digests commit to tensor declarations, not to the weights"
+    },
+    "shards": [
+     {
+      "file": "model.safetensors",
+      "size": 2046536,
+      "header_sha256": "e50ac0723f096ddd9f3317d2acd9d28790d6f5b4db9bbfd5cf43ca46a8ef6176",
+      "metadata": {
+       "format": "pt"
+      },
+      "n_tensors": 30
+     }
+    ],
+    "n_tensors": 30,
+    "architecture": {
+     "family": "llama-like",
+     "family_note": "Llama/Qwen/Mistral/Gemma/Phi-3 layout",
+     "n_layers": 3,
+     "d_model": 128,
+     "vocab_size": 72,
+     "n_heads": 4,
+     "n_kv_heads": 4,
+     "d_head": 32,
+     "d_mlp": 256,
+     "tied_embeddings": false,
+     "final_norm_kind": "rmsnorm",
+     "moe": null,
+     "lora_adapter": null,
+     "quantization_markers": null,
+     "declared_parameters": 510848,
+     "declared_parameters_human": "0.001B",
+     "dtype_histogram": {
+      "F32": 510848
+     },
+     "config_consistency": "consistent"
+    },
+    "config_headline": {
+     "model_type": "llama",
+     "architectures": [
+      "LlamaForCausalLM"
+     ],
+     "hidden_size": 128,
+     "num_hidden_layers": 3,
+     "num_attention_heads": 4,
+     "num_key_value_heads": 4,
+     "intermediate_size": 256,
+     "vocab_size": 72,
+     "tie_word_embeddings": false,
+     "max_position_embeddings": 64
+    },
+    "tensors": [
+     {
+      "name": "lm_head.weight",
+      "dtype": "F32",
+      "shape": [
+       72,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.embed_tokens.weight",
+      "dtype": "F32",
+      "shape": [
+       72,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.input_layernorm.weight",
+      "dtype": "F32",
+      "shape": [
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.mlp.down_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       256
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.mlp.gate_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       256,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.mlp.up_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       256,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.post_attention_layernorm.weight",
+      "dtype": "F32",
+      "shape": [
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.self_attn.k_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.self_attn.o_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.self_attn.q_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.0.self_attn.v_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.input_layernorm.weight",
+      "dtype": "F32",
+      "shape": [
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.mlp.down_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       256
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.mlp.gate_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       256,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.mlp.up_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       256,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.post_attention_layernorm.weight",
+      "dtype": "F32",
+      "shape": [
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.self_attn.k_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.self_attn.o_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.self_attn.q_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.1.self_attn.v_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.input_layernorm.weight",
+      "dtype": "F32",
+      "shape": [
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.mlp.down_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       256
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.mlp.gate_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       256,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.mlp.up_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       256,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.post_attention_layernorm.weight",
+      "dtype": "F32",
+      "shape": [
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.self_attn.k_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.self_attn.o_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.self_attn.q_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.layers.2.self_attn.v_proj.weight",
+      "dtype": "F32",
+      "shape": [
+       128,
+       128
+      ],
+      "file": "model.safetensors"
+     },
+     {
+      "name": "model.norm.weight",
+      "dtype": "F32",
+      "shape": [
+       128
+      ],
+      "file": "model.safetensors"
+     }
+    ],
+    "tensors_total_matching": 30
+   },
+   "coverage": {
+    "status": "complete",
+    "note": null
+   },
+   "limitations": [
+    "derived from tensor declarations, not from running the model; shared/tied weights are not deduplicated",
+    "no weights were read, loaded or executed"
+   ],
+   "authority": "declared",
+   "facet_availability": {},
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_04ddc2ec08705115411eeda48b2d2279cd0b51c4373e079809b4e8bc9c076bc7",
+   "operation": "open_model",
+   "parameters": {
+    "model_id": "/home/claude/demo/model",
+    "dtype": "float32",
+    "device": "cpu",
+    "revision": null,
+    "hash_weights": "header",
+    "trust_remote_code": false
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "run_id": "run_2723dccd9a4d",
+    "opened_at": "2026-10-22T22:18:20Z",
+    "binding": {
+     "backend": "transformers-hooks",
+     "device": "cpu",
+     "dtype": "float32",
+     "attn_implementation": "eager"
+    },
+    "identity": {
+     "model_id": "/home/claude/demo/model",
+     "revision": null,
+     "architecture": "LlamaForCausalLM",
+     "dtype": "float32",
+     "device_type": "cpu",
+     "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+     "weights_sha256": null,
+     "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+    },
+    "weights": {
+     "mode": "header",
+     "root": "/home/claude/demo/model",
+     "headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c",
+     "weights_sha256": null,
+     "note": null,
+     "n_files": 1
+    },
+    "analysis_profile": {
+     "rellm": "0.2.0",
+     "hook_semantics": 2,
+     "attn_implementation": "eager",
+     "dtype": "float32",
+     "norm_freeze": "final-residual-scale",
+     "torch": "2.14.1",
+     "transformers": "5.20.2"
+    },
+    "facet_availability": {
+     "residual_stream": {
+      "available": true
+     },
+     "attention_weights": {
+      "available": true
+     },
+     "attention_out": {
+      "available": true
+     },
+     "mlp_out": {
+      "available": true
+     },
+     "per_head_output": {
+      "available": true
+     }
+    },
+    "facts": {
+     "n_layers": 3,
+     "d_model": 128,
+     "n_heads": 4,
+     "n_kv_heads": 4,
+     "d_head": 32,
+     "d_mlp": 256,
+     "vocab_size": 72,
+     "max_position_embeddings": 64,
+     "rope_theta": null,
+     "tied_embeddings": false,
+     "final_norm_class": "LlamaRMSNorm",
+     "parameters": 510848,
+     "parameters_human": "0.00B",
+     "quirks": [],
+     "tokenizer": {
+      "class": "TokenizersBackend",
+      "vocab_size": 72,
+      "bos": "<bos>",
+      "eos": null,
+      "chat_template": false
+     }
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "scope": "open_model"
+   },
+   "limitations": [],
+   "authority": "declared",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": false,
+    "source": "session_state"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_c0c6a2ad6166c54c5b14720857cd454d6aadf210cf0edd8e624bb23cbe946bc6",
+   "operation": "next_token",
+   "parameters": {
+    "prompt": "the capital of france is",
+    "top_k": 3,
+    "add_special_tokens": true,
+    "track_tokens": [
+     "paris",
+     "rome"
+    ]
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "tokens": [
+     "<bos>",
+     "the",
+     "capital",
+     "of",
+     "france",
+     "is"
+    ],
+    "n_tokens": 6,
+    "top": [
+     {
+      "token": "paris",
+      "token_id": 24,
+      "prob": 0.998936,
+      "logit": 11.4416
+     },
+     {
+      "token": "beijing",
+      "token_id": 29,
+      "prob": 9.3e-05,
+      "logit": 2.1549
+     },
+     {
+      "token": "cairo",
+      "token_id": 31,
+      "prob": 6.6e-05,
+      "logit": 1.811
+     }
+    ],
+    "entropy_bits": 0.018,
+    "tracked": {
+     "paris": {
+      "token_id": 24,
+      "rank": 1,
+      "prob": 0.998936
+     },
+     "rome": {
+      "token_id": 25,
+      "rank": 7,
+      "prob": 4.1e-05
+     }
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "scope": "next_token"
+   },
+   "limitations": [],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_5561fefd41079648e5fffff1eaf7dd8388edf4531e0f452d16df8aa0b03160a4",
+   "operation": "next_token",
+   "parameters": {
+    "prompt": "the capital of italy is",
+    "top_k": 3,
+    "add_special_tokens": true,
+    "track_tokens": [
+     "paris",
+     "rome"
+    ]
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "tokens": [
+     "<bos>",
+     "the",
+     "capital",
+     "of",
+     "italy",
+     "is"
+    ],
+    "n_tokens": 6,
+    "top": [
+     {
+      "token": "rome",
+      "token_id": 25,
+      "prob": 0.9985,
+      "logit": 11.2612
+     },
+     {
+      "token": "ottawa",
+      "token_id": 35,
+      "prob": 0.000104,
+      "logit": 2.0886
+     },
+     {
+      "token": "athens",
+      "token_id": 37,
+      "prob": 7.3e-05,
+      "logit": 1.7391
+     }
+    ],
+    "entropy_bits": 0.0247,
+    "tracked": {
+     "paris": {
+      "token_id": 24,
+      "rank": 4,
+      "prob": 6.9e-05
+     },
+     "rome": {
+      "token_id": 25,
+      "rank": 1,
+      "prob": 0.9985
+     }
+    }
+   },
+   "coverage": {
+    "status": "complete",
+    "scope": "next_token"
+   },
+   "limitations": [],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_9a1cb6349bc1e50a00f1bd120256ea42b22b78bf5c11dc076fc6f30a1b593274",
+   "operation": "logit_lens",
+   "parameters": {
+    "prompt": "the capital of france is",
+    "position": -1,
+    "top_k": 3,
+    "add_special_tokens": true,
+    "track_tokens": [
+     "paris",
+     "rome"
+    ]
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "position": 5,
+    "token_at_position": "is",
+    "tokens": [
+     "<bos>",
+     "the",
+     "capital",
+     "of",
+     "france",
+     "is"
+    ],
+    "final_top": {
+     "token": "paris",
+     "token_id": 24,
+     "prob": 0.998936
+    },
+    "decision_layer": "L0",
+    "lens_last_layer_max_abs_err": 0.0,
+    "layers": [
+     {
+      "layer": "embed",
+      "top": [
+       {
+        "token": "nairobi",
+        "token_id": 32,
+        "prob": 0.127296,
+        "logit": 3.3073
+       },
+       {
+        "token": "lima",
+        "token_id": 33,
+        "prob": 0.093417,
+        "logit": 2.9978
+       },
+       {
+        "token": "beijing",
+        "token_id": 29,
+        "prob": 0.071447,
+        "logit": 2.7297
+       }
+      ],
+      "final_answer_rank": 8,
+      "final_answer_prob": 0.041243,
+      "kl_to_final_bits": 4.5839,
+      "entropy_bits": 5.0126,
+      "tracked": {
+       "paris": {
+        "rank": 8,
+        "prob": 0.041243
+       },
+       "rome": {
+        "rank": 6,
+        "prob": 0.044168
+       }
+      }
+     },
+     {
+      "layer": "L0",
+      "top": [
+       {
+        "token": "paris",
+        "token_id": 24,
+        "prob": 0.980738,
+        "logit": 9.2532
+       },
+       {
+        "token": "cairo",
+        "token_id": 31,
+        "prob": 0.003583,
+        "logit": 3.6412
+       },
+       {
+        "token": "oslo",
+        "token_id": 36,
+        "prob": 0.002321,
+        "logit": 3.2069
+       }
+      ],
+      "final_answer_rank": 1,
+      "final_answer_prob": 0.980738,
+      "kl_to_final_bits": 0.0227,
+      "entropy_bits": 0.2284,
+      "tracked": {
+       "paris": {
+        "rank": 1,
+        "prob": 0.980738
+       },
+       "rome": {
+        "rank": 9,
+        "prob": 0.000586
+       }
+      }
+     },
+     {
+      "layer": "L1",
+      "top": [
+       {
+        "token": "paris",
+        "token_id": 24,
+        "prob": 0.996086,
+        "logit": 10.6599
+       },
+       {
+        "token": "beijing",
+        "token_id": 29,
+        "prob": 0.000841,
+        "logit": 3.5827
+       },
+       {
+        "token": "cairo",
+        "token_id": 31,
+        "prob": 0.000463,
+        "logit": 2.986
+       }
+      ],
+      "final_answer_rank": 1,
+      "final_answer_prob": 0.996086,
+      "kl_to_final_bits": 0.0025,
+      "entropy_bits": 0.0554,
+      "tracked": {
+       "paris": {
+        "rank": 1,
+        "prob": 0.996086
+       },
+       "rome": {
+        "rank": 8,
+        "prob": 0.000103
+       }
+      }
+     },
+     {
+      "layer": "L2",
+      "top": [
+       {
+        "token": "paris",
+        "token_id": 24,
+        "prob": 0.998936,
+        "logit": 11.4416
+       },
+       {
+        "token": "beijing",
+        "token_id": 29,
+        "prob": 9.3e-05,
+        "logit": 2.1549
+       },
+       {
+        "token": "cairo",
+        "token_id": 31,
+        "prob": 6.6e-05,
+        "logit": 1.811
+       }
+      ],
+      "final_answer_rank": 1,
+      "final_answer_prob": 0.998936,
+      "kl_to_final_bits": 0.0,
+      "entropy_bits": 0.018,
+      "tracked": {
+       "paris": {
+        "rank": 1,
+        "prob": 0.998936
+       },
+       "rome": {
+        "rank": 7,
+        "prob": 4.1e-05
+       }
+      }
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "scope": "logit_lens"
+   },
+   "limitations": [
+    "logit lens reads the residual stream through the final norm+unembed; intermediate layers were never trained for that readout, so early-layer predictions are suggestive, not what the model 'thinks'"
+   ],
+   "authority": "inference",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_e6e06ca02796bf7a875cc72bb889cb0f009d80a5cb5d77221c322ac3afd26587",
+   "operation": "head_catalog",
+   "parameters": {
+    "seq_len": 16,
+    "n_samples": 6,
+    "seed": 1,
+    "threshold": 0.3,
+    "max_seconds": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "diagnostic": {
+     "seq_len": 16,
+     "n_samples_requested": 6,
+     "n_samples_done": 6,
+     "seed": 1,
+     "token_range": [
+      18,
+      71
+     ],
+     "bos_prepended": true
+    },
+    "induction_heads": [],
+    "duplicate_token_heads": [],
+    "previous_token_heads": [],
+    "top_by_induction": [
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.066,
+      "duplicate_token": 0.071,
+      "previous_token": 0.069
+     },
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.059,
+      "duplicate_token": 0.069,
+      "previous_token": 0.114
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.054,
+      "duplicate_token": 0.019,
+      "previous_token": 0.096
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.036,
+      "duplicate_token": 0.045,
+      "previous_token": 0.104
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.033,
+      "duplicate_token": 0.036,
+      "previous_token": 0.105
+     },
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.031,
+      "duplicate_token": 0.028,
+      "previous_token": 0.104
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.024,
+      "duplicate_token": 0.019,
+      "previous_token": 0.087
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.014,
+      "duplicate_token": 0.019,
+      "previous_token": 0.13
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.006,
+      "duplicate_token": 0.033,
+      "previous_token": 0.029
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.004,
+      "duplicate_token": 0.008,
+      "previous_token": 0.029
+     },
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.001,
+      "duplicate_token": 0.011,
+      "previous_token": 0.011
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.0,
+      "duplicate_token": 0.0,
+      "previous_token": 0.067
+     }
+    ],
+    "all_heads": [
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.031,
+      "duplicate_token": 0.028,
+      "previous_token": 0.104
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.036,
+      "duplicate_token": 0.045,
+      "previous_token": 0.104
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.024,
+      "duplicate_token": 0.019,
+      "previous_token": 0.087
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.033,
+      "duplicate_token": 0.036,
+      "previous_token": 0.105
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.006,
+      "duplicate_token": 0.033,
+      "previous_token": 0.029
+     },
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.001,
+      "duplicate_token": 0.011,
+      "previous_token": 0.011
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.0,
+      "duplicate_token": 0.0,
+      "previous_token": 0.067
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.004,
+      "duplicate_token": 0.008,
+      "previous_token": 0.029
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.054,
+      "duplicate_token": 0.019,
+      "previous_token": 0.096
+     },
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.059,
+      "duplicate_token": 0.069,
+      "previous_token": 0.114
+     },
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.066,
+      "duplicate_token": 0.071,
+      "previous_token": 0.069
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.014,
+      "duplicate_token": 0.019,
+      "previous_token": 0.13
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "samples_done": 6,
+    "samples_requested": 6,
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "scores come from random-token sequences; a head can act as an induction head on natural text without passing this test and vice versa",
+    "threshold 0.3 is a convention, not a proof of role"
+   ],
+   "authority": "inference",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": false,
+    "source": "session_state"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_f170730d4092f596f3d8173d2ae7df5447a04bad0e4ad7bba245c2e6eecf0ec2",
+   "operation": "activation_patching",
+   "parameters": {
+    "clean_prompt": "the capital of france is",
+    "corrupted_prompt": "the capital of italy is",
+    "answer": "paris",
+    "counter_answer": "rome",
+    "component": "resid_post",
+    "layers": null,
+    "positions": null,
+    "heads": null,
+    "add_special_tokens": true,
+    "max_seconds": null,
+    "max_passes": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "component": "resid_post",
+    "metric": {
+     "kind": "logit_diff",
+     "answer": "paris",
+     "counter_answer": "rome",
+     "answer_id": 24,
+     "counter_id": 25
+    },
+    "clean": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "france",
+      "is"
+     ],
+     "metric": 10.1016
+    },
+    "corrupted": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "italy",
+      "is"
+     ],
+     "metric": -9.573
+    },
+    "n_forward_passes": 18,
+    "top_effects": [
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": 10.1013,
+      "normalized": 1.0
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": 10.1016,
+      "normalized": 1.0
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 10.0968,
+      "normalized": 0.9998
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5719,
+      "normalized": 0.0001
+     },
+     {
+      "layer": 0,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     }
+    ],
+    "grid": [
+     {
+      "layer": 0,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5893,
+      "normalized": -0.0008
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 10.0968,
+      "normalized": 0.9998
+     },
+     {
+      "layer": 1,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5719,
+      "normalized": 0.0001
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": 10.1013,
+      "normalized": 1.0
+     },
+     {
+      "layer": 2,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": 10.1016,
+      "normalized": 1.0
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "cells_requested": 18,
+    "cells_computed": 18,
+    "cells_skipped": [],
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "patching one component restores that component's *clean* value in the corrupted run; a large effect means the information flows through there, not that the component computes it alone"
+   ],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_884baa685dabd16f0883b6e8a56bd789308502bbb686cf8483fe8b6ec6982a0d",
+   "operation": "activation_patching",
+   "parameters": {
+    "clean_prompt": "the capital of france is",
+    "corrupted_prompt": "the capital of italy is",
+    "answer": "paris",
+    "counter_answer": "rome",
+    "component": "head",
+    "layers": null,
+    "positions": [
+     -1
+    ],
+    "heads": null,
+    "add_special_tokens": true,
+    "max_seconds": null,
+    "max_passes": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "component": "head",
+    "metric": {
+     "kind": "logit_diff",
+     "answer": "paris",
+     "counter_answer": "rome",
+     "answer_id": 24,
+     "counter_id": 25
+    },
+    "clean": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "france",
+      "is"
+     ],
+     "metric": 10.1016
+    },
+    "corrupted": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "italy",
+      "is"
+     ],
+     "metric": -9.573
+    },
+    "n_forward_passes": 12,
+    "top_effects": [
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 3.5742,
+      "normalized": 0.6682,
+      "head": 3
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": -0.4888,
+      "normalized": 0.4617,
+      "head": 2
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": -7.0925,
+      "normalized": 0.1261,
+      "head": 0
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": -8.8907,
+      "normalized": 0.0347,
+      "head": 1
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.1015,
+      "normalized": 0.024,
+      "head": 2
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.271,
+      "normalized": 0.0153,
+      "head": 0
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.4884,
+      "normalized": 0.0043,
+      "head": 2
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.5346,
+      "normalized": 0.002,
+      "head": 1
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.54,
+      "normalized": 0.0017,
+      "head": 3
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.5407,
+      "normalized": 0.0016,
+      "head": 3
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.5582,
+      "normalized": 0.0008,
+      "head": 0
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.597,
+      "normalized": -0.0012,
+      "head": 1
+     }
+    ],
+    "grid": [
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": -7.0925,
+      "normalized": 0.1261,
+      "head": 0
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": -8.8907,
+      "normalized": 0.0347,
+      "head": 1
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": -0.4888,
+      "normalized": 0.4617,
+      "head": 2
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 3.5742,
+      "normalized": 0.6682,
+      "head": 3
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.5582,
+      "normalized": 0.0008,
+      "head": 0
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.5346,
+      "normalized": 0.002,
+      "head": 1
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.1015,
+      "normalized": 0.024,
+      "head": 2
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -9.5407,
+      "normalized": 0.0016,
+      "head": 3
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.271,
+      "normalized": 0.0153,
+      "head": 0
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.597,
+      "normalized": -0.0012,
+      "head": 1
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.4884,
+      "normalized": 0.0043,
+      "head": 2
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -9.54,
+      "normalized": 0.0017,
+      "head": 3
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "cells_requested": 12,
+    "cells_computed": 12,
+    "cells_skipped": [],
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "patching one component restores that component's *clean* value in the corrupted run; a large effect means the information flows through there, not that the component computes it alone"
+   ],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_89eacf7dec76c9be6021b3c469f8665748d55caa4656f52b9ac86785c9dbc12f",
+   "operation": "activation_patching",
+   "parameters": {
+    "clean_prompt": "the capital of france is",
+    "corrupted_prompt": "the capital of italy is",
+    "answer": "paris",
+    "counter_answer": "rome",
+    "component": "head",
+    "layers": null,
+    "positions": [
+     4
+    ],
+    "heads": null,
+    "add_special_tokens": true,
+    "max_seconds": null,
+    "max_passes": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "component": "head",
+    "metric": {
+     "kind": "logit_diff",
+     "answer": "paris",
+     "counter_answer": "rome",
+     "answer_id": 24,
+     "counter_id": 25
+    },
+    "clean": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "france",
+      "is"
+     ],
+     "metric": 10.1016
+    },
+    "corrupted": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "italy",
+      "is"
+     ],
+     "metric": -9.573
+    },
+    "n_forward_passes": 12,
+    "top_effects": [
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5737,
+      "normalized": -0.0,
+      "head": 0
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": -0.0,
+      "head": 0
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5728,
+      "normalized": 0.0,
+      "head": 1
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5732,
+      "normalized": -0.0,
+      "head": 2
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5728,
+      "normalized": 0.0,
+      "head": 3
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 0
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 1
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 2
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 3
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5756,
+      "normalized": -0.0001,
+      "head": 2
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5792,
+      "normalized": -0.0003,
+      "head": 3
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5824,
+      "normalized": -0.0005,
+      "head": 1
+     }
+    ],
+    "grid": [
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5737,
+      "normalized": -0.0,
+      "head": 0
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5824,
+      "normalized": -0.0005,
+      "head": 1
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5756,
+      "normalized": -0.0001,
+      "head": 2
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5792,
+      "normalized": -0.0003,
+      "head": 3
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": -0.0,
+      "head": 0
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5728,
+      "normalized": 0.0,
+      "head": 1
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5732,
+      "normalized": -0.0,
+      "head": 2
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5728,
+      "normalized": 0.0,
+      "head": 3
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 0
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 1
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 2
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0,
+      "head": 3
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "cells_requested": 12,
+    "cells_computed": 12,
+    "cells_skipped": [],
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "patching one component restores that component's *clean* value in the corrupted run; a large effect means the information flows through there, not that the component computes it alone"
+   ],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_8921ebba8cdc4859be296e9026d1602275fda5a26d5ecd1f516d2c80d909e623",
+   "operation": "activation_patching",
+   "parameters": {
+    "clean_prompt": "the capital of france is",
+    "corrupted_prompt": "the capital of italy is",
+    "answer": "paris",
+    "counter_answer": "rome",
+    "component": "mlp_out",
+    "layers": null,
+    "positions": null,
+    "heads": null,
+    "add_special_tokens": true,
+    "max_seconds": null,
+    "max_passes": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "component": "mlp_out",
+    "metric": {
+     "kind": "logit_diff",
+     "answer": "paris",
+     "counter_answer": "rome",
+     "answer_id": 24,
+     "counter_id": 25
+    },
+    "clean": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "france",
+      "is"
+     ],
+     "metric": 10.1016
+    },
+    "corrupted": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "italy",
+      "is"
+     ],
+     "metric": -9.573
+    },
+    "n_forward_passes": 18,
+    "top_effects": [
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 6.4092,
+      "normalized": 0.8123
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -2.6072,
+      "normalized": 0.354
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -4.3299,
+      "normalized": 0.2665
+     },
+     {
+      "layer": 0,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5721,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     }
+    ],
+    "grid": [
+     {
+      "layer": 0,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5772,
+      "normalized": -0.0002
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 6.4092,
+      "normalized": 0.8123
+     },
+     {
+      "layer": 1,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.5721,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": -2.6072,
+      "normalized": 0.354
+     },
+     {
+      "layer": 2,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 1,
+      "token": "the",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 2,
+      "token": "capital",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 3,
+      "token": "of",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "italy",
+      "metric": -9.573,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": -4.3299,
+      "normalized": 0.2665
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "cells_requested": 18,
+    "cells_computed": 18,
+    "cells_skipped": [],
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "patching one component restores that component's *clean* value in the corrupted run; a large effect means the information flows through there, not that the component computes it alone"
+   ],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_c2ded9e60f8285d5ca66140f99c24479be57b37af2eadea05fb36ac54c8c4b77",
+   "operation": "direct_logit_attribution",
+   "parameters": {
+    "prompt": "the capital of france is",
+    "answer": "paris",
+    "counter_answer": "rome",
+    "position": -1,
+    "top_k": 6,
+    "add_special_tokens": true
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "position": 5,
+    "token_at_position": "is",
+    "target": {
+     "kind": "logit_diff",
+     "answer": "paris",
+     "counter_answer": "rome"
+    },
+    "norm_kind": "rmsnorm",
+    "actual_target_value": 10.1016,
+    "sum_of_attributions": 10.1016,
+    "reconstruction_max_abs_err": 0.0,
+    "top_positive": [
+     {
+      "component": "mlp",
+      "layer": 1,
+      "head": null,
+      "contribution": 2.9557
+     },
+     {
+      "component": "mlp",
+      "layer": 0,
+      "head": null,
+      "contribution": 2.4755
+     },
+     {
+      "component": "mlp",
+      "layer": 2,
+      "head": null,
+      "contribution": 2.4365
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 3,
+      "contribution": 0.9076
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 2,
+      "contribution": 0.3988
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 0,
+      "contribution": 0.3611
+     }
+    ],
+    "top_negative": [
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 1,
+      "contribution": -0.0322
+     },
+     {
+      "component": "embed",
+      "layer": null,
+      "head": null,
+      "contribution": -0.0053
+     }
+    ],
+    "by_layer": [
+     {
+      "layer": 0,
+      "attention": 1.7931,
+      "mlp": 2.4755
+     },
+     {
+      "layer": 1,
+      "attention": 0.263,
+      "mlp": 2.9557
+     },
+     {
+      "layer": 2,
+      "attention": 0.183,
+      "mlp": 2.4365
+     }
+    ],
+    "components": [
+     {
+      "component": "embed",
+      "layer": null,
+      "head": null,
+      "contribution": -0.0053
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 0,
+      "contribution": 0.3611
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 1,
+      "contribution": 0.1256
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 2,
+      "contribution": 0.3988
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 3,
+      "contribution": 0.9076
+     },
+     {
+      "component": "mlp",
+      "layer": 0,
+      "head": null,
+      "contribution": 2.4755
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 0,
+      "contribution": 0.0963
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 1,
+      "contribution": -0.0322
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 2,
+      "contribution": 0.1385
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 3,
+      "contribution": 0.0604
+     },
+     {
+      "component": "mlp",
+      "layer": 1,
+      "head": null,
+      "contribution": 2.9557
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 0,
+      "contribution": 0.0695
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 1,
+      "contribution": 0.0411
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 2,
+      "contribution": 0.0446
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 3,
+      "contribution": 0.0278
+     },
+     {
+      "component": "mlp",
+      "layer": 2,
+      "head": null,
+      "contribution": 2.4365
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "reconstruction_rel_err": 0.0
+   },
+   "limitations": [
+    "DLA measures the *direct* path to the logit; a head that only feeds later heads has ~0 direct attribution yet can be essential (check with patching)"
+   ],
+   "authority": "derived",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_6d5f2b8f3a1b78b6ece2931516e2e6053497fe75febf76ff7c225aa07883e73c",
+   "operation": "ablate_heads",
+   "parameters": {
+    "prompt": "the capital of france is",
+    "heads": [
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "answer": "paris",
+    "counter_answer": "rome",
+    "mode": "mean",
+    "top_k": 3,
+    "add_special_tokens": true
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "metric": {
+     "kind": "logit_diff",
+     "answer": "paris",
+     "counter_answer": "rome",
+     "answer_id": 24,
+     "counter_id": 25
+    },
+    "mode": "mean",
+    "tokens": [
+     "<bos>",
+     "the",
+     "capital",
+     "of",
+     "france",
+     "is"
+    ],
+    "ablated_heads": [
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "baseline": {
+     "metric": 10.1016,
+     "top": [
+      {
+       "token": "paris",
+       "prob": 0.99894
+      },
+      {
+       "token": "beijing",
+       "prob": 9e-05
+      },
+      {
+       "token": "cairo",
+       "prob": 7e-05
+      }
+     ]
+    },
+    "ablated": {
+     "metric": 3.6739,
+     "top": [
+      {
+       "token": "beijing",
+       "prob": 0.51055
+      },
+      {
+       "token": "athens",
+       "prob": 0.28576
+      },
+      {
+       "token": "paris",
+       "prob": 0.16621
+      }
+     ],
+     "delta": -6.4277
+    },
+    "single_head_ablations": [
+     {
+      "layer": 0,
+      "head": 3,
+      "metric": 9.5259
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "metric": 9.9485
+     },
+     {
+      "layer": 0,
+      "head": 0,
+      "metric": 9.8346
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "scope": "ablate_heads"
+   },
+   "limitations": [
+    "mean ablation uses the mean over this prompt's positions, not a corpus mean",
+    "ablation shows necessity under this intervention only; compensation by other heads and off-distribution activations can hide or exaggerate roles"
+   ],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_20ce76ce223d6b573bb60902cc2f104934266f34ebd13f414966a877ac3aad47",
+   "operation": "attention_patterns",
+   "parameters": {
+    "prompt": "the capital of france is",
+    "layers": [
+     0,
+     1,
+     2
+    ],
+    "heads": null,
+    "query_position": -1,
+    "top_k": 3,
+    "add_special_tokens": true
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "query_position": 5,
+    "query_token": "is",
+    "tokens": [
+     "<bos>",
+     "the",
+     "capital",
+     "of",
+     "france",
+     "is"
+    ],
+    "layers": [
+     {
+      "layer": 0,
+      "heads": [
+       {
+        "head": 0,
+        "attends_to": [
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.9831
+         },
+         {
+          "position": 0,
+          "token": "<bos>",
+          "weight": 0.01
+         },
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.0043
+         }
+        ],
+        "entropy_bits": 0.15,
+        "to_self": 0.0002,
+        "to_previous": 0.9831,
+        "to_first_token": 0.01
+       },
+       {
+        "head": 1,
+        "attends_to": [
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.6386
+         },
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.1641
+         },
+         {
+          "position": 1,
+          "token": "the",
+          "weight": 0.1405
+         }
+        ],
+        "entropy_bits": 1.562,
+        "to_self": 0.0136,
+        "to_previous": 0.6386,
+        "to_first_token": 0.0194
+       },
+       {
+        "head": 2,
+        "attends_to": [
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.9985
+         },
+         {
+          "position": 1,
+          "token": "the",
+          "weight": 0.0008
+         },
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.0005
+         }
+        ],
+        "entropy_bits": 0.019,
+        "to_self": 0.0,
+        "to_previous": 0.9985,
+        "to_first_token": 0.0002
+       },
+       {
+        "head": 3,
+        "attends_to": [
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.9988
+         },
+         {
+          "position": 5,
+          "token": "is",
+          "weight": 0.0004
+         },
+         {
+          "position": 0,
+          "token": "<bos>",
+          "weight": 0.0004
+         }
+        ],
+        "entropy_bits": 0.016,
+        "to_self": 0.0004,
+        "to_previous": 0.9988,
+        "to_first_token": 0.0004
+       }
+      ]
+     },
+     {
+      "layer": 1,
+      "heads": [
+       {
+        "head": 0,
+        "attends_to": [
+         {
+          "position": 2,
+          "token": "capital",
+          "weight": 0.3075
+         },
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.266
+         },
+         {
+          "position": 0,
+          "token": "<bos>",
+          "weight": 0.206
+         }
+        ],
+        "entropy_bits": 2.325,
+        "to_self": 0.0536,
+        "to_previous": 0.266,
+        "to_first_token": 0.206
+       },
+       {
+        "head": 1,
+        "attends_to": [
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.2918
+         },
+         {
+          "position": 2,
+          "token": "capital",
+          "weight": 0.2177
+         },
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.1496
+         }
+        ],
+        "entropy_bits": 2.441,
+        "to_self": 0.1425,
+        "to_previous": 0.2918,
+        "to_first_token": 0.0557
+       },
+       {
+        "head": 2,
+        "attends_to": [
+         {
+          "position": 0,
+          "token": "<bos>",
+          "weight": 0.6714
+         },
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.1555
+         },
+         {
+          "position": 2,
+          "token": "capital",
+          "weight": 0.0706
+         }
+        ],
+        "entropy_bits": 1.526,
+        "to_self": 0.0446,
+        "to_previous": 0.1555,
+        "to_first_token": 0.6714
+       },
+       {
+        "head": 3,
+        "attends_to": [
+         {
+          "position": 2,
+          "token": "capital",
+          "weight": 0.6623
+         },
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.1617
+         },
+         {
+          "position": 0,
+          "token": "<bos>",
+          "weight": 0.0804
+         }
+        ],
+        "entropy_bits": 1.583,
+        "to_self": 0.0367,
+        "to_previous": 0.0374,
+        "to_first_token": 0.0804
+       }
+      ]
+     },
+     {
+      "layer": 2,
+      "heads": [
+       {
+        "head": 0,
+        "attends_to": [
+         {
+          "position": 1,
+          "token": "the",
+          "weight": 0.5518
+         },
+         {
+          "position": 5,
+          "token": "is",
+          "weight": 0.2009
+         },
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.1366
+         }
+        ],
+        "entropy_bits": 1.806,
+        "to_self": 0.2009,
+        "to_previous": 0.0663,
+        "to_first_token": 0.0031
+       },
+       {
+        "head": 1,
+        "attends_to": [
+         {
+          "position": 5,
+          "token": "is",
+          "weight": 0.2362
+         },
+         {
+          "position": 2,
+          "token": "capital",
+          "weight": 0.2276
+         },
+         {
+          "position": 4,
+          "token": "france",
+          "weight": 0.1926
+         }
+        ],
+        "entropy_bits": 2.435,
+        "to_self": 0.2362,
+        "to_previous": 0.1926,
+        "to_first_token": 0.0381
+       },
+       {
+        "head": 2,
+        "attends_to": [
+         {
+          "position": 1,
+          "token": "the",
+          "weight": 0.2921
+         },
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.2564
+         },
+         {
+          "position": 2,
+          "token": "capital",
+          "weight": 0.2045
+         }
+        ],
+        "entropy_bits": 2.273,
+        "to_self": 0.1576,
+        "to_previous": 0.0121,
+        "to_first_token": 0.0773
+       },
+       {
+        "head": 3,
+        "attends_to": [
+         {
+          "position": 3,
+          "token": "of",
+          "weight": 0.3677
+         },
+         {
+          "position": 5,
+          "token": "is",
+          "weight": 0.2749
+         },
+         {
+          "position": 1,
+          "token": "the",
+          "weight": 0.255
+         }
+        ],
+        "entropy_bits": 2.026,
+        "to_self": 0.2749,
+        "to_previous": 0.0343,
+        "to_first_token": 0.0141
+       }
+      ]
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "layers_requested": 3,
+    "layers_missing": []
+   },
+   "limitations": [
+    "attention weights show where information is read from, not what is computed with it; a high weight on the first token is usually an attention sink, not a signal"
+   ],
+   "authority": "inference",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_177852f73be9bc886d499bcb72d37a6371454a1445efed3f12c7576e067e2760",
+   "operation": "activation_patching",
+   "parameters": {
+    "clean_prompt": "the capital of japan is",
+    "corrupted_prompt": "the capital of kenya is",
+    "answer": "tokyo",
+    "counter_answer": "nairobi",
+    "component": "resid_post",
+    "layers": null,
+    "positions": null,
+    "heads": null,
+    "add_special_tokens": true,
+    "max_seconds": null,
+    "max_passes": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "component": "resid_post",
+    "metric": {
+     "kind": "logit_diff",
+     "answer": "tokyo",
+     "counter_answer": "nairobi",
+     "answer_id": 28,
+     "counter_id": 32
+    },
+    "clean": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "japan",
+      "is"
+     ],
+     "metric": 10.2705
+    },
+    "corrupted": {
+     "tokens": [
+      "<bos>",
+      "the",
+      "capital",
+      "of",
+      "kenya",
+      "is"
+     ],
+     "metric": -10.9046
+    },
+    "n_forward_passes": 18,
+    "top_effects": [
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": 10.272,
+      "normalized": 1.0001
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": 10.2705,
+      "normalized": 1.0
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 10.2572,
+      "normalized": 0.9994
+     },
+     {
+      "layer": 0,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 1,
+      "token": "the",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 2,
+      "token": "capital",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 3,
+      "token": "of",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 1,
+      "token": "the",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 2,
+      "token": "capital",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 3,
+      "token": "of",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 1,
+      "token": "the",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 2,
+      "token": "capital",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 3,
+      "token": "of",
+      "metric": -10.9046,
+      "normalized": 0.0
+     }
+    ],
+    "grid": [
+     {
+      "layer": 0,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 1,
+      "token": "the",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 2,
+      "token": "capital",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 3,
+      "token": "of",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 0,
+      "position": 4,
+      "token": "kenya",
+      "metric": -10.931,
+      "normalized": -0.0012
+     },
+     {
+      "layer": 0,
+      "position": 5,
+      "token": "is",
+      "metric": 10.2572,
+      "normalized": 0.9994
+     },
+     {
+      "layer": 1,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 1,
+      "token": "the",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 2,
+      "token": "capital",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 3,
+      "token": "of",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 1,
+      "position": 4,
+      "token": "kenya",
+      "metric": -10.9061,
+      "normalized": -0.0001
+     },
+     {
+      "layer": 1,
+      "position": 5,
+      "token": "is",
+      "metric": 10.272,
+      "normalized": 1.0001
+     },
+     {
+      "layer": 2,
+      "position": 0,
+      "token": "<bos>",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 1,
+      "token": "the",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 2,
+      "token": "capital",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 3,
+      "token": "of",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 4,
+      "token": "kenya",
+      "metric": -10.9046,
+      "normalized": 0.0
+     },
+     {
+      "layer": 2,
+      "position": 5,
+      "token": "is",
+      "metric": 10.2705,
+      "normalized": 1.0
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "cells_requested": 18,
+    "cells_computed": 18,
+    "cells_skipped": [],
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "patching one component restores that component's *clean* value in the corrupted run; a large effect means the information flows through there, not that the component computes it alone"
+   ],
+   "authority": "observation",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_5c296e8bd3551ec5d3a6ebd675358a32386195adb370e1063e196e796828e671",
+   "operation": "compare_circuits",
+   "parameters": {
+    "left_evidence_id": "ev_f170730d4092f596f3d8173d2ae7df5447a04bad0e4ad7bba245c2e6eecf0ec2",
+    "right_evidence_id": "ev_177852f73be9bc886d499bcb72d37a6371454a1445efed3f12c7576e067e2760",
+    "top_k": 5
+   },
+   "subject": {
+    "model_id": [
+     "/home/claude/demo/model",
+     "/home/claude/demo/model"
+    ]
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "operation": "activation_patching",
+    "left_evidence_id": "ev_f170730d4092f596f3d8173d2ae7df5447a04bad0e4ad7bba245c2e6eecf0ec2",
+    "right_evidence_id": "ev_177852f73be9bc886d499bcb72d37a6371454a1445efed3f12c7576e067e2760",
+    "subjects": {
+     "left": "/home/claude/demo/model",
+     "right": "/home/claude/demo/model",
+     "same_weights": true
+    },
+    "status": "same_subject",
+    "n_common": 18,
+    "n_left_only": 0,
+    "n_right_only": 0,
+    "left_only_sample": [],
+    "right_only_sample": [],
+    "top_k": 5,
+    "shared_top": [
+     "L1@5",
+     "L2@5",
+     "L0@5",
+     "L0@4",
+     "L1@4"
+    ],
+    "jaccard_top": 1.0,
+    "left_top_only": [],
+    "right_top_only": [],
+    "spearman_common": 0.6981,
+    "largest_deltas": [
+     {
+      "key": "L0@4",
+      "left": -0.0008,
+      "right": -0.0012,
+      "delta": -0.0004
+     },
+     {
+      "key": "L0@5",
+      "left": 0.9998,
+      "right": 0.9994,
+      "delta": -0.0004
+     },
+     {
+      "key": "L1@4",
+      "left": 0.0001,
+      "right": -0.0001,
+      "delta": -0.0002
+     },
+     {
+      "key": "L1@5",
+      "left": 1.0,
+      "right": 1.0001,
+      "delta": 0.0001
+     },
+     {
+      "key": "L0@0",
+      "left": 0.0,
+      "right": 0.0,
+      "delta": 0.0
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete"
+   },
+   "limitations": [
+    "values compared: normalized patch effect; equal numbers show the same measured effect, not the same mechanism",
+    "components are matched by (layer, head, position) label; across different models those labels are not the same objects"
+   ],
+   "authority": "derived",
+   "facet_availability": {},
+   "evidence_links": [
+    "ev_f170730d4092f596f3d8173d2ae7df5447a04bad0e4ad7bba245c2e6eecf0ec2",
+    "ev_177852f73be9bc886d499bcb72d37a6371454a1445efed3f12c7576e067e2760"
+   ],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_66c0c3b5e4e54aafc1cd8e6b6184727a69f02c79fb222d8033b432887be4a312",
+   "operation": "direct_logit_attribution",
+   "parameters": {
+    "prompt": "the capital of japan is",
+    "answer": "tokyo",
+    "counter_answer": "nairobi",
+    "position": -1,
+    "top_k": 6,
+    "add_special_tokens": true
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "position": 5,
+    "token_at_position": "is",
+    "target": {
+     "kind": "logit_diff",
+     "answer": "tokyo",
+     "counter_answer": "nairobi"
+    },
+    "norm_kind": "rmsnorm",
+    "actual_target_value": 10.2705,
+    "sum_of_attributions": 10.2705,
+    "reconstruction_max_abs_err": 0.0,
+    "top_positive": [
+     {
+      "component": "mlp",
+      "layer": 0,
+      "head": null,
+      "contribution": 4.0858
+     },
+     {
+      "component": "mlp",
+      "layer": 1,
+      "head": null,
+      "contribution": 3.1985
+     },
+     {
+      "component": "mlp",
+      "layer": 2,
+      "head": null,
+      "contribution": 2.3008
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 3,
+      "contribution": 0.4492
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 2,
+      "contribution": 0.3908
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 0,
+      "contribution": 0.2432
+     }
+    ],
+    "top_negative": [
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 2,
+      "contribution": -0.1895
+     },
+     {
+      "component": "embed",
+      "layer": null,
+      "head": null,
+      "contribution": -0.131
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 1,
+      "contribution": -0.0958
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 3,
+      "contribution": -0.0946
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 1,
+      "contribution": -0.0742
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 2,
+      "contribution": -0.0124
+     }
+    ],
+    "by_layer": [
+     {
+      "layer": 0,
+      "attention": 1.1843,
+      "mlp": 4.0858
+     },
+     {
+      "layer": 1,
+      "attention": -0.36,
+      "mlp": 3.1985
+     },
+     {
+      "layer": 2,
+      "attention": -0.008,
+      "mlp": 2.3008
+     }
+    ],
+    "components": [
+     {
+      "component": "embed",
+      "layer": null,
+      "head": null,
+      "contribution": -0.131
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 0,
+      "contribution": 0.2432
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 1,
+      "contribution": 0.1011
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 2,
+      "contribution": 0.3908
+     },
+     {
+      "component": "head",
+      "layer": 0,
+      "head": 3,
+      "contribution": 0.4492
+     },
+     {
+      "component": "mlp",
+      "layer": 0,
+      "head": null,
+      "contribution": 4.0858
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 0,
+      "contribution": -0.0017
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 1,
+      "contribution": -0.0742
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 2,
+      "contribution": -0.1895
+     },
+     {
+      "component": "head",
+      "layer": 1,
+      "head": 3,
+      "contribution": -0.0946
+     },
+     {
+      "component": "mlp",
+      "layer": 1,
+      "head": null,
+      "contribution": 3.1985
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 0,
+      "contribution": 0.0053
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 1,
+      "contribution": -0.0958
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 2,
+      "contribution": -0.0124
+     },
+     {
+      "component": "head",
+      "layer": 2,
+      "head": 3,
+      "contribution": 0.0949
+     },
+     {
+      "component": "mlp",
+      "layer": 2,
+      "head": null,
+      "contribution": 2.3008
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "reconstruction_rel_err": 0.0
+   },
+   "limitations": [
+    "DLA measures the *direct* path to the logit; a head that only feeds later heads has ~0 direct attribution yet can be essential (check with patching)"
+   ],
+   "authority": "derived",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_ccf72c7ba8eed90bce47d6d14330bf3f5bec2d4396092d214f526bcdac06fb5d",
+   "operation": "compare_circuits",
+   "parameters": {
+    "left_evidence_id": "ev_c2ded9e60f8285d5ca66140f99c24479be57b37af2eadea05fb36ac54c8c4b77",
+    "right_evidence_id": "ev_66c0c3b5e4e54aafc1cd8e6b6184727a69f02c79fb222d8033b432887be4a312",
+    "top_k": 5
+   },
+   "subject": {
+    "model_id": [
+     "/home/claude/demo/model",
+     "/home/claude/demo/model"
+    ]
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "operation": "direct_logit_attribution",
+    "left_evidence_id": "ev_c2ded9e60f8285d5ca66140f99c24479be57b37af2eadea05fb36ac54c8c4b77",
+    "right_evidence_id": "ev_66c0c3b5e4e54aafc1cd8e6b6184727a69f02c79fb222d8033b432887be4a312",
+    "subjects": {
+     "left": "/home/claude/demo/model",
+     "right": "/home/claude/demo/model",
+     "same_weights": true
+    },
+    "status": "same_subject",
+    "n_common": 16,
+    "n_left_only": 0,
+    "n_right_only": 0,
+    "left_only_sample": [],
+    "right_only_sample": [],
+    "top_k": 5,
+    "shared_top": [
+     "L0.mlp",
+     "L1.mlp",
+     "L2.mlp",
+     "L0H3",
+     "L0H2"
+    ],
+    "jaccard_top": 1.0,
+    "left_top_only": [],
+    "right_top_only": [],
+    "spearman_common": 0.7882,
+    "largest_deltas": [
+     {
+      "key": "L0.mlp",
+      "left": 2.4755,
+      "right": 4.0858,
+      "delta": 1.6103
+     },
+     {
+      "key": "L0H3",
+      "left": 0.9076,
+      "right": 0.4492,
+      "delta": -0.4584
+     },
+     {
+      "key": "L1H2",
+      "left": 0.1385,
+      "right": -0.1895,
+      "delta": -0.328
+     },
+     {
+      "key": "L1.mlp",
+      "left": 2.9557,
+      "right": 3.1985,
+      "delta": 0.2428
+     },
+     {
+      "key": "L1H3",
+      "left": 0.0604,
+      "right": -0.0946,
+      "delta": -0.155
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete"
+   },
+   "limitations": [
+    "values compared: direct logit contribution; equal numbers show the same measured effect, not the same mechanism",
+    "components are matched by (layer, head, position) label; across different models those labels are not the same objects"
+   ],
+   "authority": "derived",
+   "facet_availability": {},
+   "evidence_links": [
+    "ev_c2ded9e60f8285d5ca66140f99c24479be57b37af2eadea05fb36ac54c8c4b77",
+    "ev_66c0c3b5e4e54aafc1cd8e6b6184727a69f02c79fb222d8033b432887be4a312"
+   ],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_fc65c5f098e19ef87f6c067e04462c42fb9bbb9831e87836d7fe50c42cd29020",
+   "operation": "head_catalog",
+   "parameters": {
+    "seq_len": 19,
+    "n_samples": 6,
+    "seed": 1,
+    "threshold": 0.3,
+    "max_seconds": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "diagnostic": {
+     "seq_len": 19,
+     "n_samples_requested": 6,
+     "n_samples_done": 6,
+     "seed": 1,
+     "token_range": [
+      18,
+      71
+     ],
+     "bos_prepended": true
+    },
+    "induction_heads": [
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.892,
+      "duplicate_token": 0.031,
+      "previous_token": 0.006
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.853,
+      "duplicate_token": 0.016,
+      "previous_token": 0.025
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.789,
+      "duplicate_token": 0.107,
+      "previous_token": 0.025
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.709,
+      "duplicate_token": 0.066,
+      "previous_token": 0.051
+     }
+    ],
+    "duplicate_token_heads": [],
+    "previous_token_heads": [],
+    "top_by_induction": [
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.892,
+      "duplicate_token": 0.031,
+      "previous_token": 0.006
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.853,
+      "duplicate_token": 0.016,
+      "previous_token": 0.025
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.789,
+      "duplicate_token": 0.107,
+      "previous_token": 0.025
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.709,
+      "duplicate_token": 0.066,
+      "previous_token": 0.051
+     },
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.051,
+      "duplicate_token": 0.039,
+      "previous_token": 0.056
+     },
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.044,
+      "duplicate_token": 0.029,
+      "previous_token": 0.092
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.038,
+      "duplicate_token": 0.058,
+      "previous_token": 0.093
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.037,
+      "duplicate_token": 0.045,
+      "previous_token": 0.094
+     },
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.034,
+      "duplicate_token": 0.049,
+      "previous_token": 0.092
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.03,
+      "duplicate_token": 0.075,
+      "previous_token": 0.078
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.024,
+      "duplicate_token": 0.02,
+      "previous_token": 0.121
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.02,
+      "duplicate_token": 0.019,
+      "previous_token": 0.095
+     }
+    ],
+    "all_heads": [
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.034,
+      "duplicate_token": 0.049,
+      "previous_token": 0.092
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.038,
+      "duplicate_token": 0.058,
+      "previous_token": 0.093
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.03,
+      "duplicate_token": 0.075,
+      "previous_token": 0.078
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.037,
+      "duplicate_token": 0.045,
+      "previous_token": 0.094
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.789,
+      "duplicate_token": 0.107,
+      "previous_token": 0.025
+     },
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.892,
+      "duplicate_token": 0.031,
+      "previous_token": 0.006
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.709,
+      "duplicate_token": 0.066,
+      "previous_token": 0.051
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.853,
+      "duplicate_token": 0.016,
+      "previous_token": 0.025
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.02,
+      "duplicate_token": 0.019,
+      "previous_token": 0.095
+     },
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.044,
+      "duplicate_token": 0.029,
+      "previous_token": 0.092
+     },
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.051,
+      "duplicate_token": 0.039,
+      "previous_token": 0.056
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.024,
+      "duplicate_token": 0.02,
+      "previous_token": 0.121
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "samples_done": 6,
+    "samples_requested": 6,
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "scores come from random-token sequences; a head can act as an induction head on natural text without passing this test and vice versa",
+    "threshold 0.3 is a convention, not a proof of role"
+   ],
+   "authority": "inference",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": false,
+    "source": "session_state"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_e39a6edd27f4324a9475f3ac6e0b605bf9396eb8175ab4e1cf748678ded67a88",
+   "operation": "head_catalog",
+   "parameters": {
+    "seq_len": 12,
+    "n_samples": 6,
+    "seed": 1,
+    "threshold": 0.3,
+    "max_seconds": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "diagnostic": {
+     "seq_len": 12,
+     "n_samples_requested": 6,
+     "n_samples_done": 6,
+     "seed": 1,
+     "token_range": [
+      18,
+      71
+     ],
+     "bos_prepended": true
+    },
+    "induction_heads": [],
+    "duplicate_token_heads": [],
+    "previous_token_heads": [],
+    "top_by_induction": [
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.058,
+      "duplicate_token": 0.082,
+      "previous_token": 0.141
+     },
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.053,
+      "duplicate_token": 0.094,
+      "previous_token": 0.015
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.042,
+      "duplicate_token": 0.049,
+      "previous_token": 0.123
+     },
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.041,
+      "duplicate_token": 0.05,
+      "previous_token": 0.12
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.036,
+      "duplicate_token": 0.047,
+      "previous_token": 0.124
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.034,
+      "duplicate_token": 0.052,
+      "previous_token": 0.102
+     },
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.029,
+      "duplicate_token": 0.044,
+      "previous_token": 0.079
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.028,
+      "duplicate_token": 0.056,
+      "previous_token": 0.036
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.027,
+      "duplicate_token": 0.042,
+      "previous_token": 0.113
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.008,
+      "duplicate_token": 0.005,
+      "previous_token": 0.037
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.008,
+      "duplicate_token": 0.007,
+      "previous_token": 0.187
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.001,
+      "duplicate_token": 0.0,
+      "previous_token": 0.105
+     }
+    ],
+    "all_heads": [
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.041,
+      "duplicate_token": 0.05,
+      "previous_token": 0.12
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.036,
+      "duplicate_token": 0.047,
+      "previous_token": 0.124
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.034,
+      "duplicate_token": 0.052,
+      "previous_token": 0.102
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.042,
+      "duplicate_token": 0.049,
+      "previous_token": 0.123
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.028,
+      "duplicate_token": 0.056,
+      "previous_token": 0.036
+     },
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.053,
+      "duplicate_token": 0.094,
+      "previous_token": 0.015
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.001,
+      "duplicate_token": 0.0,
+      "previous_token": 0.105
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.008,
+      "duplicate_token": 0.005,
+      "previous_token": 0.037
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.027,
+      "duplicate_token": 0.042,
+      "previous_token": 0.113
+     },
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.058,
+      "duplicate_token": 0.082,
+      "previous_token": 0.141
+     },
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.029,
+      "duplicate_token": 0.044,
+      "previous_token": 0.079
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.008,
+      "duplicate_token": 0.007,
+      "previous_token": 0.187
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "samples_done": 6,
+    "samples_requested": 6,
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "scores come from random-token sequences; a head can act as an induction head on natural text without passing this test and vice versa",
+    "threshold 0.3 is a convention, not a proof of role"
+   ],
+   "authority": "inference",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": false,
+    "source": "session_state"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_db966db5f9bbb787c19bc55b182d5a89a38e9f9ca9e0a91896be4b94cd70bad9",
+   "operation": "head_catalog",
+   "parameters": {
+    "seq_len": 25,
+    "n_samples": 6,
+    "seed": 1,
+    "threshold": 0.3,
+    "max_seconds": null
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "diagnostic": {
+     "seq_len": 25,
+     "n_samples_requested": 6,
+     "n_samples_done": 6,
+     "seed": 1,
+     "token_range": [
+      18,
+      71
+     ],
+     "bos_prepended": true
+    },
+    "induction_heads": [],
+    "duplicate_token_heads": [],
+    "previous_token_heads": [],
+    "top_by_induction": [
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.029,
+      "duplicate_token": 0.032,
+      "previous_token": 0.078
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.028,
+      "duplicate_token": 0.032,
+      "previous_token": 0.071
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.026,
+      "duplicate_token": 0.025,
+      "previous_token": 0.08
+     },
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.023,
+      "duplicate_token": 0.019,
+      "previous_token": 0.076
+     },
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.022,
+      "duplicate_token": 0.022,
+      "previous_token": 0.05
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.021,
+      "duplicate_token": 0.024,
+      "previous_token": 0.08
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.017,
+      "duplicate_token": 0.012,
+      "previous_token": 0.09
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.012,
+      "duplicate_token": 0.013,
+      "previous_token": 0.08
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.005,
+      "duplicate_token": 0.003,
+      "previous_token": 0.019
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.001,
+      "duplicate_token": 0.0,
+      "previous_token": 0.031
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.0,
+      "duplicate_token": 0.0,
+      "previous_token": 0.02
+     },
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.0,
+      "duplicate_token": 0.0,
+      "previous_token": 0.008
+     }
+    ],
+    "all_heads": [
+     {
+      "layer": 0,
+      "head": 0,
+      "induction": 0.029,
+      "duplicate_token": 0.032,
+      "previous_token": 0.078
+     },
+     {
+      "layer": 0,
+      "head": 1,
+      "induction": 0.021,
+      "duplicate_token": 0.024,
+      "previous_token": 0.08
+     },
+     {
+      "layer": 0,
+      "head": 2,
+      "induction": 0.028,
+      "duplicate_token": 0.032,
+      "previous_token": 0.071
+     },
+     {
+      "layer": 0,
+      "head": 3,
+      "induction": 0.026,
+      "duplicate_token": 0.025,
+      "previous_token": 0.08
+     },
+     {
+      "layer": 1,
+      "head": 0,
+      "induction": 0.0,
+      "duplicate_token": 0.0,
+      "previous_token": 0.02
+     },
+     {
+      "layer": 1,
+      "head": 1,
+      "induction": 0.0,
+      "duplicate_token": 0.0,
+      "previous_token": 0.008
+     },
+     {
+      "layer": 1,
+      "head": 2,
+      "induction": 0.001,
+      "duplicate_token": 0.0,
+      "previous_token": 0.031
+     },
+     {
+      "layer": 1,
+      "head": 3,
+      "induction": 0.005,
+      "duplicate_token": 0.003,
+      "previous_token": 0.019
+     },
+     {
+      "layer": 2,
+      "head": 0,
+      "induction": 0.012,
+      "duplicate_token": 0.013,
+      "previous_token": 0.08
+     },
+     {
+      "layer": 2,
+      "head": 1,
+      "induction": 0.023,
+      "duplicate_token": 0.019,
+      "previous_token": 0.076
+     },
+     {
+      "layer": 2,
+      "head": 2,
+      "induction": 0.022,
+      "duplicate_token": 0.022,
+      "previous_token": 0.05
+     },
+     {
+      "layer": 2,
+      "head": 3,
+      "induction": 0.017,
+      "duplicate_token": 0.012,
+      "previous_token": 0.09
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "samples_done": 6,
+    "samples_requested": 6,
+    "budget_exhausted": null
+   },
+   "limitations": [
+    "scores come from random-token sequences; a head can act as an induction head on natural text without passing this test and vice versa",
+    "threshold 0.3 is a convention, not a proof of role"
+   ],
+   "authority": "inference",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": false,
+    "source": "session_state"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "evidence_id": "ev_3b089d35dae963fd327254beabf72b5c1b12863486e6c1fe2675a318b28e3fff",
+   "operation": "attention_patterns",
+   "parameters": {
+    "prompt": "w3 w17 w9 w25 w1 w30 w12 w8 w21 w5 w14 w27 w2 w19 w11 w6 w29 w16 w23 w3 w17 w9 w25 w1 w30 w12 w8 w21 w5 w14 w27 w2 w19 w11 w6 w29 w16 w23",
+    "layers": [
+     1
+    ],
+    "heads": null,
+    "query_position": 30,
+    "top_k": 1,
+    "add_special_tokens": true
+   },
+   "subject": {
+    "model_id": "/home/claude/demo/model",
+    "revision": null,
+    "architecture": "LlamaForCausalLM",
+    "dtype": "float32",
+    "device_type": "cpu",
+    "config_sha256": "c502e2f6f1b773780578567254b89675f0f22125c05a835fd8aa83fb9d807623",
+    "weights_sha256": null,
+    "weights_headers_sha256": "bcdb226e91d0733312c1e301a17c43ce986eb82a65a9c1aa04a49b4c27d7e91c"
+   },
+   "analysis_profile": {
+    "rellm": "0.2.0",
+    "hook_semantics": 2,
+    "attn_implementation": "eager",
+    "dtype": "float32",
+    "norm_freeze": "final-residual-scale",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+   },
+   "normalized_result": {
+    "query_position": 30,
+    "query_token": "w14",
+    "tokens": [
+     "<bos>",
+     "w3",
+     "w17",
+     "w9",
+     "w25",
+     "w1",
+     "w30",
+     "w12",
+     "w8",
+     "w21",
+     "w5",
+     "w14",
+     "w27",
+     "w2",
+     "w19",
+     "w11",
+     "w6",
+     "w29",
+     "w16",
+     "w23",
+     "w3",
+     "w17",
+     "w9",
+     "w25",
+     "w1",
+     "w30",
+     "w12",
+     "w8",
+     "w21",
+     "w5",
+     "w14",
+     "w27",
+     "w2",
+     "w19",
+     "w11",
+     "w6",
+     "w29",
+     "w16",
+     "w23"
+    ],
+    "layers": [
+     {
+      "layer": 1,
+      "heads": [
+       {
+        "head": 0,
+        "attends_to": [
+         {
+          "position": 12,
+          "token": "w27",
+          "weight": 0.9743
+         }
+        ],
+        "entropy_bits": 0.181,
+        "to_self": 0.0,
+        "to_previous": 0.0,
+        "to_first_token": 0.0
+       },
+       {
+        "head": 1,
+        "attends_to": [
+         {
+          "position": 12,
+          "token": "w27",
+          "weight": 0.9971
+         }
+        ],
+        "entropy_bits": 0.029,
+        "to_self": 0.0,
+        "to_previous": 0.0,
+        "to_first_token": 0.0001
+       },
+       {
+        "head": 2,
+        "attends_to": [
+         {
+          "position": 12,
+          "token": "w27",
+          "weight": 0.9814
+         }
+        ],
+        "entropy_bits": 0.164,
+        "to_self": 0.0013,
+        "to_previous": 0.0,
+        "to_first_token": 0.0
+       },
+       {
+        "head": 3,
+        "attends_to": [
+         {
+          "position": 12,
+          "token": "w27",
+          "weight": 0.9978
+         }
+        ],
+        "entropy_bits": 0.025,
+        "to_self": 0.0,
+        "to_previous": 0.0,
+        "to_first_token": 0.0
+       }
+      ]
+     }
+    ]
+   },
+   "coverage": {
+    "status": "complete",
+    "layers_requested": 1,
+    "layers_missing": []
+   },
+   "limitations": [
+    "attention weights show where information is read from, not what is computed with it; a high weight on the first token is usually an attention sink, not a signal"
+   ],
+   "authority": "inference",
+   "facet_availability": {
+    "residual_stream": {
+     "available": true
+    },
+    "attention_weights": {
+     "available": true
+    },
+    "attention_out": {
+     "available": true
+    },
+    "mlp_out": {
+     "available": true
+    },
+    "per_head_output": {
+     "available": true
+    }
+   },
+   "evidence_links": [],
+   "provenance": {
+    "untrusted_content": true,
+    "source": "analysis_target"
+   },
+   "created_at": "2026-10-22T22:18:20Z"
+  }
+ ],
+ "unknowns": [
+  {
+   "unknown_id": "unk_ed831cbd0af67e9c6a397004",
+   "question": "is the repeat-copy mechanism content-based induction or a fixed positional offset?",
+   "domain": "attention",
+   "context_evidence_id": "ev_e6e06ca02796bf7a875cc72bb889cb0f009d80a5cb5d77221c322ac3afd26587",
+   "notes": "",
+   "status": "resolved",
+   "resolution": "fixed offset 18: all L1 heads attend to q-18 on period-19 repeats; induction score collapses at other periods",
+   "resolved_by": "ev_3b089d35dae963fd327254beabf72b5c1b12863486e6c1fe2675a318b28e3fff",
+   "created_at": "2026-10-22T22:18:20Z"
+  },
+  {
+   "unknown_id": "unk_18c8b4bdfd98c05364fa5108",
+   "question": "which head moves the country identity from position 4 to the last position, and in which layer?",
+   "domain": "attention",
+   "context_evidence_id": "ev_f170730d4092f596f3d8173d2ae7df5447a04bad0e4ad7bba245c2e6eecf0ec2",
+   "notes": "",
+   "status": "resolved",
+   "resolution": "see heads@country / heads@last patching",
+   "resolved_by": "ev_884baa685dabd16f0883b6e8a56bd789308502bbb686cf8483fe8b6ec6982a0d",
+   "created_at": "2026-10-22T22:18:20Z"
+  }
+ ],
+ "manifest_sha256": "aab17b1229c49dcc29b6a5a045eca42e77c47e306f4557a9db556712d5c6b258"
+}

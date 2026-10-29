@@ -1,0 +1,9279 @@
+{
+ "google/gemma-4-12B-it": {
+  "model": "google/gemma-4-12B-it",
+  "facts": {
+   "n_layers": 48,
+   "n_heads": 16,
+   "layer_types": [
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "sliding_attention",
+    "full_attention"
+   ],
+   "sliding_window": 1024,
+   "quirks": [
+    "final_logit_softcapping=30.0 (logits are tanh-capped; logit lens applies the cap, DLA is pre-cap)",
+    "Gemma: embeddings scaled by sqrt(d_model); RMSNorm uses (1+weight)",
+    "attention and MLP outputs pass through a norm before being added to the residual (DLA uses frozen per-position scales)",
+    "head size differs by layer: [256, 512]",
+    "40 sliding-window layers (window 1024) + 8 global layers: tokens beyond the window are only reachable through the global layers"
+   ],
+   "parameters_human": "11.96B"
+  },
+  "grid": [
+   {
+    "condition": "wording",
+    "wording": "this_ticket",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 14.248,
+    "picked_competitor": null,
+    "mean_tokens": 138,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "that_one",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 14.754,
+    "picked_competitor": null,
+    "mean_tokens": 140,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "it",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 14.309,
+    "picked_competitor": null,
+    "mean_tokens": 136,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "same_ticket",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 14.129,
+    "picked_competitor": null,
+    "mean_tokens": 141,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "no_noun",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 14.438,
+    "picked_competitor": null,
+    "mean_tokens": 134,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 13.699,
+    "picked_competitor": null,
+    "mean_tokens": 178,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 11.949,
+    "picked_competitor": null,
+    "mean_tokens": 257,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 6,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 10.219,
+    "picked_competitor": null,
+    "mean_tokens": 374,
+    "wrong_examples": []
+   },
+   {
+    "condition": "competing_before",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": "before",
+    "pipeline": "history",
+    "accuracy": 0.938,
+    "mean_margin": 2.234,
+    "picked_competitor": 0.0625,
+    "mean_tokens": 232,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'"
+    ]
+   },
+   {
+    "condition": "competing_before",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "before",
+    "pipeline": "history",
+    "accuracy": 0.812,
+    "mean_margin": 1.289,
+    "picked_competitor": 0.1875,
+    "mean_tokens": 310,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'",
+     "PROJ-2731 -> '9'",
+     "PROJ-3731 -> '1'"
+    ]
+   },
+   {
+    "condition": "competing_after",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": "after",
+    "pipeline": "history",
+    "accuracy": 0.0,
+    "mean_margin": -7.637,
+    "picked_competitor": 1.0,
+    "mean_tokens": 230,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'",
+     "PROJ-2731 -> '9'",
+     "PROJ-3462 -> '1'"
+    ]
+   },
+   {
+    "condition": "competing_after",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "history",
+    "accuracy": 0.0,
+    "mean_margin": -6.32,
+    "picked_competitor": 1.0,
+    "mean_tokens": 310,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'",
+     "PROJ-2731 -> '9'",
+     "PROJ-3462 -> '1'"
+    ]
+   },
+   {
+    "condition": "pipeline",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "entity_slot",
+    "accuracy": 0.625,
+    "mean_margin": 0.281,
+    "picked_competitor": 0.375,
+    "mean_tokens": 320,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'",
+     "PROJ-3462 -> '1'",
+     "PROJ-5824 -> '3'"
+    ]
+   },
+   {
+    "condition": "pipeline",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "rewritten",
+    "accuracy": 1.0,
+    "mean_margin": 15.42,
+    "picked_competitor": 0.0,
+    "mean_tokens": 315,
+    "wrong_examples": []
+   }
+  ],
+  "per_case": {
+   "wording|this_ticket|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 19.3438,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 13.3125,
+     "picked_competitor": null,
+     "n_tokens": 137,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 12.3125,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 14.3125,
+     "picked_competitor": null,
+     "n_tokens": 137,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 12.875,
+     "picked_competitor": null,
+     "n_tokens": 137,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 12.875,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 11.8125,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 15.1875,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 14.25,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 18.125,
+     "picked_competitor": null,
+     "n_tokens": 137,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 12.9375,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 15.125,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 15.75,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 12.5,
+     "picked_competitor": null,
+     "n_tokens": 137,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 13.5,
+     "picked_competitor": null,
+     "n_tokens": 137,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 13.75,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|that_one|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 19.3438,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 14.0,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 13.25,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 13.4375,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 14.375,
+     "picked_competitor": null,
+     "n_tokens": 139,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 13.75,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 13.0,
+     "picked_competitor": null,
+     "n_tokens": 139,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 16.9688,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 13.5,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 18.625,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 12.3125,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 15.125,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 16.5625,
+     "picked_competitor": null,
+     "n_tokens": 138,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 13.0625,
+     "picked_competitor": null,
+     "n_tokens": 139,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 14.4375,
+     "picked_competitor": null,
+     "n_tokens": 139,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 14.3125,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|it|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 18.0,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 13.625,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 12.375,
+     "picked_competitor": null,
+     "n_tokens": 134,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 13.625,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 13.4375,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 12.3125,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 12.9375,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 16.75,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 13.5,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 17.8125,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 13.3125,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 15.125,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 16.25,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 12.5625,
+     "picked_competitor": null,
+     "n_tokens": 136,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 14.0625,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 13.25,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|same_ticket|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 13.375,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 12.1875,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 13.8125,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 14.0625,
+     "picked_competitor": null,
+     "n_tokens": 139,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 12.0,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 12.6875,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 15.125,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 12.1875,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 19.4375,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 12.375,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 15.3125,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 16.1875,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 11.75,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 14.6875,
+     "picked_competitor": null,
+     "n_tokens": 141,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 12.375,
+     "picked_competitor": null,
+     "n_tokens": 140,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|no_noun|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 17.6875,
+     "picked_competitor": null,
+     "n_tokens": 134,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 13.8125,
+     "picked_competitor": null,
+     "n_tokens": 134,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 12.75,
+     "picked_competitor": null,
+     "n_tokens": 134,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 13.625,
+     "picked_competitor": null,
+     "n_tokens": 134,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 14.0,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 13.25,
+     "picked_competitor": null,
+     "n_tokens": 134,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 12.8125,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 14.625,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 13.625,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 18.25,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 14.125,
+     "picked_competitor": null,
+     "n_tokens": 134,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 15.375,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 16.3125,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 13.0,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 14.875,
+     "picked_competitor": null,
+     "n_tokens": 135,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 12.875,
+     "picked_competitor": null,
+     "n_tokens": 133,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|1|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 16.5625,
+     "picked_competitor": null,
+     "n_tokens": 180,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 13.3125,
+     "picked_competitor": null,
+     "n_tokens": 182,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 14.4375,
+     "picked_competitor": null,
+     "n_tokens": 176,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 13.8125,
+     "picked_competitor": null,
+     "n_tokens": 182,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 13.3125,
+     "picked_competitor": null,
+     "n_tokens": 182,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 13.75,
+     "picked_competitor": null,
+     "n_tokens": 175,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 10.75,
+     "picked_competitor": null,
+     "n_tokens": 170,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 15.9375,
+     "picked_competitor": null,
+     "n_tokens": 177,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 13.375,
+     "picked_competitor": null,
+     "n_tokens": 175,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 14.3125,
+     "picked_competitor": null,
+     "n_tokens": 178,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 12.375,
+     "picked_competitor": null,
+     "n_tokens": 176,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 14.625,
+     "picked_competitor": null,
+     "n_tokens": 182,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 14.6875,
+     "picked_competitor": null,
+     "n_tokens": 173,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 12.375,
+     "picked_competitor": null,
+     "n_tokens": 174,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 13.5,
+     "picked_competitor": null,
+     "n_tokens": 180,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 12.0625,
+     "picked_competitor": null,
+     "n_tokens": 179,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|3|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 16.875,
+     "picked_competitor": null,
+     "n_tokens": 251,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 11.875,
+     "picked_competitor": null,
+     "n_tokens": 256,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 12.0,
+     "picked_competitor": null,
+     "n_tokens": 249,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 10.125,
+     "picked_competitor": null,
+     "n_tokens": 249,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 9.875,
+     "picked_competitor": null,
+     "n_tokens": 261,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 11.9375,
+     "picked_competitor": null,
+     "n_tokens": 263,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 12.0,
+     "picked_competitor": null,
+     "n_tokens": 262,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 11.5625,
+     "picked_competitor": null,
+     "n_tokens": 259,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 8.75,
+     "picked_competitor": null,
+     "n_tokens": 259,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 15.9375,
+     "picked_competitor": null,
+     "n_tokens": 263,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 8.75,
+     "picked_competitor": null,
+     "n_tokens": 264,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 13.0625,
+     "picked_competitor": null,
+     "n_tokens": 260,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 12.75,
+     "picked_competitor": null,
+     "n_tokens": 249,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 10.0,
+     "picked_competitor": null,
+     "n_tokens": 249,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 12.3125,
+     "picked_competitor": null,
+     "n_tokens": 263,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 13.375,
+     "picked_competitor": null,
+     "n_tokens": 254,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|6|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 12.125,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 10.25,
+     "picked_competitor": null,
+     "n_tokens": 373,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 8.75,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 9.125,
+     "picked_competitor": null,
+     "n_tokens": 373,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 11.5,
+     "picked_competitor": null,
+     "n_tokens": 373,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 8.25,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 10.0,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 10.5625,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 9.875,
+     "picked_competitor": null,
+     "n_tokens": 373,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 12.5,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 9.875,
+     "picked_competitor": null,
+     "n_tokens": 373,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 12.125,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 9.75,
+     "picked_competitor": null,
+     "n_tokens": 373,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 9.375,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 8.625,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 10.8125,
+     "picked_competitor": null,
+     "n_tokens": 374,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "competing_before|this_ticket|1|before|history": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -0.125,
+     "picked_competitor": true,
+     "n_tokens": 234,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 1.875,
+     "picked_competitor": false,
+     "n_tokens": 229,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 1.5,
+     "picked_competitor": false,
+     "n_tokens": 233,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 5.75,
+     "picked_competitor": false,
+     "n_tokens": 235,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 1.375,
+     "picked_competitor": false,
+     "n_tokens": 230,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 2.625,
+     "picked_competitor": false,
+     "n_tokens": 229,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 1.75,
+     "picked_competitor": false,
+     "n_tokens": 233,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 3.5,
+     "picked_competitor": false,
+     "n_tokens": 229,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 1.5,
+     "picked_competitor": false,
+     "n_tokens": 236,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 2.125,
+     "picked_competitor": false,
+     "n_tokens": 231,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 2.75,
+     "picked_competitor": false,
+     "n_tokens": 235,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 1.375,
+     "picked_competitor": false,
+     "n_tokens": 233,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 2.125,
+     "picked_competitor": false,
+     "n_tokens": 231,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 2.875,
+     "picked_competitor": false,
+     "n_tokens": 230,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 2.375,
+     "picked_competitor": false,
+     "n_tokens": 233,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 2.375,
+     "picked_competitor": false,
+     "n_tokens": 229,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_before|this_ticket|3|before|history": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -1.0,
+     "picked_competitor": true,
+     "n_tokens": 317,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -0.375,
+     "picked_competitor": true,
+     "n_tokens": 307,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 0.25,
+     "picked_competitor": false,
+     "n_tokens": 313,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 3.125,
+     "picked_competitor": false,
+     "n_tokens": 315,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 3.25,
+     "picked_competitor": false,
+     "n_tokens": 316,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 2.625,
+     "picked_competitor": false,
+     "n_tokens": 316,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 3.25,
+     "picked_competitor": false,
+     "n_tokens": 302,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 3.5,
+     "picked_competitor": false,
+     "n_tokens": 314,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 0.625,
+     "picked_competitor": false,
+     "n_tokens": 313,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 0.25,
+     "picked_competitor": false,
+     "n_tokens": 304,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 0.75,
+     "picked_competitor": false,
+     "n_tokens": 309,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -0.375,
+     "picked_competitor": true,
+     "n_tokens": 304,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 1.5,
+     "picked_competitor": false,
+     "n_tokens": 305,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 0.625,
+     "picked_competitor": false,
+     "n_tokens": 315,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 1.5,
+     "picked_competitor": false,
+     "n_tokens": 310,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 1.125,
+     "picked_competitor": false,
+     "n_tokens": 307,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_after|this_ticket|1|after|history": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -5.375,
+     "picked_competitor": true,
+     "n_tokens": 224,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -10.5,
+     "picked_competitor": true,
+     "n_tokens": 222,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -6.125,
+     "picked_competitor": true,
+     "n_tokens": 233,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -7.0,
+     "picked_competitor": true,
+     "n_tokens": 229,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -6.75,
+     "picked_competitor": true,
+     "n_tokens": 234,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": false,
+     "top_token": "4",
+     "margin": -8.125,
+     "picked_competitor": true,
+     "n_tokens": 231,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "5",
+     "margin": -6.625,
+     "picked_competitor": true,
+     "n_tokens": 235,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "6",
+     "margin": -9.5,
+     "picked_competitor": true,
+     "n_tokens": 224,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "7",
+     "margin": -8.125,
+     "picked_competitor": true,
+     "n_tokens": 229,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -7.5,
+     "picked_competitor": true,
+     "n_tokens": 230,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -10.9375,
+     "picked_competitor": true,
+     "n_tokens": 229,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -7.5,
+     "picked_competitor": true,
+     "n_tokens": 236,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -6.75,
+     "picked_competitor": true,
+     "n_tokens": 229,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -5.125,
+     "picked_competitor": true,
+     "n_tokens": 227,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -7.375,
+     "picked_competitor": true,
+     "n_tokens": 236,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -8.875,
+     "picked_competitor": true,
+     "n_tokens": 233,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_after|this_ticket|3|after|history": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -5.5,
+     "picked_competitor": true,
+     "n_tokens": 315,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -8.125,
+     "picked_competitor": true,
+     "n_tokens": 320,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -5.5,
+     "picked_competitor": true,
+     "n_tokens": 308,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -6.875,
+     "picked_competitor": true,
+     "n_tokens": 312,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -6.875,
+     "picked_competitor": true,
+     "n_tokens": 299,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": false,
+     "top_token": "4",
+     "margin": -4.625,
+     "picked_competitor": true,
+     "n_tokens": 307,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "5",
+     "margin": -6.625,
+     "picked_competitor": true,
+     "n_tokens": 316,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "6",
+     "margin": -5.5,
+     "picked_competitor": true,
+     "n_tokens": 304,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "7",
+     "margin": -6.75,
+     "picked_competitor": true,
+     "n_tokens": 304,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -4.75,
+     "picked_competitor": true,
+     "n_tokens": 315,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -8.0,
+     "picked_competitor": true,
+     "n_tokens": 307,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -5.0,
+     "picked_competitor": true,
+     "n_tokens": 301,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -6.625,
+     "picked_competitor": true,
+     "n_tokens": 317,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -6.5,
+     "picked_competitor": true,
+     "n_tokens": 310,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -8.125,
+     "picked_competitor": true,
+     "n_tokens": 315,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -5.75,
+     "picked_competitor": true,
+     "n_tokens": 313,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "pipeline|this_ticket|3|after|entity_slot": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -3.5,
+     "picked_competitor": true,
+     "n_tokens": 316,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 2.875,
+     "picked_competitor": false,
+     "n_tokens": 321,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -3.5,
+     "picked_competitor": true,
+     "n_tokens": 326,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 0.5,
+     "picked_competitor": false,
+     "n_tokens": 315,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -0.625,
+     "picked_competitor": true,
+     "n_tokens": 314,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 1.625,
+     "picked_competitor": false,
+     "n_tokens": 321,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 2.5,
+     "picked_competitor": false,
+     "n_tokens": 320,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 1.0,
+     "picked_competitor": false,
+     "n_tokens": 319,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 1.75,
+     "picked_competitor": false,
+     "n_tokens": 321,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 0.625,
+     "picked_competitor": false,
+     "n_tokens": 321,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -4.0,
+     "picked_competitor": true,
+     "n_tokens": 327,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -0.375,
+     "picked_competitor": true,
+     "n_tokens": 310,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -4.875,
+     "picked_competitor": true,
+     "n_tokens": 328,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 4.25,
+     "picked_competitor": false,
+     "n_tokens": 315,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 2.5,
+     "picked_competitor": false,
+     "n_tokens": 320,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 3.75,
+     "picked_competitor": false,
+     "n_tokens": 325,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "pipeline|this_ticket|3|after|rewritten": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 20.1562,
+     "picked_competitor": false,
+     "n_tokens": 307,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 14.625,
+     "picked_competitor": false,
+     "n_tokens": 321,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 12.8125,
+     "picked_competitor": false,
+     "n_tokens": 319,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 15.625,
+     "picked_competitor": false,
+     "n_tokens": 307,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 14.5625,
+     "picked_competitor": false,
+     "n_tokens": 314,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 14.125,
+     "picked_competitor": false,
+     "n_tokens": 319,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 13.0625,
+     "picked_competitor": false,
+     "n_tokens": 318,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 15.625,
+     "picked_competitor": false,
+     "n_tokens": 313,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 14.5625,
+     "picked_competitor": false,
+     "n_tokens": 312,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 20.6875,
+     "picked_competitor": false,
+     "n_tokens": 313,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 14.125,
+     "picked_competitor": false,
+     "n_tokens": 317,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 15.3125,
+     "picked_competitor": false,
+     "n_tokens": 317,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 16.9375,
+     "picked_competitor": false,
+     "n_tokens": 315,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 14.25,
+     "picked_competitor": false,
+     "n_tokens": 320,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 14.9375,
+     "picked_competitor": false,
+     "n_tokens": 315,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 15.3125,
+     "picked_competitor": false,
+     "n_tokens": 320,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ]
+  },
+  "mechanistic": {
+   "A_hardest_success": {
+    "condition": {
+     "condition": "competing_before",
+     "wording": "this_ticket",
+     "fillers": 3,
+     "competing": "before"
+    },
+    "n_success": 11,
+    "n_failure": 1,
+    "target_heads_success": [
+     {
+      "head": "L33H8",
+      "type": "sliding_attention",
+      "attention": 0.673
+     },
+     {
+      "head": "L13H6",
+      "type": "sliding_attention",
+      "attention": 0.586
+     },
+     {
+      "head": "L35H14",
+      "type": "full_attention",
+      "attention": 0.575
+     },
+     {
+      "head": "L7H11",
+      "type": "sliding_attention",
+      "attention": 0.476
+     },
+     {
+      "head": "L34H9",
+      "type": "sliding_attention",
+      "attention": 0.468
+     },
+     {
+      "head": "L14H8",
+      "type": "sliding_attention",
+      "attention": 0.399
+     }
+    ],
+    "target_heads_failure": [
+     {
+      "head": "L13H6",
+      "type": "sliding_attention",
+      "attention": 0.68
+     },
+     {
+      "head": "L33H8",
+      "type": "sliding_attention",
+      "attention": 0.644
+     },
+     {
+      "head": "L8H15",
+      "type": "sliding_attention",
+      "attention": 0.578
+     },
+     {
+      "head": "L7H11",
+      "type": "sliding_attention",
+      "attention": 0.491
+     },
+     {
+      "head": "L14H8",
+      "type": "sliding_attention",
+      "attention": 0.448
+     },
+     {
+      "head": "L34H9",
+      "type": "sliding_attention",
+      "attention": 0.443
+     }
+    ],
+    "competitor_heads_success": [
+     {
+      "head": "L17H0",
+      "type": "full_attention",
+      "attention": 0.609
+     },
+     {
+      "head": "L14H8",
+      "type": "sliding_attention",
+      "attention": 0.532
+     },
+     {
+      "head": "L7H11",
+      "type": "sliding_attention",
+      "attention": 0.5
+     },
+     {
+      "head": "L35H12",
+      "type": "full_attention",
+      "attention": 0.489
+     },
+     {
+      "head": "L35H7",
+      "type": "full_attention",
+      "attention": 0.468
+     },
+     {
+      "head": "L35H5",
+      "type": "full_attention",
+      "attention": 0.428
+     }
+    ],
+    "competitor_heads_failure": [
+     {
+      "head": "L35H14",
+      "type": "full_attention",
+      "attention": 0.701
+     },
+     {
+      "head": "L35H12",
+      "type": "full_attention",
+      "attention": 0.681
+     },
+     {
+      "head": "L35H7",
+      "type": "full_attention",
+      "attention": 0.588
+     },
+     {
+      "head": "L39H0",
+      "type": "sliding_attention",
+      "attention": 0.583
+     },
+     {
+      "head": "L35H5",
+      "type": "full_attention",
+      "attention": 0.578
+     },
+     {
+      "head": "L17H0",
+      "type": "full_attention",
+      "attention": 0.56
+     }
+    ],
+    "max_attention_on_target_by_layer_type": {
+     "success": {
+      "full_attention": 2.436,
+      "sliding_attention": 6.523
+     },
+     "failure": {
+      "full_attention": 2.032,
+      "sliding_attention": 6.759
+     }
+    },
+    "lens_first_layer_target_on_top": {
+     "success": [
+      38,
+      39,
+      40,
+      41,
+      43,
+      47,
+      47,
+      47,
+      47,
+      47,
+      47
+     ],
+     "failure": [
+      48
+     ]
+    },
+    "dla": [
+     {
+      "target": "PROJ-1000",
+      "competitor": "PROJ-8917",
+      "correct": true,
+      "logit_diff": 0.75,
+      "attention_share": 2451.31,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        104801.2344
+       ],
+       [
+        "embed",
+        2345.416
+       ],
+       [
+        "L9.mlp",
+        1717.3389
+       ],
+       [
+        "L0.layer_extra",
+        1057.2336
+       ],
+       [
+        "L8.mlp",
+        939.9484
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -104620.3281
+       ],
+       [
+        "L9.layer_extra",
+        -3372.0889
+       ],
+       [
+        "L0.mlp",
+        -2162.4226
+       ],
+       [
+        "L6.mlp",
+        -798.8044
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-2731",
+      "competitor": "PROJ-9648",
+      "correct": true,
+      "logit_diff": 0.25,
+      "attention_share": 8449.7,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        235016.1875
+       ],
+       [
+        "L0.layer_extra",
+        2552.3601
+       ],
+       [
+        "embed",
+        1897.2463
+       ],
+       [
+        "L1.mlp",
+        1609.0938
+       ],
+       [
+        "L9.mlp",
+        1493.0468
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -236152.5781
+       ],
+       [
+        "L0.mlp",
+        -4726.3545
+       ],
+       [
+        "L9.layer_extra",
+        -2694.3804
+       ],
+       [
+        "L1.layer_extra",
+        -1629.8059
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-3462",
+      "competitor": "PROJ-1379",
+      "correct": true,
+      "logit_diff": 0.375,
+      "attention_share": -3351.975,
+      "top_positive": [
+       [
+        "L11.mlp",
+        49164.4258
+       ],
+       [
+        "L9.layer_extra",
+        2402.4468
+       ],
+       [
+        "L1.mlp",
+        1292.511
+       ],
+       [
+        "L0.mlp",
+        794.0013
+       ],
+       [
+        "L6.mlp",
+        666.0944
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.layer_extra",
+        -49164.2773
+       ],
+       [
+        "L1.layer_extra",
+        -1118.4458
+       ],
+       [
+        "embed",
+        -1109.3141
+       ],
+       [
+        "L9.mlp",
+        -949.3597
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-4193",
+      "competitor": "PROJ-2000",
+      "correct": true,
+      "logit_diff": 2.125,
+      "attention_share": -1570.147,
+      "top_positive": [
+       [
+        "L11.mlp",
+        158991.9688
+       ],
+       [
+        "L0.mlp",
+        1684.1355
+       ],
+       [
+        "L1.layer_extra",
+        1211.0775
+       ],
+       [
+        "L7.layer_extra",
+        998.1891
+       ],
+       [
+        "L9.layer_extra",
+        941.3959
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.layer_extra",
+        -158422.3594
+       ],
+       [
+        "L1.mlp",
+        -1018.2528
+       ],
+       [
+        "L7.mlp",
+        -965.1928
+       ],
+       [
+        "embed",
+        -787.5437
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-5824",
+      "competitor": "PROJ-3731",
+      "correct": true,
+      "logit_diff": 1.25,
+      "attention_share": 1043.753,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        78897.9062
+       ],
+       [
+        "L0.layer_extra",
+        3000.0146
+       ],
+       [
+        "L1.layer_extra",
+        1890.024
+       ],
+       [
+        "L10.layer_extra",
+        877.0974
+       ],
+       [
+        "L8.mlp",
+        712.3236
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -79237.8984
+       ],
+       [
+        "L0.mlp",
+        -3327.7712
+       ],
+       [
+        "L1.mlp",
+        -2348.7288
+       ],
+       [
+        "L10.mlp",
+        -691.6452
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-6555",
+      "competitor": "PROJ-4462",
+      "correct": true,
+      "logit_diff": 1.125,
+      "attention_share": 210.04,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        53956.0078
+       ],
+       [
+        "L8.mlp",
+        1263.3374
+       ],
+       [
+        "L0.mlp",
+        1251.7605
+       ],
+       [
+        "L7.mlp",
+        997.2462
+       ],
+       [
+        "L6.mlp",
+        889.4382
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -54254.3516
+       ],
+       [
+        "L0.layer_extra",
+        -1395.2676
+       ],
+       [
+        "L8.layer_extra",
+        -1313.9443
+       ],
+       [
+        "L1.layer_extra",
+        -993.4135
+       ]
+      ]
+     }
+    ]
+   },
+   "B_competing_after": {
+    "condition": {
+     "condition": "competing_after",
+     "wording": "this_ticket",
+     "fillers": 3,
+     "competing": "after"
+    },
+    "n_success": 0,
+    "n_failure": 12,
+    "target_heads_success": [],
+    "target_heads_failure": [
+     {
+      "head": "L7H11",
+      "type": "sliding_attention",
+      "attention": 0.56
+     },
+     {
+      "head": "L17H0",
+      "type": "full_attention",
+      "attention": 0.471
+     },
+     {
+      "head": "L17H10",
+      "type": "full_attention",
+      "attention": 0.304
+     },
+     {
+      "head": "L41H6",
+      "type": "full_attention",
+      "attention": 0.292
+     },
+     {
+      "head": "L13H6",
+      "type": "sliding_attention",
+      "attention": 0.266
+     },
+     {
+      "head": "L29H5",
+      "type": "full_attention",
+      "attention": 0.242
+     }
+    ],
+    "competitor_heads_success": [],
+    "competitor_heads_failure": [
+     {
+      "head": "L14H8",
+      "type": "sliding_attention",
+      "attention": 0.836
+     },
+     {
+      "head": "L35H14",
+      "type": "full_attention",
+      "attention": 0.78
+     },
+     {
+      "head": "L39H0",
+      "type": "sliding_attention",
+      "attention": 0.721
+     },
+     {
+      "head": "L13H6",
+      "type": "sliding_attention",
+      "attention": 0.687
+     },
+     {
+      "head": "L41H14",
+      "type": "full_attention",
+      "attention": 0.676
+     },
+     {
+      "head": "L11H7",
+      "type": "full_attention",
+      "attention": 0.655
+     }
+    ],
+    "max_attention_on_target_by_layer_type": {
+     "success": {
+      "full_attention": 0.0,
+      "sliding_attention": 0.0
+     },
+     "failure": {
+      "full_attention": 1.592,
+      "sliding_attention": 2.548
+     }
+    },
+    "lens_first_layer_target_on_top": {
+     "success": [],
+     "failure": [
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48
+     ]
+    },
+    "dla": [
+     {
+      "target": "PROJ-1000",
+      "competitor": "PROJ-8917",
+      "correct": false,
+      "logit_diff": -6.375,
+      "attention_share": -97.065,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        62355.9062
+       ],
+       [
+        "embed",
+        1615.3401
+       ],
+       [
+        "L9.mlp",
+        1081.0598
+       ],
+       [
+        "L0.layer_extra",
+        1057.5106
+       ],
+       [
+        "L47.layer_extra",
+        482.7887
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -62188.8945
+       ],
+       [
+        "L9.layer_extra",
+        -1990.6389
+       ],
+       [
+        "L0.mlp",
+        -1760.5911
+       ],
+       [
+        "L0H14",
+        -450.9951
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-2731",
+      "competitor": "PROJ-9648",
+      "correct": false,
+      "logit_diff": -7.625,
+      "attention_share": -49.691,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        168113.7656
+       ],
+       [
+        "L0.layer_extra",
+        1931.4954
+       ],
+       [
+        "embed",
+        1358.655
+       ],
+       [
+        "L1.mlp",
+        1194.9595
+       ],
+       [
+        "L8.layer_extra",
+        907.2941
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -168917.75
+       ],
+       [
+        "L0.mlp",
+        -3376.8577
+       ],
+       [
+        "L9.layer_extra",
+        -1435.7051
+       ],
+       [
+        "L1.layer_extra",
+        -1189.5378
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-3462",
+      "competitor": "PROJ-1379",
+      "correct": false,
+      "logit_diff": -9.25,
+      "attention_share": 169.431,
+      "top_positive": [
+       [
+        "L11.mlp",
+        23731.8008
+       ],
+       [
+        "L9.layer_extra",
+        1441.7921
+       ],
+       [
+        "L1.mlp",
+        859.3928
+       ],
+       [
+        "L47.layer_extra",
+        678.4622
+       ],
+       [
+        "L0.mlp",
+        643.1014
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.layer_extra",
+        -23754.793
+       ],
+       [
+        "L1.layer_extra",
+        -763.1549
+       ],
+       [
+        "embed",
+        -717.1019
+       ],
+       [
+        "L9.mlp",
+        -665.7742
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-4193",
+      "competitor": "PROJ-2000",
+      "correct": false,
+      "logit_diff": -5.625,
+      "attention_share": 534.116,
+      "top_positive": [
+       [
+        "L11.mlp",
+        97201.9922
+       ],
+       [
+        "L0.mlp",
+        1265.5583
+       ],
+       [
+        "L9.layer_extra",
+        875.7137
+       ],
+       [
+        "L1.layer_extra",
+        834.4597
+       ],
+       [
+        "L8.layer_extra",
+        780.6674
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.layer_extra",
+        -96856.1172
+       ],
+       [
+        "L1.mlp",
+        -703.6641
+       ],
+       [
+        "L8.mlp",
+        -696.0207
+       ],
+       [
+        "L7.mlp",
+        -638.3161
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-5824",
+      "competitor": "PROJ-3731",
+      "correct": false,
+      "logit_diff": -5.75,
+      "attention_share": -9.853,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        40366.8906
+       ],
+       [
+        "L0.layer_extra",
+        1921.4727
+       ],
+       [
+        "L1.layer_extra",
+        1182.6788
+       ],
+       [
+        "L8.mlp",
+        1091.9954
+       ],
+       [
+        "L47.layer_extra",
+        527.6114
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -40553.1406
+       ],
+       [
+        "L0.mlp",
+        -2095.0022
+       ],
+       [
+        "L1.mlp",
+        -1468.656
+       ],
+       [
+        "L8.layer_extra",
+        -972.1093
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-6555",
+      "competitor": "PROJ-4462",
+      "correct": false,
+      "logit_diff": -7.75,
+      "attention_share": 79.58,
+      "top_positive": [
+       [
+        "L11.layer_extra",
+        22317.6875
+       ],
+       [
+        "L8.mlp",
+        894.8301
+       ],
+       [
+        "L0.mlp",
+        837.4119
+       ],
+       [
+        "L47.layer_extra",
+        574.0311
+       ],
+       [
+        "L10.layer_extra",
+        519.7386
+       ]
+      ],
+      "top_negative": [
+       [
+        "L11.mlp",
+        -22424.9844
+       ],
+       [
+        "L8.layer_extra",
+        -879.6978
+       ],
+       [
+        "L0.layer_extra",
+        -871.6598
+       ],
+       [
+        "L1.layer_extra",
+        -611.0859
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "elapsed_s": 124.1
+ },
+ "Qwen/Qwen3-8B": {
+  "model": "Qwen/Qwen3-8B",
+  "facts": {
+   "n_layers": 36,
+   "n_heads": 32,
+   "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+   ],
+   "sliding_window": null,
+   "quirks": [
+    "0 sliding-window layers (window None) + 36 global layers: tokens beyond the window are only reachable through the global layers",
+    "grouped-query attention: 32 query heads share 8 KV heads"
+   ],
+   "parameters_human": "8.19B"
+  },
+  "grid": [
+   {
+    "condition": "wording",
+    "wording": "this_ticket",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 29.664,
+    "picked_competitor": null,
+    "mean_tokens": 128,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "that_one",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 28.383,
+    "picked_competitor": null,
+    "mean_tokens": 128,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "it",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 30.812,
+    "picked_competitor": null,
+    "mean_tokens": 126,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "same_ticket",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 26.883,
+    "picked_competitor": null,
+    "mean_tokens": 130,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "no_noun",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 26.789,
+    "picked_competitor": null,
+    "mean_tokens": 125,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 23.641,
+    "picked_competitor": null,
+    "mean_tokens": 167,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 20.125,
+    "picked_competitor": null,
+    "mean_tokens": 247,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 6,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 19.312,
+    "picked_competitor": null,
+    "mean_tokens": 363,
+    "wrong_examples": []
+   },
+   {
+    "condition": "competing_before",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": "before",
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 6.609,
+    "picked_competitor": 0.0,
+    "mean_tokens": 219,
+    "wrong_examples": []
+   },
+   {
+    "condition": "competing_before",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "before",
+    "pipeline": "history",
+    "accuracy": 0.625,
+    "mean_margin": 1.062,
+    "picked_competitor": 0.375,
+    "mean_tokens": 297,
+    "wrong_examples": [
+     "PROJ-3462 -> '1'",
+     "PROJ-7286 -> '5'",
+     "PROJ-8917 -> '6'"
+    ]
+   },
+   {
+    "condition": "competing_after",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": "after",
+    "pipeline": "history",
+    "accuracy": 0.062,
+    "mean_margin": -11.359,
+    "picked_competitor": 0.9375,
+    "mean_tokens": 217,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'",
+     "PROJ-2731 -> '9'",
+     "PROJ-3462 -> '1'"
+    ]
+   },
+   {
+    "condition": "competing_after",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "history",
+    "accuracy": 0.0,
+    "mean_margin": -13.922,
+    "picked_competitor": 1.0,
+    "mean_tokens": 297,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'",
+     "PROJ-2731 -> '9'",
+     "PROJ-3462 -> '1'"
+    ]
+   },
+   {
+    "condition": "pipeline",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "entity_slot",
+    "accuracy": 0.312,
+    "mean_margin": -3.266,
+    "picked_competitor": 0.6875,
+    "mean_tokens": 305,
+    "wrong_examples": [
+     "PROJ-1000 -> '8'",
+     "PROJ-3462 -> '1'",
+     "PROJ-5824 -> '3'"
+    ]
+   },
+   {
+    "condition": "pipeline",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "rewritten",
+    "accuracy": 1.0,
+    "mean_margin": 33.93,
+    "picked_competitor": 0.0,
+    "mean_tokens": 302,
+    "wrong_examples": []
+   }
+  ],
+  "per_case": {
+   "wording|this_ticket|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 33.25,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 25.75,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 32.875,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 27.5,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 29.0,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 32.0,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 29.875,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 30.125,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 30.375,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 34.25,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 27.5,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 28.125,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 28.125,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 27.75,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 29.125,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 29.0,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|that_one|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 28.375,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 24.75,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 28.875,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 24.25,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 28.25,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 28.75,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 26.5,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 31.5,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 33.0,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 28.5,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 20.25,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 30.625,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 32.125,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 29.5,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 33.75,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 25.125,
+     "picked_competitor": null,
+     "n_tokens": 128,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|it|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 33.625,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 27.75,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 35.0,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 30.0,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 29.25,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 28.875,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 27.875,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 30.75,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 31.125,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 35.0,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 30.125,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 33.875,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 29.125,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 29.25,
+     "picked_competitor": null,
+     "n_tokens": 127,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 29.375,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 32.0,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|same_ticket|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 30.875,
+     "picked_competitor": null,
+     "n_tokens": 131,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 21.125,
+     "picked_competitor": null,
+     "n_tokens": 131,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 29.0,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 25.625,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 25.75,
+     "picked_competitor": null,
+     "n_tokens": 129,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 27.25,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 27.875,
+     "picked_competitor": null,
+     "n_tokens": 131,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 25.625,
+     "picked_competitor": null,
+     "n_tokens": 131,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 26.625,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 28.125,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 22.875,
+     "picked_competitor": null,
+     "n_tokens": 131,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 29.375,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 27.875,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 24.75,
+     "picked_competitor": null,
+     "n_tokens": 131,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 27.75,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 29.625,
+     "picked_competitor": null,
+     "n_tokens": 130,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|no_noun|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 31.625,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 26.75,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 31.625,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 22.75,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 27.25,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 19.75,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 28.625,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 25.125,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 25.875,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 30.25,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 24.75,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 31.125,
+     "picked_competitor": null,
+     "n_tokens": 126,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 23.375,
+     "picked_competitor": null,
+     "n_tokens": 124,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 26.875,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 25.625,
+     "picked_competitor": null,
+     "n_tokens": 125,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 27.25,
+     "picked_competitor": null,
+     "n_tokens": 123,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|1|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 23.25,
+     "picked_competitor": null,
+     "n_tokens": 170,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 21.75,
+     "picked_competitor": null,
+     "n_tokens": 171,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 28.25,
+     "picked_competitor": null,
+     "n_tokens": 166,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 21.625,
+     "picked_competitor": null,
+     "n_tokens": 170,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 25.75,
+     "picked_competitor": null,
+     "n_tokens": 172,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 25.875,
+     "picked_competitor": null,
+     "n_tokens": 164,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 20.75,
+     "picked_competitor": null,
+     "n_tokens": 160,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 25.0,
+     "picked_competitor": null,
+     "n_tokens": 167,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 26.25,
+     "picked_competitor": null,
+     "n_tokens": 165,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 21.25,
+     "picked_competitor": null,
+     "n_tokens": 168,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 18.0,
+     "picked_competitor": null,
+     "n_tokens": 165,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 24.75,
+     "picked_competitor": null,
+     "n_tokens": 171,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 26.0,
+     "picked_competitor": null,
+     "n_tokens": 164,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 26.0,
+     "picked_competitor": null,
+     "n_tokens": 164,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 23.25,
+     "picked_competitor": null,
+     "n_tokens": 171,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 20.5,
+     "picked_competitor": null,
+     "n_tokens": 168,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|3|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 22.75,
+     "picked_competitor": null,
+     "n_tokens": 242,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 17.25,
+     "picked_competitor": null,
+     "n_tokens": 246,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 19.0,
+     "picked_competitor": null,
+     "n_tokens": 239,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 19.75,
+     "picked_competitor": null,
+     "n_tokens": 239,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 19.0,
+     "picked_competitor": null,
+     "n_tokens": 250,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 20.75,
+     "picked_competitor": null,
+     "n_tokens": 252,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 21.25,
+     "picked_competitor": null,
+     "n_tokens": 251,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 20.0,
+     "picked_competitor": null,
+     "n_tokens": 250,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 16.25,
+     "picked_competitor": null,
+     "n_tokens": 249,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 23.0,
+     "picked_competitor": null,
+     "n_tokens": 252,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 17.5,
+     "picked_competitor": null,
+     "n_tokens": 253,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 20.75,
+     "picked_competitor": null,
+     "n_tokens": 249,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 19.5,
+     "picked_competitor": null,
+     "n_tokens": 239,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 19.5,
+     "picked_competitor": null,
+     "n_tokens": 239,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 21.5,
+     "picked_competitor": null,
+     "n_tokens": 251,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 24.25,
+     "picked_competitor": null,
+     "n_tokens": 244,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|6|None|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 18.75,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 20.25,
+     "picked_competitor": null,
+     "n_tokens": 362,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 18.75,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 19.25,
+     "picked_competitor": null,
+     "n_tokens": 362,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 21.75,
+     "picked_competitor": null,
+     "n_tokens": 361,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 18.75,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 19.75,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 17.5,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 362,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 20.25,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 20.75,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 20.5,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 17.25,
+     "picked_competitor": null,
+     "n_tokens": 362,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 17.25,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 19.75,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 20.0,
+     "picked_competitor": null,
+     "n_tokens": 363,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "competing_before|this_ticket|1|before|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 6.5,
+     "picked_competitor": false,
+     "n_tokens": 220,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 7.0,
+     "picked_competitor": false,
+     "n_tokens": 216,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 4.25,
+     "picked_competitor": false,
+     "n_tokens": 221,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 10.0,
+     "picked_competitor": false,
+     "n_tokens": 221,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 6.0,
+     "picked_competitor": false,
+     "n_tokens": 217,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 5.25,
+     "picked_competitor": false,
+     "n_tokens": 217,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 0.25,
+     "picked_competitor": false,
+     "n_tokens": 222,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 7.25,
+     "picked_competitor": false,
+     "n_tokens": 217,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 5.5,
+     "picked_competitor": false,
+     "n_tokens": 222,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 10.25,
+     "picked_competitor": false,
+     "n_tokens": 218,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 9.0,
+     "picked_competitor": false,
+     "n_tokens": 222,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 4.5,
+     "picked_competitor": false,
+     "n_tokens": 219,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 10.5,
+     "picked_competitor": false,
+     "n_tokens": 217,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 8.25,
+     "picked_competitor": false,
+     "n_tokens": 217,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 3.75,
+     "picked_competitor": false,
+     "n_tokens": 220,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 7.5,
+     "picked_competitor": false,
+     "n_tokens": 216,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_before|this_ticket|3|before|history": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 4.75,
+     "picked_competitor": false,
+     "n_tokens": 303,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 0.0,
+     "picked_competitor": false,
+     "n_tokens": 293,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -3.25,
+     "picked_competitor": true,
+     "n_tokens": 300,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 4.0,
+     "picked_competitor": false,
+     "n_tokens": 301,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 1.5,
+     "picked_competitor": false,
+     "n_tokens": 302,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 0.75,
+     "picked_competitor": false,
+     "n_tokens": 301,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "5",
+     "margin": -0.75,
+     "picked_competitor": true,
+     "n_tokens": 290,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "6",
+     "margin": -2.25,
+     "picked_competitor": true,
+     "n_tokens": 302,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "7",
+     "margin": -5.5,
+     "picked_competitor": true,
+     "n_tokens": 300,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -0.25,
+     "picked_competitor": true,
+     "n_tokens": 291,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 2.5,
+     "picked_competitor": false,
+     "n_tokens": 296,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 5.0,
+     "picked_competitor": false,
+     "n_tokens": 289,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 6.75,
+     "picked_competitor": false,
+     "n_tokens": 291,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 3.75,
+     "picked_competitor": false,
+     "n_tokens": 302,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 2.75,
+     "picked_competitor": false,
+     "n_tokens": 297,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -2.75,
+     "picked_competitor": true,
+     "n_tokens": 295,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_after|this_ticket|1|after|history": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -9.0,
+     "picked_competitor": true,
+     "n_tokens": 211,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -18.5,
+     "picked_competitor": true,
+     "n_tokens": 209,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -6.25,
+     "picked_competitor": true,
+     "n_tokens": 220,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -6.0,
+     "picked_competitor": true,
+     "n_tokens": 216,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -2.75,
+     "picked_competitor": true,
+     "n_tokens": 220,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": false,
+     "top_token": "4",
+     "margin": -12.25,
+     "picked_competitor": true,
+     "n_tokens": 218,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "5",
+     "margin": -14.0,
+     "picked_competitor": true,
+     "n_tokens": 220,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "6",
+     "margin": -16.75,
+     "picked_competitor": true,
+     "n_tokens": 212,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "7",
+     "margin": -7.5,
+     "picked_competitor": true,
+     "n_tokens": 217,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -8.5,
+     "picked_competitor": true,
+     "n_tokens": 217,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -16.5,
+     "picked_competitor": true,
+     "n_tokens": 216,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -19.75,
+     "picked_competitor": true,
+     "n_tokens": 221,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -19.5,
+     "picked_competitor": true,
+     "n_tokens": 216,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 0.75,
+     "picked_competitor": false,
+     "n_tokens": 214,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -9.5,
+     "picked_competitor": true,
+     "n_tokens": 223,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -15.75,
+     "picked_competitor": true,
+     "n_tokens": 220,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_after|this_ticket|3|after|history": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -16.75,
+     "picked_competitor": true,
+     "n_tokens": 301,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -12.75,
+     "picked_competitor": true,
+     "n_tokens": 306,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -4.75,
+     "picked_competitor": true,
+     "n_tokens": 296,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -14.75,
+     "picked_competitor": true,
+     "n_tokens": 298,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -20.0,
+     "picked_competitor": true,
+     "n_tokens": 287,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": false,
+     "top_token": "4",
+     "margin": -12.75,
+     "picked_competitor": true,
+     "n_tokens": 295,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "5",
+     "margin": -21.0,
+     "picked_competitor": true,
+     "n_tokens": 303,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "6",
+     "margin": -18.25,
+     "picked_competitor": true,
+     "n_tokens": 290,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "7",
+     "margin": -12.75,
+     "picked_competitor": true,
+     "n_tokens": 290,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -3.0,
+     "picked_competitor": true,
+     "n_tokens": 302,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -10.0,
+     "picked_competitor": true,
+     "n_tokens": 296,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -3.5,
+     "picked_competitor": true,
+     "n_tokens": 289,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -11.75,
+     "picked_competitor": true,
+     "n_tokens": 303,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -21.0,
+     "picked_competitor": true,
+     "n_tokens": 296,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -24.75,
+     "picked_competitor": true,
+     "n_tokens": 302,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -15.0,
+     "picked_competitor": true,
+     "n_tokens": 299,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "pipeline|this_ticket|3|after|entity_slot": [
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -15.75,
+     "picked_competitor": true,
+     "n_tokens": 301,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 19.5,
+     "picked_competitor": false,
+     "n_tokens": 306,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -22.5,
+     "picked_competitor": true,
+     "n_tokens": 311,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 4.75,
+     "picked_competitor": false,
+     "n_tokens": 301,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "3",
+     "margin": -0.75,
+     "picked_competitor": true,
+     "n_tokens": 301,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": false,
+     "top_token": "4",
+     "margin": -5.75,
+     "picked_competitor": true,
+     "n_tokens": 306,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "5",
+     "margin": -1.5,
+     "picked_competitor": true,
+     "n_tokens": 305,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "6",
+     "margin": -3.25,
+     "picked_competitor": true,
+     "n_tokens": 305,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "7",
+     "margin": -3.25,
+     "picked_competitor": true,
+     "n_tokens": 306,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "8",
+     "margin": -8.0,
+     "picked_competitor": true,
+     "n_tokens": 306,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "9",
+     "margin": -9.5,
+     "picked_competitor": true,
+     "n_tokens": 311,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "1",
+     "margin": -14.25,
+     "picked_competitor": true,
+     "n_tokens": 296,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "2",
+     "margin": -21.5,
+     "picked_competitor": true,
+     "n_tokens": 313,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 1.0,
+     "picked_competitor": false,
+     "n_tokens": 302,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 11.75,
+     "picked_competitor": false,
+     "n_tokens": 305,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 16.75,
+     "picked_competitor": false,
+     "n_tokens": 311,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "pipeline|this_ticket|3|after|rewritten": [
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 35.375,
+     "picked_competitor": false,
+     "n_tokens": 293,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 33.625,
+     "picked_competitor": false,
+     "n_tokens": 307,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 35.375,
+     "picked_competitor": false,
+     "n_tokens": 307,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 31.625,
+     "picked_competitor": false,
+     "n_tokens": 294,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 34.25,
+     "picked_competitor": false,
+     "n_tokens": 301,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 32.0,
+     "picked_competitor": false,
+     "n_tokens": 306,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 32.25,
+     "picked_competitor": false,
+     "n_tokens": 305,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "8",
+     "margin": 34.5,
+     "picked_competitor": false,
+     "n_tokens": 299,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "9",
+     "margin": 34.125,
+     "picked_competitor": false,
+     "n_tokens": 299,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "1",
+     "margin": 37.5,
+     "picked_competitor": false,
+     "n_tokens": 300,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "2",
+     "margin": 32.25,
+     "picked_competitor": false,
+     "n_tokens": 303,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "3",
+     "margin": 35.75,
+     "picked_competitor": false,
+     "n_tokens": 305,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "4",
+     "margin": 30.0,
+     "picked_competitor": false,
+     "n_tokens": 302,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "5",
+     "margin": 36.125,
+     "picked_competitor": false,
+     "n_tokens": 306,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "6",
+     "margin": 34.875,
+     "picked_competitor": false,
+     "n_tokens": 301,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "7",
+     "margin": 33.25,
+     "picked_competitor": false,
+     "n_tokens": 307,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ]
+  },
+  "mechanistic": {
+   "A_hardest_success": {
+    "condition": {
+     "condition": "competing_after",
+     "wording": "this_ticket",
+     "fillers": 1,
+     "competing": "after"
+    },
+    "n_success": 0,
+    "n_failure": 12,
+    "target_heads_success": [],
+    "target_heads_failure": [
+     {
+      "head": "L22H23",
+      "type": "full_attention",
+      "attention": 0.901
+     },
+     {
+      "head": "L27H25",
+      "type": "full_attention",
+      "attention": 0.492
+     },
+     {
+      "head": "L2H31",
+      "type": "full_attention",
+      "attention": 0.454
+     },
+     {
+      "head": "L3H21",
+      "type": "full_attention",
+      "attention": 0.44
+     },
+     {
+      "head": "L6H6",
+      "type": "full_attention",
+      "attention": 0.431
+     },
+     {
+      "head": "L26H4",
+      "type": "full_attention",
+      "attention": 0.379
+     }
+    ],
+    "competitor_heads_success": [],
+    "competitor_heads_failure": [
+     {
+      "head": "L4H4",
+      "type": "full_attention",
+      "attention": 0.92
+     },
+     {
+      "head": "L13H13",
+      "type": "full_attention",
+      "attention": 0.836
+     },
+     {
+      "head": "L22H21",
+      "type": "full_attention",
+      "attention": 0.807
+     },
+     {
+      "head": "L29H11",
+      "type": "full_attention",
+      "attention": 0.785
+     },
+     {
+      "head": "L28H0",
+      "type": "full_attention",
+      "attention": 0.773
+     },
+     {
+      "head": "L22H22",
+      "type": "full_attention",
+      "attention": 0.756
+     }
+    ],
+    "max_attention_on_target_by_layer_type": {
+     "success": {
+      "full_attention": 0.0
+     },
+     "failure": {
+      "full_attention": 7.369
+     }
+    },
+    "lens_first_layer_target_on_top": {
+     "success": [],
+     "failure": [
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36
+     ]
+    },
+    "dla": [
+     {
+      "target": "PROJ-1000",
+      "competitor": "PROJ-8917",
+      "correct": false,
+      "logit_diff": -8.0,
+      "attention_share": -0.212,
+      "top_positive": [
+       [
+        "L35H27",
+        9.3806
+       ],
+       [
+        "L34H29",
+        1.0525
+       ],
+       [
+        "L30H6",
+        0.9683
+       ],
+       [
+        "L30H11",
+        0.745
+       ],
+       [
+        "L32.mlp",
+        0.6514
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -7.0301
+       ],
+       [
+        "L35H26",
+        -4.5666
+       ],
+       [
+        "L32H10",
+        -3.9101
+       ],
+       [
+        "L30H9",
+        -2.3455
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-2731",
+      "competitor": "PROJ-9648",
+      "correct": false,
+      "logit_diff": -13.75,
+      "attention_share": -0.051,
+      "top_positive": [
+       [
+        "L35H27",
+        8.0904
+       ],
+       [
+        "L34H29",
+        1.2648
+       ],
+       [
+        "L30.mlp",
+        1.0631
+       ],
+       [
+        "L30H6",
+        1.0436
+       ],
+       [
+        "L34H31",
+        0.5765
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -5.4719
+       ],
+       [
+        "L35.mlp",
+        -5.067
+       ],
+       [
+        "L35H26",
+        -4.3852
+       ],
+       [
+        "L29.mlp",
+        -2.8361
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-3462",
+      "competitor": "PROJ-1379",
+      "correct": false,
+      "logit_diff": -21.5,
+      "attention_share": 0.123,
+      "top_positive": [
+       [
+        "L35H27",
+        4.9742
+       ],
+       [
+        "L31H6",
+        1.4121
+       ],
+       [
+        "L30H6",
+        1.0811
+       ],
+       [
+        "L32H10",
+        0.9143
+       ],
+       [
+        "L34H28",
+        0.6795
+       ]
+      ],
+      "top_negative": [
+       [
+        "L35.mlp",
+        -7.9263
+       ],
+       [
+        "L34.mlp",
+        -6.0186
+       ],
+       [
+        "L35H26",
+        -4.7467
+       ],
+       [
+        "L32.mlp",
+        -3.9106
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-4193",
+      "competitor": "PROJ-2000",
+      "correct": false,
+      "logit_diff": -4.75,
+      "attention_share": 0.28,
+      "top_positive": [
+       [
+        "L34H28",
+        2.5168
+       ],
+       [
+        "L32.mlp",
+        2.034
+       ],
+       [
+        "L30H6",
+        1.8068
+       ],
+       [
+        "L30.mlp",
+        1.7192
+       ],
+       [
+        "L35H27",
+        1.3338
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -5.9164
+       ],
+       [
+        "L35H26",
+        -1.9614
+       ],
+       [
+        "L29H5",
+        -1.2954
+       ],
+       [
+        "L31.mlp",
+        -1.2949
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-5824",
+      "competitor": "PROJ-3731",
+      "correct": false,
+      "logit_diff": -12.0,
+      "attention_share": 0.123,
+      "top_positive": [
+       [
+        "L35H27",
+        7.1334
+       ],
+       [
+        "L30H8",
+        1.7175
+       ],
+       [
+        "L30.mlp",
+        1.4229
+       ],
+       [
+        "L30H6",
+        1.3388
+       ],
+       [
+        "L34H29",
+        0.6129
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -7.0059
+       ],
+       [
+        "L35H26",
+        -3.1977
+       ],
+       [
+        "L31H6",
+        -2.9761
+       ],
+       [
+        "L35.mlp",
+        -2.1235
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-6555",
+      "competitor": "PROJ-4462",
+      "correct": false,
+      "logit_diff": -8.0,
+      "attention_share": 0.402,
+      "top_positive": [
+       [
+        "L35H27",
+        4.9657
+       ],
+       [
+        "L33.mlp",
+        1.7121
+       ],
+       [
+        "L31H14",
+        1.506
+       ],
+       [
+        "L29.mlp",
+        1.0981
+       ],
+       [
+        "L26.mlp",
+        0.7655
+       ]
+      ],
+      "top_negative": [
+       [
+        "L30.mlp",
+        -5.2419
+       ],
+       [
+        "L35H26",
+        -3.0249
+       ],
+       [
+        "L32H10",
+        -2.6325
+       ],
+       [
+        "L30H8",
+        -2.5971
+       ]
+      ]
+     }
+    ]
+   },
+   "B_competing_after": {
+    "condition": {
+     "condition": "competing_after",
+     "wording": "this_ticket",
+     "fillers": 3,
+     "competing": "after"
+    },
+    "n_success": 0,
+    "n_failure": 12,
+    "target_heads_success": [],
+    "target_heads_failure": [
+     {
+      "head": "L22H23",
+      "type": "full_attention",
+      "attention": 0.832
+     },
+     {
+      "head": "L26H4",
+      "type": "full_attention",
+      "attention": 0.506
+     },
+     {
+      "head": "L27H25",
+      "type": "full_attention",
+      "attention": 0.5
+     },
+     {
+      "head": "L24H21",
+      "type": "full_attention",
+      "attention": 0.399
+     },
+     {
+      "head": "L29H3",
+      "type": "full_attention",
+      "attention": 0.384
+     },
+     {
+      "head": "L2H31",
+      "type": "full_attention",
+      "attention": 0.382
+     }
+    ],
+    "competitor_heads_success": [],
+    "competitor_heads_failure": [
+     {
+      "head": "L4H4",
+      "type": "full_attention",
+      "attention": 0.985
+     },
+     {
+      "head": "L13H13",
+      "type": "full_attention",
+      "attention": 0.865
+     },
+     {
+      "head": "L29H11",
+      "type": "full_attention",
+      "attention": 0.842
+     },
+     {
+      "head": "L28H0",
+      "type": "full_attention",
+      "attention": 0.789
+     },
+     {
+      "head": "L22H21",
+      "type": "full_attention",
+      "attention": 0.762
+     },
+     {
+      "head": "L22H22",
+      "type": "full_attention",
+      "attention": 0.754
+     }
+    ],
+    "max_attention_on_target_by_layer_type": {
+     "success": {
+      "full_attention": 0.0
+     },
+     "failure": {
+      "full_attention": 6.753
+     }
+    },
+    "lens_first_layer_target_on_top": {
+     "success": [],
+     "failure": [
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36
+     ]
+    },
+    "dla": [
+     {
+      "target": "PROJ-1000",
+      "competitor": "PROJ-8917",
+      "correct": false,
+      "logit_diff": -10.5,
+      "attention_share": -0.202,
+      "top_positive": [
+       [
+        "L35H27",
+        10.7543
+       ],
+       [
+        "L34H29",
+        1.3319
+       ],
+       [
+        "L35H24",
+        0.7504
+       ],
+       [
+        "L32.mlp",
+        0.7183
+       ],
+       [
+        "L30H11",
+        0.6806
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -8.2286
+       ],
+       [
+        "L35H26",
+        -5.0717
+       ],
+       [
+        "L29H15",
+        -2.8107
+       ],
+       [
+        "L32H10",
+        -2.5483
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-2731",
+      "competitor": "PROJ-9648",
+      "correct": false,
+      "logit_diff": -12.5,
+      "attention_share": -0.095,
+      "top_positive": [
+       [
+        "L35H27",
+        7.2624
+       ],
+       [
+        "L34H29",
+        1.1745
+       ],
+       [
+        "L30.mlp",
+        1.152
+       ],
+       [
+        "L30H6",
+        0.9668
+       ],
+       [
+        "L34H31",
+        0.5949
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -5.0231
+       ],
+       [
+        "L35.mlp",
+        -4.3017
+       ],
+       [
+        "L35H26",
+        -4.0362
+       ],
+       [
+        "L29.mlp",
+        -2.9029
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-3462",
+      "competitor": "PROJ-1379",
+      "correct": false,
+      "logit_diff": -21.75,
+      "attention_share": 0.035,
+      "top_positive": [
+       [
+        "L35H27",
+        8.3903
+       ],
+       [
+        "L31H6",
+        1.4591
+       ],
+       [
+        "L30H6",
+        1.0669
+       ],
+       [
+        "L35H25",
+        0.9531
+       ],
+       [
+        "L34H29",
+        0.6729
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -6.8802
+       ],
+       [
+        "L35.mlp",
+        -6.2949
+       ],
+       [
+        "L35H26",
+        -5.5952
+       ],
+       [
+        "L32.mlp",
+        -5.0454
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-4193",
+      "competitor": "PROJ-2000",
+      "correct": false,
+      "logit_diff": -11.5,
+      "attention_share": 0.197,
+      "top_positive": [
+       [
+        "L35H27",
+        4.5434
+       ],
+       [
+        "L32.mlp",
+        2.1793
+       ],
+       [
+        "L34H28",
+        1.3699
+       ],
+       [
+        "L30H6",
+        0.8707
+       ],
+       [
+        "L33.mlp",
+        0.7025
+       ]
+      ],
+      "top_negative": [
+       [
+        "L34.mlp",
+        -6.9593
+       ],
+       [
+        "L35H26",
+        -3.1167
+       ],
+       [
+        "L32H10",
+        -2.8166
+       ],
+       [
+        "L35.mlp",
+        -2.1828
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-5824",
+      "competitor": "PROJ-3731",
+      "correct": false,
+      "logit_diff": -11.25,
+      "attention_share": 0.471,
+      "top_positive": [
+       [
+        "L35H27",
+        3.3446
+       ],
+       [
+        "L30H6",
+        1.8414
+       ],
+       [
+        "L30.mlp",
+        1.8372
+       ],
+       [
+        "L30H8",
+        0.8365
+       ],
+       [
+        "L34H29",
+        0.6983
+       ]
+      ],
+      "top_negative": [
+       [
+        "L35H26",
+        -5.3833
+       ],
+       [
+        "L35.mlp",
+        -2.8718
+       ],
+       [
+        "L31H6",
+        -2.5983
+       ],
+       [
+        "L34.mlp",
+        -2.347
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-6555",
+      "competitor": "PROJ-4462",
+      "correct": false,
+      "logit_diff": -24.25,
+      "attention_share": 0.095,
+      "top_positive": [
+       [
+        "L35H27",
+        11.2833
+       ],
+       [
+        "L34H29",
+        1.9936
+       ],
+       [
+        "L29.mlp",
+        1.1494
+       ],
+       [
+        "L34H31",
+        0.8609
+       ],
+       [
+        "L35H24",
+        0.762
+       ]
+      ],
+      "top_negative": [
+       [
+        "L35H26",
+        -10.6268
+       ],
+       [
+        "L34.mlp",
+        -8.5019
+       ],
+       [
+        "L30.mlp",
+        -6.9278
+       ],
+       [
+        "L35.mlp",
+        -5.5357
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "elapsed_s": 75.0
+ },
+ "microsoft/phi-4": {
+  "model": "microsoft/phi-4",
+  "facts": {
+   "n_layers": 40,
+   "n_heads": 40,
+   "layer_types": null,
+   "sliding_window": null,
+   "quirks": [
+    "grouped-query attention: 40 query heads share 10 KV heads"
+   ],
+   "parameters_human": "14.66B"
+  },
+  "grid": [
+   {
+    "condition": "wording",
+    "wording": "this_ticket",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 18.781,
+    "picked_competitor": null,
+    "mean_tokens": 114,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "that_one",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 20.25,
+    "picked_competitor": null,
+    "mean_tokens": 114,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "it",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 19.145,
+    "picked_competitor": null,
+    "mean_tokens": 112,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "same_ticket",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 20.129,
+    "picked_competitor": null,
+    "mean_tokens": 116,
+    "wrong_examples": []
+   },
+   {
+    "condition": "wording",
+    "wording": "no_noun",
+    "fillers": 0,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 21.445,
+    "picked_competitor": null,
+    "mean_tokens": 111,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 18.324,
+    "picked_competitor": null,
+    "mean_tokens": 151,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 10.617,
+    "picked_competitor": null,
+    "mean_tokens": 226,
+    "wrong_examples": []
+   },
+   {
+    "condition": "distance",
+    "wording": "this_ticket",
+    "fillers": 6,
+    "competing": null,
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 9.445,
+    "picked_competitor": null,
+    "mean_tokens": 336,
+    "wrong_examples": []
+   },
+   {
+    "condition": "competing_before",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": "before",
+    "pipeline": "history",
+    "accuracy": 1.0,
+    "mean_margin": 1.742,
+    "picked_competitor": 0.0,
+    "mean_tokens": 195,
+    "wrong_examples": []
+   },
+   {
+    "condition": "competing_before",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "before",
+    "pipeline": "history",
+    "accuracy": 0.375,
+    "mean_margin": -0.273,
+    "picked_competitor": 0.625,
+    "mean_tokens": 269,
+    "wrong_examples": [
+     "PROJ-1000 -> '891'",
+     "PROJ-4193 -> '200'",
+     "PROJ-8917 -> '682'"
+    ]
+   },
+   {
+    "condition": "competing_after",
+    "wording": "this_ticket",
+    "fillers": 1,
+    "competing": "after",
+    "pipeline": "history",
+    "accuracy": 0.0,
+    "mean_margin": -7.523,
+    "picked_competitor": 1.0,
+    "mean_tokens": 193,
+    "wrong_examples": [
+     "PROJ-1000 -> '891'",
+     "PROJ-2731 -> '964'",
+     "PROJ-3462 -> '137'"
+    ]
+   },
+   {
+    "condition": "competing_after",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "history",
+    "accuracy": 0.0,
+    "mean_margin": -3.516,
+    "picked_competitor": 1.0,
+    "mean_tokens": 269,
+    "wrong_examples": [
+     "PROJ-1000 -> '891'",
+     "PROJ-2731 -> '964'",
+     "PROJ-3462 -> '137'"
+    ]
+   },
+   {
+    "condition": "pipeline",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "entity_slot",
+    "accuracy": 0.562,
+    "mean_margin": 0.273,
+    "picked_competitor": 0.4375,
+    "mean_tokens": 275,
+    "wrong_examples": [
+     "PROJ-1000 -> '891'",
+     "PROJ-4193 -> '200'",
+     "PROJ-5824 -> '373'"
+    ]
+   },
+   {
+    "condition": "pipeline",
+    "wording": "this_ticket",
+    "fillers": 3,
+    "competing": "after",
+    "pipeline": "rewritten",
+    "accuracy": 1.0,
+    "mean_margin": 17.914,
+    "picked_competitor": 0.0,
+    "mean_tokens": 272,
+    "wrong_examples": []
+   }
+  ],
+  "per_case": {
+   "wording|this_ticket|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 24.625,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 19.875,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 18.0,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 15.75,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 16.75,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 21.75,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 16.0,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 14.5,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 19.375,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 19.5,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 20.0,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 19.625,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 21.5,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 16.0,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 21.25,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 16.0,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|that_one|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 25.25,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 21.875,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 19.375,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 18.375,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 18.875,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 17.25,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 18.75,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 15.0,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 22.5,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 21.5,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 16.375,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 21.125,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 26.125,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 15.125,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 21.375,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 25.125,
+     "picked_competitor": null,
+     "n_tokens": 114,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|it|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 23.75,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 18.375,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 16.0,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 16.875,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 15.125,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 18.375,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 16.5,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 13.375,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 22.625,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 18.875,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 21.75,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 19.875,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 24.625,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 15.25,
+     "picked_competitor": null,
+     "n_tokens": 113,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 19.75,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 25.1875,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|same_ticket|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 23.75,
+     "picked_competitor": null,
+     "n_tokens": 117,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 20.75,
+     "picked_competitor": null,
+     "n_tokens": 117,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 20.375,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 19.5,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 19.375,
+     "picked_competitor": null,
+     "n_tokens": 115,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 16.75,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 20.125,
+     "picked_competitor": null,
+     "n_tokens": 117,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 18.125,
+     "picked_competitor": null,
+     "n_tokens": 117,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 21.25,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 21.625,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 14.5,
+     "picked_competitor": null,
+     "n_tokens": 117,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 26.9375,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 117,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 20.75,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 21.25,
+     "picked_competitor": null,
+     "n_tokens": 116,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "wording|no_noun|0|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 27.75,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 19.875,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 21.0,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 20.625,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 24.25,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 19.5,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 15.5,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 22.5,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 22.75,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 20.875,
+     "picked_competitor": null,
+     "n_tokens": 112,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 28.25,
+     "picked_competitor": null,
+     "n_tokens": 110,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 21.75,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 23.0,
+     "picked_competitor": null,
+     "n_tokens": 111,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 109,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|1|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 19.0,
+     "picked_competitor": null,
+     "n_tokens": 154,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 18.25,
+     "picked_competitor": null,
+     "n_tokens": 155,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 23.875,
+     "picked_competitor": null,
+     "n_tokens": 150,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 15.75,
+     "picked_competitor": null,
+     "n_tokens": 154,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 16.75,
+     "picked_competitor": null,
+     "n_tokens": 156,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 18.9375,
+     "picked_competitor": null,
+     "n_tokens": 148,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 15.75,
+     "picked_competitor": null,
+     "n_tokens": 143,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 16.375,
+     "picked_competitor": null,
+     "n_tokens": 151,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 19.25,
+     "picked_competitor": null,
+     "n_tokens": 149,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 13.0625,
+     "picked_competitor": null,
+     "n_tokens": 152,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 18.125,
+     "picked_competitor": null,
+     "n_tokens": 149,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 20.625,
+     "picked_competitor": null,
+     "n_tokens": 155,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 28.75,
+     "picked_competitor": null,
+     "n_tokens": 148,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 18.25,
+     "picked_competitor": null,
+     "n_tokens": 148,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 18.5,
+     "picked_competitor": null,
+     "n_tokens": 155,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 11.9375,
+     "picked_competitor": null,
+     "n_tokens": 152,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|3|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 8.5,
+     "picked_competitor": null,
+     "n_tokens": 221,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 13.75,
+     "picked_competitor": null,
+     "n_tokens": 226,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 9.375,
+     "picked_competitor": null,
+     "n_tokens": 218,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 8.875,
+     "picked_competitor": null,
+     "n_tokens": 218,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 9.9375,
+     "picked_competitor": null,
+     "n_tokens": 230,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 10.5,
+     "picked_competitor": null,
+     "n_tokens": 232,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 11.375,
+     "picked_competitor": null,
+     "n_tokens": 231,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 13.5,
+     "picked_competitor": null,
+     "n_tokens": 230,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 7.625,
+     "picked_competitor": null,
+     "n_tokens": 229,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 12.75,
+     "picked_competitor": null,
+     "n_tokens": 232,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 10.0,
+     "picked_competitor": null,
+     "n_tokens": 233,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 10.375,
+     "picked_competitor": null,
+     "n_tokens": 229,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 9.6875,
+     "picked_competitor": null,
+     "n_tokens": 218,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 9.3125,
+     "picked_competitor": null,
+     "n_tokens": 218,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 11.6875,
+     "picked_competitor": null,
+     "n_tokens": 231,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 12.625,
+     "picked_competitor": null,
+     "n_tokens": 224,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "distance|this_ticket|6|None|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 7.125,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-1000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 10.5625,
+     "picked_competitor": null,
+     "n_tokens": 335,
+     "target": "PROJ-2731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 10.3125,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-3462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 9.3125,
+     "picked_competitor": null,
+     "n_tokens": 335,
+     "target": "PROJ-4193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 9.5,
+     "picked_competitor": null,
+     "n_tokens": 334,
+     "target": "PROJ-5824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 9.25,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-6555",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 9.25,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-7286",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 10.25,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-8917",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 8.25,
+     "picked_competitor": null,
+     "n_tokens": 335,
+     "target": "PROJ-9648",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 8.875,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-1379",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 11.75,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-2000",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 9.1875,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-3731",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 10.4375,
+     "picked_competitor": null,
+     "n_tokens": 335,
+     "target": "PROJ-4462",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 9.1875,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-5193",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 8.9375,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-6824",
+     "competing": null
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 8.9375,
+     "picked_competitor": null,
+     "n_tokens": 336,
+     "target": "PROJ-7555",
+     "competing": null
+    }
+   ],
+   "competing_before|this_ticket|1|before|history": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 0.625,
+     "picked_competitor": false,
+     "n_tokens": 196,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 2.75,
+     "picked_competitor": false,
+     "n_tokens": 192,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 2.25,
+     "picked_competitor": false,
+     "n_tokens": 197,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 1.125,
+     "picked_competitor": false,
+     "n_tokens": 197,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 3.25,
+     "picked_competitor": false,
+     "n_tokens": 193,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 2.125,
+     "picked_competitor": false,
+     "n_tokens": 193,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 2.0,
+     "picked_competitor": false,
+     "n_tokens": 198,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 1.75,
+     "picked_competitor": false,
+     "n_tokens": 193,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 1.875,
+     "picked_competitor": false,
+     "n_tokens": 198,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 2.125,
+     "picked_competitor": false,
+     "n_tokens": 194,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 1.25,
+     "picked_competitor": false,
+     "n_tokens": 198,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 0.125,
+     "picked_competitor": false,
+     "n_tokens": 195,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 1.75,
+     "picked_competitor": false,
+     "n_tokens": 193,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 1.25,
+     "picked_competitor": false,
+     "n_tokens": 193,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 2.0,
+     "picked_competitor": false,
+     "n_tokens": 196,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 1.625,
+     "picked_competitor": false,
+     "n_tokens": 192,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_before|this_ticket|3|before|history": [
+    {
+     "correct": false,
+     "top_token": "891",
+     "margin": -1.5,
+     "picked_competitor": true,
+     "n_tokens": 275,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 0.5,
+     "picked_competitor": false,
+     "n_tokens": 264,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 0.625,
+     "picked_competitor": false,
+     "n_tokens": 272,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "200",
+     "margin": -0.25,
+     "picked_competitor": true,
+     "n_tokens": 273,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 0.875,
+     "picked_competitor": false,
+     "n_tokens": 274,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 0.0,
+     "picked_competitor": false,
+     "n_tokens": 273,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 0.625,
+     "picked_competitor": false,
+     "n_tokens": 261,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "682",
+     "margin": -0.25,
+     "picked_competitor": true,
+     "n_tokens": 274,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "755",
+     "margin": -0.75,
+     "picked_competitor": true,
+     "n_tokens": 272,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 0.125,
+     "picked_competitor": false,
+     "n_tokens": 262,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "991",
+     "margin": -0.375,
+     "picked_competitor": true,
+     "n_tokens": 267,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "164",
+     "margin": -1.25,
+     "picked_competitor": true,
+     "n_tokens": 260,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "237",
+     "margin": -0.5,
+     "picked_competitor": true,
+     "n_tokens": 262,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": false,
+     "top_token": "100",
+     "margin": -0.5,
+     "picked_competitor": true,
+     "n_tokens": 274,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": false,
+     "top_token": "273",
+     "margin": -1.5,
+     "picked_competitor": true,
+     "n_tokens": 269,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "346",
+     "margin": -0.25,
+     "picked_competitor": true,
+     "n_tokens": 266,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_after|this_ticket|1|after|history": [
+    {
+     "correct": false,
+     "top_token": "891",
+     "margin": -8.625,
+     "picked_competitor": true,
+     "n_tokens": 186,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": false,
+     "top_token": "964",
+     "margin": -4.125,
+     "picked_competitor": true,
+     "n_tokens": 184,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "137",
+     "margin": -4.375,
+     "picked_competitor": true,
+     "n_tokens": 196,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "200",
+     "margin": -15.0,
+     "picked_competitor": true,
+     "n_tokens": 192,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "373",
+     "margin": -5.875,
+     "picked_competitor": true,
+     "n_tokens": 196,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": false,
+     "top_token": "446",
+     "margin": -11.625,
+     "picked_competitor": true,
+     "n_tokens": 194,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "519",
+     "margin": -4.375,
+     "picked_competitor": true,
+     "n_tokens": 196,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "682",
+     "margin": -4.25,
+     "picked_competitor": true,
+     "n_tokens": 187,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "755",
+     "margin": -7.25,
+     "picked_competitor": true,
+     "n_tokens": 193,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "828",
+     "margin": -6.25,
+     "picked_competitor": true,
+     "n_tokens": 193,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "991",
+     "margin": -8.875,
+     "picked_competitor": true,
+     "n_tokens": 192,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "164",
+     "margin": -5.5,
+     "picked_competitor": true,
+     "n_tokens": 197,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "237",
+     "margin": -2.5,
+     "picked_competitor": true,
+     "n_tokens": 192,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": false,
+     "top_token": "100",
+     "margin": -19.125,
+     "picked_competitor": true,
+     "n_tokens": 190,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": false,
+     "top_token": "273",
+     "margin": -2.75,
+     "picked_competitor": true,
+     "n_tokens": 199,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "346",
+     "margin": -9.875,
+     "picked_competitor": true,
+     "n_tokens": 196,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "competing_after|this_ticket|3|after|history": [
+    {
+     "correct": false,
+     "top_token": "891",
+     "margin": -4.5,
+     "picked_competitor": true,
+     "n_tokens": 273,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": false,
+     "top_token": "964",
+     "margin": -2.25,
+     "picked_competitor": true,
+     "n_tokens": 278,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": false,
+     "top_token": "137",
+     "margin": -2.25,
+     "picked_competitor": true,
+     "n_tokens": 267,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "200",
+     "margin": -3.5,
+     "picked_competitor": true,
+     "n_tokens": 270,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "373",
+     "margin": -4.5,
+     "picked_competitor": true,
+     "n_tokens": 258,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": false,
+     "top_token": "446",
+     "margin": -3.875,
+     "picked_competitor": true,
+     "n_tokens": 266,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": false,
+     "top_token": "519",
+     "margin": -1.0,
+     "picked_competitor": true,
+     "n_tokens": 275,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": false,
+     "top_token": "682",
+     "margin": -3.25,
+     "picked_competitor": true,
+     "n_tokens": 261,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": false,
+     "top_token": "755",
+     "margin": -5.0,
+     "picked_competitor": true,
+     "n_tokens": 261,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "828",
+     "margin": -2.875,
+     "picked_competitor": true,
+     "n_tokens": 274,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "991",
+     "margin": -4.75,
+     "picked_competitor": true,
+     "n_tokens": 267,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": false,
+     "top_token": "164",
+     "margin": -1.625,
+     "picked_competitor": true,
+     "n_tokens": 260,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "237",
+     "margin": -3.125,
+     "picked_competitor": true,
+     "n_tokens": 275,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": false,
+     "top_token": "100",
+     "margin": -8.875,
+     "picked_competitor": true,
+     "n_tokens": 268,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": false,
+     "top_token": "273",
+     "margin": -2.0,
+     "picked_competitor": true,
+     "n_tokens": 274,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": false,
+     "top_token": "346",
+     "margin": -2.875,
+     "picked_competitor": true,
+     "n_tokens": 271,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "pipeline|this_ticket|3|after|entity_slot": [
+    {
+     "correct": false,
+     "top_token": "891",
+     "margin": -0.875,
+     "picked_competitor": true,
+     "n_tokens": 270,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 3.0,
+     "picked_competitor": false,
+     "n_tokens": 275,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 0.625,
+     "picked_competitor": false,
+     "n_tokens": 281,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": false,
+     "top_token": "200",
+     "margin": -0.5,
+     "picked_competitor": true,
+     "n_tokens": 270,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": false,
+     "top_token": "373",
+     "margin": -0.5,
+     "picked_competitor": true,
+     "n_tokens": 270,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 0.375,
+     "picked_competitor": false,
+     "n_tokens": 275,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 2.5,
+     "picked_competitor": false,
+     "n_tokens": 274,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 1.375,
+     "picked_competitor": false,
+     "n_tokens": 274,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 1.0,
+     "picked_competitor": false,
+     "n_tokens": 275,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": false,
+     "top_token": "828",
+     "margin": -2.0,
+     "picked_competitor": true,
+     "n_tokens": 276,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": false,
+     "top_token": "991",
+     "margin": -2.125,
+     "picked_competitor": true,
+     "n_tokens": 281,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 0.75,
+     "picked_competitor": false,
+     "n_tokens": 265,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": false,
+     "top_token": "237",
+     "margin": -0.875,
+     "picked_competitor": true,
+     "n_tokens": 283,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": false,
+     "top_token": "100",
+     "margin": -1.0,
+     "picked_competitor": true,
+     "n_tokens": 271,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 1.5,
+     "picked_competitor": false,
+     "n_tokens": 275,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 1.125,
+     "picked_competitor": false,
+     "n_tokens": 281,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ],
+   "pipeline|this_ticket|3|after|rewritten": [
+    {
+     "correct": true,
+     "top_token": "100",
+     "margin": 15.5,
+     "picked_competitor": false,
+     "n_tokens": 262,
+     "target": "PROJ-1000",
+     "competing": "PROJ-8917"
+    },
+    {
+     "correct": true,
+     "top_token": "273",
+     "margin": 20.875,
+     "picked_competitor": false,
+     "n_tokens": 277,
+     "target": "PROJ-2731",
+     "competing": "PROJ-9648"
+    },
+    {
+     "correct": true,
+     "top_token": "346",
+     "margin": 18.75,
+     "picked_competitor": false,
+     "n_tokens": 277,
+     "target": "PROJ-3462",
+     "competing": "PROJ-1379"
+    },
+    {
+     "correct": true,
+     "top_token": "419",
+     "margin": 17.375,
+     "picked_competitor": false,
+     "n_tokens": 263,
+     "target": "PROJ-4193",
+     "competing": "PROJ-2000"
+    },
+    {
+     "correct": true,
+     "top_token": "582",
+     "margin": 20.5,
+     "picked_competitor": false,
+     "n_tokens": 271,
+     "target": "PROJ-5824",
+     "competing": "PROJ-3731"
+    },
+    {
+     "correct": true,
+     "top_token": "655",
+     "margin": 22.25,
+     "picked_competitor": false,
+     "n_tokens": 276,
+     "target": "PROJ-6555",
+     "competing": "PROJ-4462"
+    },
+    {
+     "correct": true,
+     "top_token": "728",
+     "margin": 17.625,
+     "picked_competitor": false,
+     "n_tokens": 275,
+     "target": "PROJ-7286",
+     "competing": "PROJ-5193"
+    },
+    {
+     "correct": true,
+     "top_token": "891",
+     "margin": 16.25,
+     "picked_competitor": false,
+     "n_tokens": 268,
+     "target": "PROJ-8917",
+     "competing": "PROJ-6824"
+    },
+    {
+     "correct": true,
+     "top_token": "964",
+     "margin": 17.75,
+     "picked_competitor": false,
+     "n_tokens": 268,
+     "target": "PROJ-9648",
+     "competing": "PROJ-7555"
+    },
+    {
+     "correct": true,
+     "top_token": "137",
+     "margin": 16.625,
+     "picked_competitor": false,
+     "n_tokens": 269,
+     "target": "PROJ-1379",
+     "competing": "PROJ-8286"
+    },
+    {
+     "correct": true,
+     "top_token": "200",
+     "margin": 18.5,
+     "picked_competitor": false,
+     "n_tokens": 273,
+     "target": "PROJ-2000",
+     "competing": "PROJ-9917"
+    },
+    {
+     "correct": true,
+     "top_token": "373",
+     "margin": 17.5,
+     "picked_competitor": false,
+     "n_tokens": 275,
+     "target": "PROJ-3731",
+     "competing": "PROJ-1648"
+    },
+    {
+     "correct": true,
+     "top_token": "446",
+     "margin": 21.25,
+     "picked_competitor": false,
+     "n_tokens": 272,
+     "target": "PROJ-4462",
+     "competing": "PROJ-2379"
+    },
+    {
+     "correct": true,
+     "top_token": "519",
+     "margin": 12.25,
+     "picked_competitor": false,
+     "n_tokens": 276,
+     "target": "PROJ-5193",
+     "competing": "PROJ-1000"
+    },
+    {
+     "correct": true,
+     "top_token": "682",
+     "margin": 20.625,
+     "picked_competitor": false,
+     "n_tokens": 270,
+     "target": "PROJ-6824",
+     "competing": "PROJ-2731"
+    },
+    {
+     "correct": true,
+     "top_token": "755",
+     "margin": 13.0,
+     "picked_competitor": false,
+     "n_tokens": 277,
+     "target": "PROJ-7555",
+     "competing": "PROJ-3462"
+    }
+   ]
+  },
+  "mechanistic": {
+   "A_hardest_success": {
+    "condition": {
+     "condition": "competing_before",
+     "wording": "this_ticket",
+     "fillers": 3,
+     "competing": "before"
+    },
+    "n_success": 5,
+    "n_failure": 7,
+    "target_heads_success": [
+     {
+      "head": "L21H25",
+      "type": "full_attention",
+      "attention": 0.753
+     },
+     {
+      "head": "L17H22",
+      "type": "full_attention",
+      "attention": 0.738
+     },
+     {
+      "head": "L11H17",
+      "type": "full_attention",
+      "attention": 0.726
+     },
+     {
+      "head": "L18H18",
+      "type": "full_attention",
+      "attention": 0.692
+     },
+     {
+      "head": "L17H31",
+      "type": "full_attention",
+      "attention": 0.676
+     },
+     {
+      "head": "L14H27",
+      "type": "full_attention",
+      "attention": 0.645
+     }
+    ],
+    "target_heads_failure": [
+     {
+      "head": "L11H17",
+      "type": "full_attention",
+      "attention": 0.76
+     },
+     {
+      "head": "L21H25",
+      "type": "full_attention",
+      "attention": 0.732
+     },
+     {
+      "head": "L21H7",
+      "type": "full_attention",
+      "attention": 0.722
+     },
+     {
+      "head": "L17H31",
+      "type": "full_attention",
+      "attention": 0.704
+     },
+     {
+      "head": "L14H27",
+      "type": "full_attention",
+      "attention": 0.699
+     },
+     {
+      "head": "L17H22",
+      "type": "full_attention",
+      "attention": 0.69
+     }
+    ],
+    "competitor_heads_success": [
+     {
+      "head": "L17H28",
+      "type": "full_attention",
+      "attention": 0.821
+     },
+     {
+      "head": "L26H29",
+      "type": "full_attention",
+      "attention": 0.781
+     },
+     {
+      "head": "L35H21",
+      "type": "full_attention",
+      "attention": 0.695
+     },
+     {
+      "head": "L36H6",
+      "type": "full_attention",
+      "attention": 0.67
+     },
+     {
+      "head": "L26H26",
+      "type": "full_attention",
+      "attention": 0.631
+     },
+     {
+      "head": "L28H16",
+      "type": "full_attention",
+      "attention": 0.6
+     }
+    ],
+    "competitor_heads_failure": [
+     {
+      "head": "L17H28",
+      "type": "full_attention",
+      "attention": 0.873
+     },
+     {
+      "head": "L26H29",
+      "type": "full_attention",
+      "attention": 0.738
+     },
+     {
+      "head": "L35H21",
+      "type": "full_attention",
+      "attention": 0.718
+     },
+     {
+      "head": "L35H22",
+      "type": "full_attention",
+      "attention": 0.64
+     },
+     {
+      "head": "L26H26",
+      "type": "full_attention",
+      "attention": 0.62
+     },
+     {
+      "head": "L25H13",
+      "type": "full_attention",
+      "attention": 0.58
+     }
+    ],
+    "max_attention_on_target_by_layer_type": {
+     "success": {
+      "full_attention": 12.404
+     },
+     "failure": {
+      "full_attention": 11.882
+     }
+    },
+    "lens_first_layer_target_on_top": {
+     "success": [
+      28,
+      35,
+      36,
+      38,
+      39
+     ],
+     "failure": [
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40
+     ]
+    },
+    "dla": [
+     {
+      "target": "PROJ-1000",
+      "competitor": "PROJ-8917",
+      "correct": false,
+      "logit_diff": -1.125,
+      "attention_share": 1.29,
+      "top_positive": [
+       [
+        "L35H16",
+        1.0932
+       ],
+       [
+        "L36.mlp",
+        0.8502
+       ],
+       [
+        "L27H36",
+        0.8081
+       ],
+       [
+        "L36H6",
+        0.7812
+       ],
+       [
+        "L31H2",
+        0.7232
+       ]
+      ],
+      "top_negative": [
+       [
+        "L32H6",
+        -1.4544
+       ],
+       [
+        "L39.mlp",
+        -1.2419
+       ],
+       [
+        "L35H19",
+        -1.0079
+       ],
+       [
+        "L28H18",
+        -0.9229
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-2731",
+      "competitor": "PROJ-9648",
+      "correct": true,
+      "logit_diff": 0.375,
+      "attention_share": -2.181,
+      "top_positive": [
+       [
+        "L32H5",
+        1.7519
+       ],
+       [
+        "L36H6",
+        0.9752
+       ],
+       [
+        "L27H38",
+        0.7838
+       ],
+       [
+        "L35H6",
+        0.568
+       ],
+       [
+        "L35H16",
+        0.5561
+       ]
+      ],
+      "top_negative": [
+       [
+        "L32H31",
+        -1.5079
+       ],
+       [
+        "L34H38",
+        -0.8125
+       ],
+       [
+        "L28H19",
+        -0.7044
+       ],
+       [
+        "L27H39",
+        -0.691
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-3462",
+      "competitor": "PROJ-1379",
+      "correct": true,
+      "logit_diff": 0.625,
+      "attention_share": -1.589,
+      "top_positive": [
+       [
+        "L33H28",
+        2.0826
+       ],
+       [
+        "L35H4",
+        0.9889
+       ],
+       [
+        "L37.mlp",
+        0.7842
+       ],
+       [
+        "L27H33",
+        0.5042
+       ],
+       [
+        "L36H6",
+        0.4347
+       ]
+      ],
+      "top_negative": [
+       [
+        "L32H6",
+        -2.006
+       ],
+       [
+        "L28H16",
+        -1.0889
+       ],
+       [
+        "L34H38",
+        -0.7392
+       ],
+       [
+        "L35H19",
+        -0.6007
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-4193",
+      "competitor": "PROJ-2000",
+      "correct": false,
+      "logit_diff": -0.875,
+      "attention_share": 0.783,
+      "top_positive": [
+       [
+        "L34H17",
+        1.1078
+       ],
+       [
+        "L27H39",
+        1.001
+       ],
+       [
+        "L39.mlp",
+        0.962
+       ],
+       [
+        "L34H38",
+        0.8597
+       ],
+       [
+        "L26H28",
+        0.5809
+       ]
+      ],
+      "top_negative": [
+       [
+        "L35H16",
+        -0.9756
+       ],
+       [
+        "L36H6",
+        -0.8156
+       ],
+       [
+        "L27H36",
+        -0.8101
+       ],
+       [
+        "L30H10",
+        -0.5133
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-5824",
+      "competitor": "PROJ-3731",
+      "correct": true,
+      "logit_diff": 0.125,
+      "attention_share": -11.149,
+      "top_positive": [
+       [
+        "L32H29",
+        1.9119
+       ],
+       [
+        "L34H38",
+        0.9337
+       ],
+       [
+        "L34H39",
+        0.766
+       ],
+       [
+        "L35.mlp",
+        0.5318
+       ],
+       [
+        "L32H32",
+        0.3792
+       ]
+      ],
+      "top_negative": [
+       [
+        "L32H35",
+        -1.7641
+       ],
+       [
+        "L27H35",
+        -1.4959
+       ],
+       [
+        "L28H16",
+        -0.3785
+       ],
+       [
+        "L37H21",
+        -0.333
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-6555",
+      "competitor": "PROJ-4462",
+      "correct": false,
+      "logit_diff": -0.5,
+      "attention_share": 1.162,
+      "top_positive": [
+       [
+        "L27H32",
+        1.1431
+       ],
+       [
+        "L36H6",
+        0.8587
+       ],
+       [
+        "L27H35",
+        0.7653
+       ],
+       [
+        "L32H31",
+        0.669
+       ],
+       [
+        "L32H33",
+        0.6086
+       ]
+      ],
+      "top_negative": [
+       [
+        "L28H19",
+        -1.2636
+       ],
+       [
+        "L28H32",
+        -0.9101
+       ],
+       [
+        "L34H38",
+        -0.8546
+       ],
+       [
+        "L35H4",
+        -0.7433
+       ]
+      ]
+     }
+    ]
+   },
+   "B_competing_after": {
+    "condition": {
+     "condition": "competing_after",
+     "wording": "this_ticket",
+     "fillers": 3,
+     "competing": "after"
+    },
+    "n_success": 0,
+    "n_failure": 12,
+    "target_heads_success": [],
+    "target_heads_failure": [
+     {
+      "head": "L17H28",
+      "type": "full_attention",
+      "attention": 0.806
+     },
+     {
+      "head": "L35H22",
+      "type": "full_attention",
+      "attention": 0.767
+     },
+     {
+      "head": "L35H21",
+      "type": "full_attention",
+      "attention": 0.635
+     },
+     {
+      "head": "L38H15",
+      "type": "full_attention",
+      "attention": 0.621
+     },
+     {
+      "head": "L39H19",
+      "type": "full_attention",
+      "attention": 0.619
+     },
+     {
+      "head": "L38H14",
+      "type": "full_attention",
+      "attention": 0.619
+     }
+    ],
+    "competitor_heads_success": [],
+    "competitor_heads_failure": [
+     {
+      "head": "L21H4",
+      "type": "full_attention",
+      "attention": 0.927
+     },
+     {
+      "head": "L24H24",
+      "type": "full_attention",
+      "attention": 0.91
+     },
+     {
+      "head": "L26H26",
+      "type": "full_attention",
+      "attention": 0.897
+     },
+     {
+      "head": "L11H17",
+      "type": "full_attention",
+      "attention": 0.879
+     },
+     {
+      "head": "L17H31",
+      "type": "full_attention",
+      "attention": 0.867
+     },
+     {
+      "head": "L21H7",
+      "type": "full_attention",
+      "attention": 0.842
+     }
+    ],
+    "max_attention_on_target_by_layer_type": {
+     "success": {
+      "full_attention": 0.0
+     },
+     "failure": {
+      "full_attention": 10.789
+     }
+    },
+    "lens_first_layer_target_on_top": {
+     "success": [],
+     "failure": [
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40,
+      40
+     ]
+    },
+    "dla": [
+     {
+      "target": "PROJ-1000",
+      "competitor": "PROJ-8917",
+      "correct": false,
+      "logit_diff": -5.5,
+      "attention_share": 0.986,
+      "top_positive": [
+       [
+        "L35H16",
+        2.5759
+       ],
+       [
+        "L27H36",
+        1.2043
+       ],
+       [
+        "L36.mlp",
+        1.0942
+       ],
+       [
+        "L36H6",
+        0.8162
+       ],
+       [
+        "L31H2",
+        0.7975
+       ]
+      ],
+      "top_negative": [
+       [
+        "L35H19",
+        -2.4736
+       ],
+       [
+        "L32H6",
+        -1.5362
+       ],
+       [
+        "L32H20",
+        -1.246
+       ],
+       [
+        "L28H18",
+        -1.1233
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-2731",
+      "competitor": "PROJ-9648",
+      "correct": false,
+      "logit_diff": -1.875,
+      "attention_share": 0.386,
+      "top_positive": [
+       [
+        "L32H5",
+        1.9351
+       ],
+       [
+        "L35H16",
+        1.414
+       ],
+       [
+        "L36H6",
+        0.9857
+       ],
+       [
+        "L27H38",
+        0.9692
+       ],
+       [
+        "L32H35",
+        0.9039
+       ]
+      ],
+      "top_negative": [
+       [
+        "L32H31",
+        -1.744
+       ],
+       [
+        "L28H19",
+        -0.9436
+       ],
+       [
+        "L34.mlp",
+        -0.7444
+       ],
+       [
+        "L34H38",
+        -0.7421
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-3462",
+      "competitor": "PROJ-1379",
+      "correct": false,
+      "logit_diff": -1.625,
+      "attention_share": 0.828,
+      "top_positive": [
+       [
+        "L33H28",
+        2.3494
+       ],
+       [
+        "L37.mlp",
+        1.4475
+       ],
+       [
+        "L35H16",
+        1.1376
+       ],
+       [
+        "L32H35",
+        0.7406
+       ],
+       [
+        "L30H18",
+        0.5655
+       ]
+      ],
+      "top_negative": [
+       [
+        "L32H6",
+        -2.2372
+       ],
+       [
+        "L32H32",
+        -1.1379
+       ],
+       [
+        "L34H38",
+        -1.0281
+       ],
+       [
+        "L28H16",
+        -0.9005
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-4193",
+      "competitor": "PROJ-2000",
+      "correct": false,
+      "logit_diff": -2.625,
+      "attention_share": 0.771,
+      "top_positive": [
+       [
+        "L39.mlp",
+        1.8332
+       ],
+       [
+        "L35H19",
+        1.3001
+       ],
+       [
+        "L34.mlp",
+        1.2181
+       ],
+       [
+        "L27H39",
+        1.2119
+       ],
+       [
+        "L34H17",
+        1.0945
+       ]
+      ],
+      "top_negative": [
+       [
+        "L33.mlp",
+        -1.4751
+       ],
+       [
+        "L35H16",
+        -1.2351
+       ],
+       [
+        "L30H8",
+        -1.2107
+       ],
+       [
+        "L27H36",
+        -1.1086
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-5824",
+      "competitor": "PROJ-3731",
+      "correct": false,
+      "logit_diff": -3.375,
+      "attention_share": 0.652,
+      "top_positive": [
+       [
+        "L32H29",
+        1.9503
+       ],
+       [
+        "L34H38",
+        1.3399
+       ],
+       [
+        "L32H32",
+        0.8741
+       ],
+       [
+        "L34H39",
+        0.8323
+       ],
+       [
+        "L35.mlp",
+        0.8069
+       ]
+      ],
+      "top_negative": [
+       [
+        "L32H35",
+        -1.9719
+       ],
+       [
+        "L27H35",
+        -1.492
+       ],
+       [
+        "L34.mlp",
+        -0.6933
+       ],
+       [
+        "L36H6",
+        -0.5741
+       ]
+      ]
+     },
+     {
+      "target": "PROJ-6555",
+      "competitor": "PROJ-4462",
+      "correct": false,
+      "logit_diff": -5.875,
+      "attention_share": 0.495,
+      "top_positive": [
+       [
+        "L27H32",
+        1.0461
+       ],
+       [
+        "L32H31",
+        1.0406
+       ],
+       [
+        "L35H16",
+        0.9698
+       ],
+       [
+        "L32H33",
+        0.9492
+       ],
+       [
+        "L27H35",
+        0.8671
+       ]
+      ],
+      "top_negative": [
+       [
+        "L28H19",
+        -1.4621
+       ],
+       [
+        "L34H38",
+        -1.1596
+       ],
+       [
+        "L35H4",
+        -1.1002
+       ],
+       [
+        "L28H32",
+        -0.9658
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  "elapsed_s": 113.9
+ }
+}

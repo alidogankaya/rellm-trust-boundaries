@@ -1,0 +1,55 @@
+eval set: 80 prompts (16 facts x 5 prefixes, country at positions 4..7)
+baseline: {'acc': 1.0, 'margin_mean': 9.306, 'margin_min': 8.643, 'params': 510848, 'repeat_task_acc': 1.0, 'latency_ms': 14.6}
+
+A. where is the decision made? (truncation = later layers removed)
+   through embed: acc 0.062 margin mean -1.342 min -2.46
+   through    L0: acc 1.000 margin mean 6.207 min 3.308
+   through    L1: acc 1.000 margin mean 7.382 min 5.676
+   through    L2: acc 1.000 margin mean 9.306 min 8.643
+   inputs where a later layer changes the L0 answer: 0/80
+
+B. necessity map (ablate one component, full model)
+   -L0.mlp : acc 0.400 margin mean   3.278 min  -0.107
+   -L2.mlp : acc 1.000 margin mean   7.295 min   5.362
+   -L0H3   : acc 0.975 margin mean   7.606 min   2.932
+   -L1.mlp : acc 1.000 margin mean   8.326 min   5.838
+   -L0H2   : acc 1.000 margin mean   8.762 min   7.816
+   -L1H2   : acc 0.950 margin mean   8.985 min   4.502
+   -L0H0   : acc 1.000 margin mean   9.060 min   7.971
+   -L2H2   : acc 1.000 margin mean   9.188 min   8.239
+   -L1H1   : acc 1.000 margin mean   9.257 min   8.639
+   -L2H0   : acc 1.000 margin mean   9.267 min   8.463
+   -L1H3   : acc 1.000 margin mean   9.273 min   8.582
+   -L2H1   : acc 1.000 margin mean   9.276 min   8.610
+   -L0H1   : acc 1.000 margin mean   9.285 min   8.563
+   -L2H3   : acc 1.000 margin mean   9.296 min   8.601
+   -L1H0   : acc 1.000 margin mean   9.311 min   8.721
+
+C. minimal circuit (greedy: drop the component whose removal costs the least margin, stop before acc < 1.0)
+   dropped layer L2: acc 1.000 margin min 5.676
+   dropped layer L1: acc 1.000 margin min 3.308
+   dropped head L0H0: acc 1.000 margin min 3.560
+   dropped head L0H1: acc 1.000 margin min 3.584
+   dropped head L0H2: acc 1.000 margin min 2.471
+   minimal circuit: layers [0], heads {0: [3]}, mlps [0] -> {'acc': 1.0, 'margin_mean': 5.329, 'margin_min': 2.471}
+
+D. MLP neuron pruning (importance = |act x down-proj projected on the answer direction|)
+   L0 keep   8/256 neurons: acc 0.863 margin min -1.611
+   L0 keep  16/256 neurons: acc 0.938 margin min -1.742
+   L0 keep  24/256 neurons: acc 1.000 margin min 2.264
+   L0 keep  32/256 neurons: acc 1.000 margin min 2.120
+   L0 keep  48/256 neurons: acc 1.000 margin min 2.593
+   L0 keep  64/256 neurons: acc 1.000 margin min 2.477
+   L0 keep  96/256 neurons: acc 1.000 margin min 2.397
+   L0 keep 128/256 neurons: acc 1.000 margin min 2.518
+   L0 keep 192/256 neurons: acc 1.000 margin min 2.448
+   L0 keep 256/256 neurons: acc 1.000 margin min 2.471
+   L0: keeping 24 neurons
+
+E. compressed model (real HF model, fewer layers/heads/neurons)
+   full : layers 3 heads 4 d_mlp 256 params 510848 (body 492416) latency 14.6 ms  facts acc 1.000 margin min 8.643  repeat 1.0
+   small: layers 1 heads 1 d_mlp 24 params 44416 (body 25984) latency 2.43 ms  facts acc 1.000 margin min 2.97  repeat 0.019
+   body params x19.0 smaller, 6.0x faster, task kept: True, repeat task lost: True
+   hook-circuit vs built model margin mean: 5.329 vs 4.597 (differ only by mean-ablation vs removal of dropped heads and pruned neurons)
+
+saved /home/claude/demo/model-compressed and circuit-compression-report.json

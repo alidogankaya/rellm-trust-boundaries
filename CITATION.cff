@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Trust Boundaries Inside Open LLMs"
+message: "If you use this work, please cite it."
+authors:
+  - family-names: Kaya
+    given-names: Ali Dogan
+repository-code: "https://github.com/alidogankaya/rellm-trust-boundaries"
+date-released: 2026-10-29
+license: MIT

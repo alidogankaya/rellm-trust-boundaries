@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rellm"
+version = "0.2.0"
+description = "REA-style reverse engineering of LLM internals: logit lens, attention, activation patching, DLA, SAEs — served over MCP"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+  "torch>=2.2",
+  "transformers>=4.45",
+  "accelerate>=0.30",
+  "mcp>=1.10",
+  "huggingface_hub>=0.25",
+  "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+sae = ["sae-lens>=5.0"]
+dev = ["pytest"]
+
+[project.scripts]
+rellm-mcp = "rellm.server:main"
+
+[tool.setuptools.packages.find]
+include = ["rellm*"]

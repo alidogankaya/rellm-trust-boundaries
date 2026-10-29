@@ -1,0 +1,12 @@
+written_utc: 2026-10-29T07:27:13.480833+00:00
+script_sha256: 8150a2253c26d98e99b742331fdc2a1c3e64dd6c59b5153f68699b7379ba4375
+
+Pre-registered thresholds (written before any real run):
+  T1 each violation lowers clean behaviour by >= 20 points in >= 1 model.
+  T2 one-circuit(behavioural): A's direction shifts B's compliance by >= 10 points for all three ordered pairs.
+  T3 one-circuit(geometry): mean pairwise cosine of the three directions >= 0.3 at the best layer.
+  T4 one-circuit(heads): mean pairwise Jaccard of the top causal heads >= 0.3.
+  T5 selectivity: ablating a task's heads leaves clean-task accuracy >= baseline - 10 points.
+  Verdict: ONE CIRCUIT if T3 and T4 and T5; SEPARATE if T3 and T4 both fail; PARTIAL otherwise.
+
+Usage:

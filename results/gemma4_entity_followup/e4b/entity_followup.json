@@ -1,0 +1,371 @@
+{
+ "model": "google/gemma-4-E4B-it",
+ "facts": {
+  "n_layers": 42,
+  "n_heads": 8,
+  "layer_types": [
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "full_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "full_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "full_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "full_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "full_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "full_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "sliding_attention",
+   "full_attention"
+  ],
+  "sliding_window": 512,
+  "quirks": [
+   "final_logit_softcapping=30.0 (logits are tanh-capped; logit lens applies the cap, DLA is pre-cap)",
+   "Gemma: embeddings scaled by sqrt(d_model); RMSNorm uses (1+weight)",
+   "attention and MLP outputs pass through a norm before being added to the residual (DLA uses frozen per-position scales)",
+   "per-layer input embeddings add a third term to every layer's residual update (reported as 'layer_extra' in DLA)",
+   "head size differs by layer: [256, 512]",
+   "35 sliding-window layers (window 512) + 7 global layers: tokens beyond the window are only reachable through the global layers",
+   "grouped-query attention: 8 query heads share 2 KV heads"
+  ]
+ },
+ "grid": [
+  {
+   "condition": "wording",
+   "wording": "bu_firmanin",
+   "fillers": 0,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 17.318,
+   "picked_competitor_rate": null,
+   "mean_tokens": 140,
+   "examples_wrong": []
+  },
+  {
+   "condition": "wording",
+   "wording": "sirketin",
+   "fillers": 0,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 15.957,
+   "picked_competitor_rate": null,
+   "mean_tokens": 140,
+   "examples_wrong": []
+  },
+  {
+   "condition": "wording",
+   "wording": "onun",
+   "fillers": 0,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 18.361,
+   "picked_competitor_rate": null,
+   "mean_tokens": 139,
+   "examples_wrong": []
+  },
+  {
+   "condition": "wording",
+   "wording": "ayni_firmanin",
+   "fillers": 0,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 19.728,
+   "picked_competitor_rate": null,
+   "mean_tokens": 143,
+   "examples_wrong": []
+  },
+  {
+   "condition": "wording",
+   "wording": "no_noun",
+   "fillers": 0,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 14.473,
+   "picked_competitor_rate": null,
+   "mean_tokens": 138,
+   "examples_wrong": []
+  },
+  {
+   "condition": "distance",
+   "wording": "bu_firmanin",
+   "fillers": 1,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 14.855,
+   "picked_competitor_rate": null,
+   "mean_tokens": 178,
+   "examples_wrong": []
+  },
+  {
+   "condition": "distance",
+   "wording": "bu_firmanin",
+   "fillers": 3,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 12.062,
+   "picked_competitor_rate": null,
+   "mean_tokens": 272,
+   "examples_wrong": []
+  },
+  {
+   "condition": "distance",
+   "wording": "bu_firmanin",
+   "fillers": 6,
+   "competing": false,
+   "pipeline": "history",
+   "accuracy": 1.0,
+   "mean_margin": 8.984,
+   "picked_competitor_rate": null,
+   "mean_tokens": 402,
+   "examples_wrong": []
+  },
+  {
+   "condition": "competing",
+   "wording": "bu_firmanin",
+   "fillers": 1,
+   "competing": true,
+   "pipeline": "history",
+   "accuracy": 0.0,
+   "mean_margin": -6.766,
+   "picked_competitor_rate": 1.0,
+   "mean_tokens": 215,
+   "examples_wrong": [
+    "Yıldız Metal Sanayi -> 'K'",
+    "Akdeniz Lojistik -> 'Gü'",
+    "Karadeniz Gıda -> 'Bo'",
+    "Marmara Tekstil -> 'Tor'"
+   ]
+  },
+  {
+   "condition": "competing",
+   "wording": "bu_firmanin",
+   "fillers": 3,
+   "competing": true,
+   "pipeline": "history",
+   "accuracy": 0.0,
+   "mean_margin": -8.785,
+   "picked_competitor_rate": 1.0,
+   "mean_tokens": 294,
+   "examples_wrong": [
+    "Yıldız Metal Sanayi -> 'K'",
+    "Akdeniz Lojistik -> 'Gü'",
+    "Karadeniz Gıda -> 'Bo'",
+    "Marmara Tekstil -> 'Tor'"
+   ]
+  },
+  {
+   "condition": "pipeline",
+   "wording": "bu_firmanin",
+   "fillers": 3,
+   "competing": true,
+   "pipeline": "rewritten",
+   "accuracy": 1.0,
+   "mean_margin": 21.498,
+   "picked_competitor_rate": 0.0,
+   "mean_tokens": 307,
+   "examples_wrong": []
+  },
+  {
+   "condition": "pipeline",
+   "wording": "bu_firmanin",
+   "fillers": 3,
+   "competing": true,
+   "pipeline": "entity_slot",
+   "accuracy": 0.0,
+   "mean_margin": -8.875,
+   "picked_competitor_rate": 1.0,
+   "mean_tokens": 313,
+   "examples_wrong": [
+    "Yıldız Metal Sanayi -> 'K'",
+    "Akdeniz Lojistik -> 'Gü'",
+    "Karadeniz Gıda -> 'Bo'",
+    "Marmara Tekstil -> 'Tor'"
+   ]
+  }
+ ],
+ "mechanistic": {
+  "condition": {
+   "condition": "competing",
+   "wording": "bu_firmanin",
+   "fillers": 3,
+   "competing": true
+  },
+  "n_success": 0,
+  "n_failure": 12,
+  "copy_heads_success": [],
+  "copy_heads_failure": [
+   {
+    "head": "L5H7",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.936
+   },
+   {
+    "head": "L11H5",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.324
+   },
+   {
+    "head": "L23H3",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.32
+   },
+   {
+    "head": "L17H1",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.248
+   },
+   {
+    "head": "L35H7",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.211
+   },
+   {
+    "head": "L12H1",
+    "layer_type": "sliding_attention",
+    "attn_on_name": 0.181
+   },
+   {
+    "head": "L23H5",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.162
+   },
+   {
+    "head": "L29H3",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.152
+   }
+  ],
+  "competitor_heads_failure": [
+   {
+    "head": "L37H6",
+    "layer_type": "sliding_attention",
+    "attn_on_name": 0.818
+   },
+   {
+    "head": "L30H4",
+    "layer_type": "sliding_attention",
+    "attn_on_name": 0.762
+   },
+   {
+    "head": "L39H7",
+    "layer_type": "sliding_attention",
+    "attn_on_name": 0.717
+   },
+   {
+    "head": "L32H7",
+    "layer_type": "sliding_attention",
+    "attn_on_name": 0.661
+   },
+   {
+    "head": "L28H7",
+    "layer_type": "sliding_attention",
+    "attn_on_name": 0.639
+   },
+   {
+    "head": "L34H5",
+    "layer_type": "sliding_attention",
+    "attn_on_name": 0.629
+   },
+   {
+    "head": "L35H1",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.616
+   },
+   {
+    "head": "L35H6",
+    "layer_type": "full_attention",
+    "attn_on_name": 0.542
+   }
+  ],
+  "max_attention_on_name_by_layer_type": {
+   "success": {
+    "full_attention": 0.0,
+    "sliding_attention": 0.0
+   },
+   "failure": {
+    "full_attention": 2.286,
+    "sliding_attention": 1.593
+   }
+  },
+  "lens_first_layer_name_on_top": {
+   "success": [],
+   "failure": [
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42
+   ]
+  },
+  "dla": [
+   {
+    "company": "Yıldız Metal Sanayi",
+    "error": "KeyError: 'attention_share'"
+   },
+   {
+    "company": "Akdeniz Lojistik",
+    "error": "KeyError: 'attention_share'"
+   },
+   {
+    "company": "Karadeniz Gıda",
+    "error": "KeyError: 'attention_share'"
+   },
+   {
+    "company": "Marmara Tekstil",
+    "error": "KeyError: 'attention_share'"
+   },
+   {
+    "company": "Anadolu Yazılım",
+    "error": "KeyError: 'attention_share'"
+   },
+   {
+    "company": "Ege Mobilya",
+    "error": "KeyError: 'attention_share'"
+   }
+  ]
+ },
+ "elapsed_s": 96.8
+}

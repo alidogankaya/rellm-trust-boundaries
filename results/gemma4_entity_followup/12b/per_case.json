@@ -1,0 +1,1754 @@
+{
+ "wording|bu_firmanin|0|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 22.1855,
+   "beats_competitor": null,
+   "n_tokens": 148,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 24.3125,
+   "beats_competitor": null,
+   "n_tokens": 148,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 22.1328,
+   "beats_competitor": null,
+   "n_tokens": 146,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 21.3516,
+   "beats_competitor": null,
+   "n_tokens": 147,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 23.8438,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 22.9453,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 23.25,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 21.2656,
+   "beats_competitor": null,
+   "n_tokens": 147,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 23.7188,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 21.9023,
+   "beats_competitor": null,
+   "n_tokens": 148,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 25.7188,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 20.5469,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 19.6016,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 27.5938,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 21.4844,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 25.5625,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "wording|sirketin|0|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 22.1621,
+   "beats_competitor": null,
+   "n_tokens": 150,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 23.5,
+   "beats_competitor": null,
+   "n_tokens": 146,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 21.209,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 21.6016,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 22.5625,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 22.2344,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 22.1211,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 21.1094,
+   "beats_competitor": null,
+   "n_tokens": 147,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 23.4375,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 21.3242,
+   "beats_competitor": null,
+   "n_tokens": 146,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 25.1562,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 20.9375,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 19.7188,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 26.4062,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 20.8281,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 24.5938,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "wording|onun|0|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 22.2557,
+   "beats_competitor": null,
+   "n_tokens": 147,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 24.4688,
+   "beats_competitor": null,
+   "n_tokens": 147,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 21.8281,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 21.7246,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 24.0,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 23.0469,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 23.25,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 21.5938,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 23.7812,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 21.9766,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 25.6875,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 20.5391,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 19.8613,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 27.7188,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 21.5938,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 25.75,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "wording|ayni_firmanin|0|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 22.0479,
+   "beats_competitor": null,
+   "n_tokens": 151,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 24.1875,
+   "beats_competitor": null,
+   "n_tokens": 152,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 21.457,
+   "beats_competitor": null,
+   "n_tokens": 148,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 21.4062,
+   "beats_competitor": null,
+   "n_tokens": 149,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 24.0312,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 22.4297,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 23.0156,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 21.1094,
+   "beats_competitor": null,
+   "n_tokens": 150,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 24.2812,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 21.6133,
+   "beats_competitor": null,
+   "n_tokens": 150,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 25.5312,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 20.3516,
+   "beats_competitor": null,
+   "n_tokens": 148,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 19.0977,
+   "beats_competitor": null,
+   "n_tokens": 146,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 27.0312,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 21.7344,
+   "beats_competitor": null,
+   "n_tokens": 147,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 25.75,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "wording|no_noun|0|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 21.9438,
+   "beats_competitor": null,
+   "n_tokens": 146,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 23.7344,
+   "beats_competitor": null,
+   "n_tokens": 146,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 21.9531,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 20.3594,
+   "beats_competitor": null,
+   "n_tokens": 144,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 22.9531,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 20.9219,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 22.7812,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 19.6875,
+   "beats_competitor": null,
+   "n_tokens": 147,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 23.7969,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 21.8047,
+   "beats_competitor": null,
+   "n_tokens": 145,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 25.625,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 20.2734,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 19.1602,
+   "beats_competitor": null,
+   "n_tokens": 141,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 26.0625,
+   "beats_competitor": null,
+   "n_tokens": 140,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 21.2734,
+   "beats_competitor": null,
+   "n_tokens": 143,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 25.2812,
+   "beats_competitor": null,
+   "n_tokens": 142,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "distance|bu_firmanin|1|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 18.4062,
+   "beats_competitor": null,
+   "n_tokens": 179,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 19.7188,
+   "beats_competitor": null,
+   "n_tokens": 190,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 19.8672,
+   "beats_competitor": null,
+   "n_tokens": 179,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 20.1875,
+   "beats_competitor": null,
+   "n_tokens": 176,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 23.0938,
+   "beats_competitor": null,
+   "n_tokens": 187,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 16.4375,
+   "beats_competitor": null,
+   "n_tokens": 173,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 18.4062,
+   "beats_competitor": null,
+   "n_tokens": 172,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 19.8438,
+   "beats_competitor": null,
+   "n_tokens": 197,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 19.7969,
+   "beats_competitor": null,
+   "n_tokens": 200,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 19.7344,
+   "beats_competitor": null,
+   "n_tokens": 182,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 24.125,
+   "beats_competitor": null,
+   "n_tokens": 173,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 20.5547,
+   "beats_competitor": null,
+   "n_tokens": 176,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 18.8906,
+   "beats_competitor": null,
+   "n_tokens": 176,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 22.7773,
+   "beats_competitor": null,
+   "n_tokens": 174,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 20.4375,
+   "beats_competitor": null,
+   "n_tokens": 193,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 22.7422,
+   "beats_competitor": null,
+   "n_tokens": 185,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "distance|bu_firmanin|3|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 15.4375,
+   "beats_competitor": null,
+   "n_tokens": 271,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 12.3125,
+   "beats_competitor": null,
+   "n_tokens": 281,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 20.2109,
+   "beats_competitor": null,
+   "n_tokens": 268,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 11.9375,
+   "beats_competitor": null,
+   "n_tokens": 277,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 15.625,
+   "beats_competitor": null,
+   "n_tokens": 269,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 13.75,
+   "beats_competitor": null,
+   "n_tokens": 274,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 12.8125,
+   "beats_competitor": null,
+   "n_tokens": 252,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 20.75,
+   "beats_competitor": null,
+   "n_tokens": 300,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 15.625,
+   "beats_competitor": null,
+   "n_tokens": 264,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 11.125,
+   "beats_competitor": null,
+   "n_tokens": 281,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 18.3438,
+   "beats_competitor": null,
+   "n_tokens": 277,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 14.4375,
+   "beats_competitor": null,
+   "n_tokens": 281,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 16.125,
+   "beats_competitor": null,
+   "n_tokens": 276,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 19.2188,
+   "beats_competitor": null,
+   "n_tokens": 262,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 13.1875,
+   "beats_competitor": null,
+   "n_tokens": 298,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 20.498,
+   "beats_competitor": null,
+   "n_tokens": 279,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "distance|bu_firmanin|6|False|history": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 12.125,
+   "beats_competitor": null,
+   "n_tokens": 409,
+   "company": "Yıldız Metal Sanayi",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 12.625,
+   "beats_competitor": null,
+   "n_tokens": 410,
+   "company": "Akdeniz Lojistik",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 10.75,
+   "beats_competitor": null,
+   "n_tokens": 407,
+   "company": "Karadeniz Gıda",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 16.9375,
+   "beats_competitor": null,
+   "n_tokens": 406,
+   "company": "Marmara Tekstil",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 11.6875,
+   "beats_competitor": null,
+   "n_tokens": 404,
+   "company": "Anadolu Yazılım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 12.5625,
+   "beats_competitor": null,
+   "n_tokens": 403,
+   "company": "Ege Mobilya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 11.625,
+   "beats_competitor": null,
+   "n_tokens": 403,
+   "company": "Doğu Enerji",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 11.5,
+   "beats_competitor": null,
+   "n_tokens": 408,
+   "company": "Kuzey İnşaat",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 10.5,
+   "beats_competitor": null,
+   "n_tokens": 406,
+   "company": "Güney Turizm",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 20.1562,
+   "beats_competitor": null,
+   "n_tokens": 411,
+   "company": "Boğaziçi Kimya",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 22.9336,
+   "beats_competitor": null,
+   "n_tokens": 402,
+   "company": "Toros Tarım",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 11.625,
+   "beats_competitor": null,
+   "n_tokens": 406,
+   "company": "Zafer Otomotiv",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 11.75,
+   "beats_competitor": null,
+   "n_tokens": 404,
+   "company": "Umut Sağlık",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 10.125,
+   "beats_competitor": null,
+   "n_tokens": 404,
+   "company": "Delta Bilişim",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 17.9375,
+   "beats_competitor": null,
+   "n_tokens": 407,
+   "company": "Pınar Ambalaj",
+   "competing": null
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 18.125,
+   "beats_competitor": null,
+   "n_tokens": 403,
+   "company": "Atlas Madencilik",
+   "competing": null
+  }
+ ],
+ "competing|bu_firmanin|1|True|history": [
+  {
+   "correct_top": false,
+   "top_token": "K",
+   "margin": -12.6875,
+   "beats_competitor": false,
+   "n_tokens": 216,
+   "company": "Yıldız Metal Sanayi",
+   "competing": "Kuzey İnşaat"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Gü",
+   "margin": -16.8125,
+   "beats_competitor": false,
+   "n_tokens": 221,
+   "company": "Akdeniz Lojistik",
+   "competing": "Güney Turizm"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Bo",
+   "margin": -17.5,
+   "beats_competitor": false,
+   "n_tokens": 225,
+   "company": "Karadeniz Gıda",
+   "competing": "Boğaziçi Kimya"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Tor",
+   "margin": -17.125,
+   "beats_competitor": false,
+   "n_tokens": 216,
+   "company": "Marmara Tekstil",
+   "competing": "Toros Tarım"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Za",
+   "margin": -15.875,
+   "beats_competitor": false,
+   "n_tokens": 205,
+   "company": "Anadolu Yazılım",
+   "competing": "Zafer Otomotiv"
+  },
+  {
+   "correct_top": false,
+   "top_token": "U",
+   "margin": -16.375,
+   "beats_competitor": false,
+   "n_tokens": 216,
+   "company": "Ege Mobilya",
+   "competing": "Umut Sağlık"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Delta",
+   "margin": -14.1875,
+   "beats_competitor": false,
+   "n_tokens": 203,
+   "company": "Doğu Enerji",
+   "competing": "Delta Bilişim"
+  },
+  {
+   "correct_top": false,
+   "top_token": "P",
+   "margin": -14.75,
+   "beats_competitor": false,
+   "n_tokens": 237,
+   "company": "Kuzey İnşaat",
+   "competing": "Pınar Ambalaj"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Atlas",
+   "margin": -19.9707,
+   "beats_competitor": false,
+   "n_tokens": 217,
+   "company": "Güney Turizm",
+   "competing": "Atlas Madencilik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Meri",
+   "margin": -15.4688,
+   "beats_competitor": false,
+   "n_tokens": 207,
+   "company": "Boğaziçi Kimya",
+   "competing": "Meriç Elektrik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Sah",
+   "margin": -23.4688,
+   "beats_competitor": false,
+   "n_tokens": 230,
+   "company": "Toros Tarım",
+   "competing": "Sahra Plastik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Vega",
+   "margin": -20.0,
+   "beats_competitor": false,
+   "n_tokens": 234,
+   "company": "Zafer Otomotiv",
+   "competing": "Vega Ulaşım"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Nil",
+   "margin": -22.0156,
+   "beats_competitor": false,
+   "n_tokens": 203,
+   "company": "Umut Sağlık",
+   "competing": "Nil Kozmetik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Y",
+   "margin": -16.75,
+   "beats_competitor": false,
+   "n_tokens": 232,
+   "company": "Delta Bilişim",
+   "competing": "Yıldız Metal Sanayi"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Ak",
+   "margin": -17.7969,
+   "beats_competitor": false,
+   "n_tokens": 219,
+   "company": "Pınar Ambalaj",
+   "competing": "Akdeniz Lojistik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Kar",
+   "margin": -27.625,
+   "beats_competitor": false,
+   "n_tokens": 219,
+   "company": "Atlas Madencilik",
+   "competing": "Karadeniz Gıda"
+  }
+ ],
+ "competing|bu_firmanin|3|True|history": [
+  {
+   "correct_top": false,
+   "top_token": "K",
+   "margin": -12.8125,
+   "beats_competitor": false,
+   "n_tokens": 289,
+   "company": "Yıldız Metal Sanayi",
+   "competing": "Kuzey İnşaat"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Gü",
+   "margin": -12.4375,
+   "beats_competitor": false,
+   "n_tokens": 303,
+   "company": "Akdeniz Lojistik",
+   "competing": "Güney Turizm"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Bo",
+   "margin": -19.6953,
+   "beats_competitor": false,
+   "n_tokens": 300,
+   "company": "Karadeniz Gıda",
+   "competing": "Boğaziçi Kimya"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Tor",
+   "margin": -17.25,
+   "beats_competitor": false,
+   "n_tokens": 297,
+   "company": "Marmara Tekstil",
+   "competing": "Toros Tarım"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Za",
+   "margin": -16.0,
+   "beats_competitor": false,
+   "n_tokens": 297,
+   "company": "Anadolu Yazılım",
+   "competing": "Zafer Otomotiv"
+  },
+  {
+   "correct_top": false,
+   "top_token": "U",
+   "margin": -14.125,
+   "beats_competitor": false,
+   "n_tokens": 288,
+   "company": "Ege Mobilya",
+   "competing": "Umut Sağlık"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Delta",
+   "margin": -18.6406,
+   "beats_competitor": false,
+   "n_tokens": 322,
+   "company": "Doğu Enerji",
+   "competing": "Delta Bilişim"
+  },
+  {
+   "correct_top": false,
+   "top_token": "P",
+   "margin": -12.75,
+   "beats_competitor": false,
+   "n_tokens": 312,
+   "company": "Kuzey İnşaat",
+   "competing": "Pınar Ambalaj"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Atlas",
+   "margin": -13.9688,
+   "beats_competitor": false,
+   "n_tokens": 299,
+   "company": "Güney Turizm",
+   "competing": "Atlas Madencilik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Meri",
+   "margin": -24.6562,
+   "beats_competitor": false,
+   "n_tokens": 296,
+   "company": "Boğaziçi Kimya",
+   "competing": "Meriç Elektrik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Sah",
+   "margin": -21.5547,
+   "beats_competitor": false,
+   "n_tokens": 278,
+   "company": "Toros Tarım",
+   "competing": "Sahra Plastik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Vega",
+   "margin": -16.75,
+   "beats_competitor": false,
+   "n_tokens": 283,
+   "company": "Zafer Otomotiv",
+   "competing": "Vega Ulaşım"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Nil",
+   "margin": -18.0,
+   "beats_competitor": false,
+   "n_tokens": 294,
+   "company": "Umut Sağlık",
+   "competing": "Nil Kozmetik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Y",
+   "margin": -14.5,
+   "beats_competitor": false,
+   "n_tokens": 313,
+   "company": "Delta Bilişim",
+   "competing": "Yıldız Metal Sanayi"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Ak",
+   "margin": -16.8125,
+   "beats_competitor": false,
+   "n_tokens": 306,
+   "company": "Pınar Ambalaj",
+   "competing": "Akdeniz Lojistik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Kar",
+   "margin": -21.9766,
+   "beats_competitor": false,
+   "n_tokens": 285,
+   "company": "Atlas Madencilik",
+   "competing": "Karadeniz Gıda"
+  }
+ ],
+ "pipeline|bu_firmanin|3|True|rewritten": [
+  {
+   "correct_top": true,
+   "top_token": "Y",
+   "margin": 22.7188,
+   "beats_competitor": true,
+   "n_tokens": 312,
+   "company": "Yıldız Metal Sanayi",
+   "competing": "Kuzey İnşaat"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Ak",
+   "margin": 24.9688,
+   "beats_competitor": true,
+   "n_tokens": 329,
+   "company": "Akdeniz Lojistik",
+   "competing": "Güney Turizm"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Kar",
+   "margin": 21.7031,
+   "beats_competitor": true,
+   "n_tokens": 315,
+   "company": "Karadeniz Gıda",
+   "competing": "Boğaziçi Kimya"
+  },
+  {
+   "correct_top": true,
+   "top_token": "M",
+   "margin": 22.3008,
+   "beats_competitor": true,
+   "n_tokens": 306,
+   "company": "Marmara Tekstil",
+   "competing": "Toros Tarım"
+  },
+  {
+   "correct_top": true,
+   "top_token": "An",
+   "margin": 23.9062,
+   "beats_competitor": true,
+   "n_tokens": 302,
+   "company": "Anadolu Yazılım",
+   "competing": "Zafer Otomotiv"
+  },
+  {
+   "correct_top": true,
+   "top_token": "E",
+   "margin": 22.9375,
+   "beats_competitor": true,
+   "n_tokens": 300,
+   "company": "Ege Mobilya",
+   "competing": "Umut Sağlık"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Do",
+   "margin": 23.5938,
+   "beats_competitor": true,
+   "n_tokens": 299,
+   "company": "Doğu Enerji",
+   "competing": "Delta Bilişim"
+  },
+  {
+   "correct_top": true,
+   "top_token": "K",
+   "margin": 22.8838,
+   "beats_competitor": true,
+   "n_tokens": 299,
+   "company": "Kuzey İnşaat",
+   "competing": "Pınar Ambalaj"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Gü",
+   "margin": 25.2188,
+   "beats_competitor": true,
+   "n_tokens": 299,
+   "company": "Güney Turizm",
+   "competing": "Atlas Madencilik"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Bo",
+   "margin": 22.0664,
+   "beats_competitor": true,
+   "n_tokens": 331,
+   "company": "Boğaziçi Kimya",
+   "competing": "Meriç Elektrik"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Tor",
+   "margin": 25.25,
+   "beats_competitor": true,
+   "n_tokens": 310,
+   "company": "Toros Tarım",
+   "competing": "Sahra Plastik"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Za",
+   "margin": 20.8281,
+   "beats_competitor": true,
+   "n_tokens": 312,
+   "company": "Zafer Otomotiv",
+   "competing": "Vega Ulaşım"
+  },
+  {
+   "correct_top": true,
+   "top_token": "U",
+   "margin": 20.5391,
+   "beats_competitor": true,
+   "n_tokens": 302,
+   "company": "Umut Sağlık",
+   "competing": "Nil Kozmetik"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Delta",
+   "margin": 28.0,
+   "beats_competitor": true,
+   "n_tokens": 302,
+   "company": "Delta Bilişim",
+   "competing": "Yıldız Metal Sanayi"
+  },
+  {
+   "correct_top": true,
+   "top_token": "P",
+   "margin": 23.1289,
+   "beats_competitor": true,
+   "n_tokens": 336,
+   "company": "Pınar Ambalaj",
+   "competing": "Akdeniz Lojistik"
+  },
+  {
+   "correct_top": true,
+   "top_token": "Atlas",
+   "margin": 25.25,
+   "beats_competitor": true,
+   "n_tokens": 317,
+   "company": "Atlas Madencilik",
+   "competing": "Karadeniz Gıda"
+  }
+ ],
+ "pipeline|bu_firmanin|3|True|entity_slot": [
+  {
+   "correct_top": false,
+   "top_token": "K",
+   "margin": -11.6875,
+   "beats_competitor": false,
+   "n_tokens": 333,
+   "company": "Yıldız Metal Sanayi",
+   "competing": "Kuzey İnşaat"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Gü",
+   "margin": -13.625,
+   "beats_competitor": false,
+   "n_tokens": 297,
+   "company": "Akdeniz Lojistik",
+   "competing": "Güney Turizm"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Bo",
+   "margin": -16.1875,
+   "beats_competitor": false,
+   "n_tokens": 327,
+   "company": "Karadeniz Gıda",
+   "competing": "Boğaziçi Kimya"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Tor",
+   "margin": -15.0625,
+   "beats_competitor": false,
+   "n_tokens": 329,
+   "company": "Marmara Tekstil",
+   "competing": "Toros Tarım"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Za",
+   "margin": -12.75,
+   "beats_competitor": false,
+   "n_tokens": 320,
+   "company": "Anadolu Yazılım",
+   "competing": "Zafer Otomotiv"
+  },
+  {
+   "correct_top": false,
+   "top_token": "U",
+   "margin": -12.125,
+   "beats_competitor": false,
+   "n_tokens": 314,
+   "company": "Ege Mobilya",
+   "competing": "Umut Sağlık"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Delta",
+   "margin": -13.9375,
+   "beats_competitor": false,
+   "n_tokens": 308,
+   "company": "Doğu Enerji",
+   "competing": "Delta Bilişim"
+  },
+  {
+   "correct_top": false,
+   "top_token": "P",
+   "margin": -14.25,
+   "beats_competitor": false,
+   "n_tokens": 315,
+   "company": "Kuzey İnşaat",
+   "competing": "Pınar Ambalaj"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Atlas",
+   "margin": -11.75,
+   "beats_competitor": false,
+   "n_tokens": 316,
+   "company": "Güney Turizm",
+   "competing": "Atlas Madencilik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Meri",
+   "margin": -15.25,
+   "beats_competitor": false,
+   "n_tokens": 316,
+   "company": "Boğaziçi Kimya",
+   "competing": "Meriç Elektrik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Sah",
+   "margin": -19.8047,
+   "beats_competitor": false,
+   "n_tokens": 334,
+   "company": "Toros Tarım",
+   "competing": "Sahra Plastik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Vega",
+   "margin": -15.8125,
+   "beats_competitor": false,
+   "n_tokens": 322,
+   "company": "Zafer Otomotiv",
+   "competing": "Vega Ulaşım"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Nil",
+   "margin": -13.6875,
+   "beats_competitor": false,
+   "n_tokens": 329,
+   "company": "Umut Sağlık",
+   "competing": "Nil Kozmetik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Y",
+   "margin": -15.1875,
+   "beats_competitor": false,
+   "n_tokens": 317,
+   "company": "Delta Bilişim",
+   "competing": "Yıldız Metal Sanayi"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Ak",
+   "margin": -10.0625,
+   "beats_competitor": false,
+   "n_tokens": 295,
+   "company": "Pınar Ambalaj",
+   "competing": "Akdeniz Lojistik"
+  },
+  {
+   "correct_top": false,
+   "top_token": "Kar",
+   "margin": -19.9688,
+   "beats_competitor": false,
+   "n_tokens": 295,
+   "company": "Atlas Madencilik",
+   "competing": "Karadeniz Gıda"
+  }
+ ]
+}

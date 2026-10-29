@@ -1,0 +1,42 @@
+[static ev_8f261b1ea27] declared: family=llama-like layers=3 d_model=128 heads=4 kv=2 d_head=32 d_mlp=256 params=0.000B norm=rmsnorm tied=True config=consistent
+[open ev_7a9f71a9a16] run_id=run_5b64dde5571c headers_sha=9ec3a3d587ce facets={'residual_stream': True, 'attention_weights': True, 'attention_out': True, 'mlp_out': True, 'per_head_output': True} profile=2
+[behaviour ev_47114eb4e4c] 'the capital of france is' -> [{'token': 'paris', 'token_id': 24, 'prob': 0.998523, 'logit': 11.0341}, {'token': 'brasilia', 'token_id': 30, 'prob': 0.000127, 'logit': 2.0639}, {'token': 'berlin', 'token_id': 27, 'prob': 0.000118, 'logit': 1.9903}] | paris rank 1 rome rank 13 entropy 0.0241 bits
+[behaviour ev_0de90427977] 'the capital of italy is' -> {'token': 'rome', 'token_id': 25, 'prob': 0.99849, 'logit': 11.2421}
+[lens ev_3ebbd2d8f64 authority=inference] decision layer = L0
+    embed: top=['is', 'capital', '<bos>'] paris rank=13 p=1.8e-05 rome p=2.3e-05 KL->final=15.7344
+       L0: top=['paris', 'is', 'berlin'] paris rank=1 p=0.848873 rome p=0.002447 KL->final=0.2253
+       L1: top=['paris', 'brasilia', 'berlin'] paris rank=1 p=0.978719 rome p=0.000348 KL->final=0.0238
+       L2: top=['paris', 'brasilia', 'berlin'] paris rank=1 p=0.998523 rome p=3.5e-05 KL->final=-0.0
+[head catalog ev_c45bc5298c5] induction heads: [(1, 1, 0.558), (1, 0, 0.554), (1, 2, 0.489), (1, 3, 0.331)] | prev-token heads: [] | duplicate-token: []
+[patching resid ev_4d9661a9be2 authority=observation coverage=complete passes=18] clean metric 10.2555 corrupted -10.2786
+    L0 @pos5 'is': normalized 1.0
+    L1 @pos5 'is': normalized 1.0
+    L2 @pos5 'is': normalized 1.0
+    L0 @pos4 'italy': normalized 0.0011
+    L1 @pos4 'italy': normalized 0.0001
+    L0 @pos0 '<bos>': normalized 0.0
+    grid (rows=layer, cols=position  <bos>    the  capit     of  franc     is)
+    L0    0.00   0.00   0.00   0.00   0.00   1.00
+    L1    0.00   0.00   0.00   0.00   0.00   1.00
+    L2    0.00   0.00   0.00   0.00   0.00   1.00
+[patching heads@last ev_910901603f8] L0H3=0.3745, L0H2=0.2341, L0H0=0.1341, L2H2=0.0136, L1H2=0.0123, L1H0=0.0025
+[patching heads@country ev_6a002ec2b04] L0H1=0.0001, L0H0=0.0, L0H2=-0.0, L0H3=0.0, L1H0=-0.0, L1H1=-0.0
+[patching mlp ev_0f048a17f23] L0@5=0.6932, L2@5=0.3961, L1@5=0.2686, L0@0=0.0, L0@1=0.0, L0@2=0.0
+[DLA ev_ede723af88d authority=derived] logit diff paris-rome = 10.2555 (sum of parts 10.2555, recon err 0.0)
+    + mlp L2=4.5918, mlp L0=2.7479, mlp L1=1.5521, head L0H3=0.4485, head L0H0=0.351, head L0H2=0.2505
+    - head L1H2=-0.2034, embed=-0.0441, head L2H1=-0.0307, head L2H0=-0.018, head L0H1=-0.0104
+    by layer: L0 attn=1.0396 mlp=2.7479, L1 attn=0.1822 mlp=1.5521, L2 attn=0.1863 mlp=4.5918
+[ablation ev_bc46943714e authority=observation] mean-ablate [[0, 3], [0, 0], [0, 2]]: logit diff 10.2555 -> 4.6016 (delta -5.654); top after: [{'token': 'cairo', 'prob': 0.48522}, {'token': 'lima', 'prob': 0.22918}, {'token': 'delhi', 'prob': 0.10379}]; singles: [(0, 3, 9.8364), (0, 0, 9.4396), (0, 2, 10.2418)]
+[attention L0] H0: france(1.0),capital(0.0) | H1: france(0.5208),capital(0.4448) | H2: france(0.9999),of(0.0001) | H3: france(1.0),of(0.0)
+[attention L1] H0: the(1.0),france(0.0) | H1: the(0.9935),france(0.0032) | H2: the(0.9995),capital(0.0004) | H3: the(1.0),capital(0.0)
+[attention L2] H0: <bos>(0.2949),france(0.1693) | H1: capital(0.1917),is(0.1797) | H2: of(0.3324),capital(0.2687) | H3: of(0.596),france(0.1571)
+[compare ev_2f3f617b20a] france/italy vs japan/kenya resid grids: jaccard(top5)=1.0 spearman=0.9975 shared top=['L1@5', 'L0@5', 'L2@5', 'L0@4', 'L1@4'] largest deltas=[('L0@4', -0.0008), ('L0@5', 0.0001), ('L1@4', 0.0001)]
+[compare ev_224d5e1a161] DLA france vs japan: jaccard(top5)=0.6667 spearman=0.6882 shared top=['L2.mlp', 'L1.mlp', 'L0.mlp', 'L0H3']
+[induction sweep] training period was 19 (offset 18):
+    seq_len=19: top induction scores [(0, 0, 0.067), (0, 3, 0.064), (0, 1, 0.055)]
+    seq_len=12: top induction scores [(2, 2, 0.099), (2, 3, 0.084), (0, 0, 0.042)]
+    seq_len=25: top induction scores [(2, 2, 0.025), (2, 3, 0.023), (2, 0, 0.02)]
+    L1 heads at q=30 on a period-19 repeat: H0->pos15 (0.9243), H1->pos15 (0.9882), H2->pos15 (0.9901), H3->pos15 (0.9756)
+[cache] repeated logit lens -> cache_hit=True same id=True
+[bundle] 21 records, 2 unknowns, 109046 bytes -> /home/claude/demo-qwen2/evidence-bundle.json
+[close] cleanup=complete

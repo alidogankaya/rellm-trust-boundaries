@@ -1,0 +1,144 @@
+{
+ "baseline": {
+  "acc": 1.0,
+  "margin_mean": 9.306,
+  "margin_min": 8.643,
+  "params": 510848,
+  "repeat_task_acc": 1.0,
+  "latency_ms": 14.6
+ },
+ "truncation": {
+  "embed": {
+   "acc": 0.0625,
+   "margin_mean": -1.342,
+   "margin_min": -2.46
+  },
+  "L0": {
+   "acc": 1.0,
+   "margin_mean": 6.207,
+   "margin_min": 3.308
+  },
+  "L1": {
+   "acc": 1.0,
+   "margin_mean": 7.382,
+   "margin_min": 5.676
+  },
+  "L2": {
+   "acc": 1.0,
+   "margin_mean": 9.306,
+   "margin_min": 8.643
+  }
+ },
+ "l0_flips": 0,
+ "necessity": {
+  "L0H0": {
+   "acc": 1.0,
+   "margin_mean": 9.06,
+   "margin_min": 7.971
+  },
+  "L0H1": {
+   "acc": 1.0,
+   "margin_mean": 9.285,
+   "margin_min": 8.563
+  },
+  "L0H2": {
+   "acc": 1.0,
+   "margin_mean": 8.762,
+   "margin_min": 7.816
+  },
+  "L0H3": {
+   "acc": 0.975,
+   "margin_mean": 7.606,
+   "margin_min": 2.932
+  },
+  "L0.mlp": {
+   "acc": 0.4,
+   "margin_mean": 3.278,
+   "margin_min": -0.107
+  },
+  "L1H0": {
+   "acc": 1.0,
+   "margin_mean": 9.311,
+   "margin_min": 8.721
+  },
+  "L1H1": {
+   "acc": 1.0,
+   "margin_mean": 9.257,
+   "margin_min": 8.639
+  },
+  "L1H2": {
+   "acc": 0.95,
+   "margin_mean": 8.985,
+   "margin_min": 4.502
+  },
+  "L1H3": {
+   "acc": 1.0,
+   "margin_mean": 9.273,
+   "margin_min": 8.582
+  },
+  "L1.mlp": {
+   "acc": 1.0,
+   "margin_mean": 8.326,
+   "margin_min": 5.838
+  },
+  "L2H0": {
+   "acc": 1.0,
+   "margin_mean": 9.267,
+   "margin_min": 8.463
+  },
+  "L2H1": {
+   "acc": 1.0,
+   "margin_mean": 9.276,
+   "margin_min": 8.61
+  },
+  "L2H2": {
+   "acc": 1.0,
+   "margin_mean": 9.188,
+   "margin_min": 8.239
+  },
+  "L2H3": {
+   "acc": 1.0,
+   "margin_mean": 9.296,
+   "margin_min": 8.601
+  },
+  "L2.mlp": {
+   "acc": 1.0,
+   "margin_mean": 7.295,
+   "margin_min": 5.362
+  }
+ },
+ "minimal_circuit": {
+  "layers": [
+   0
+  ],
+  "heads": {
+   "0": [
+    3
+   ]
+  },
+  "mlps": [
+   0
+  ],
+  "score": {
+   "acc": 1.0,
+   "margin_mean": 5.329,
+   "margin_min": 2.471
+  },
+  "threshold_margin_min": 2.16075
+ },
+ "neurons_kept": {
+  "0": 24
+ },
+ "compressed": {
+  "layers": 1,
+  "heads": 1,
+  "d_mlp": 24,
+  "params": 44416,
+  "params_without_embeddings": 25984,
+  "latency_ms": 2.43,
+  "repeat_task_acc": 0.019,
+  "acc": 1.0,
+  "margin_mean": 4.597,
+  "margin_min": 2.97
+ }
+}
